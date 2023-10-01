@@ -1,0 +1,393 @@
+/* system */
+.pull-right {
+    float: right!important;
+}
+.pull-left {
+    float: left!important;
+}
+
+
+.w50{
+  min-width: 50px!important;
+}
+
+.w100{
+  min-width: 100px!important;
+}
+
+.w400{
+  min-width: 400px!important;
+}
+
+.w140 {
+    min-width: 150px!important;
+}
+
+.notification-item-list{
+  min-height: 200px!important;
+}
+
+
+
+.toggle-on.btn-sm {
+    background-color: #008000!important;
+}
+
+
+
+
+
+/* system end*/
+
+
+
+
+.password-area{
+    position: relative;
+}
+
+#show-password {
+    position: absolute;
+    right: 5px;
+    top: 38px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/*data table css*/
+
+.html5buttons {
+    float: right;
+}
+.html5buttons>.btn-group>button{
+	border-radius: none!important;
+    font-size: 13px!important;
+    color: black;
+    border: 1px solid #d2d2d2!important;
+    background-color: #fefefe!important;
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;*/
+}
+
+.html5buttons button:hover, .html5buttons button:focus:active {
+    background-color: #eee;
+    color: inherit;
+    border-color: #d2d2d2;
+}
+
+div.dataTables_wrapper div.dataTables_filter label{
+	float: right;
+	/*display: inline!important;
+	margin-right: 5px;
+    margin-top: -25px;*/
+}
+
+th.dt-center, td.dt-center { text-align: center; }
+
+.copy_icon:before{
+  color: #f8b425;
+}
+.csv_icon:before{
+  color: #008000;
+}
+.excel_icon:before{
+  color: #00723a;
+}
+.print_icon:before{
+  color: #d2342e;
+}
+.pdf_icon:before{
+  color: red;
+}
+
+
+
+/* Togle buttons Bootstrap */
+.toggle{
+    cursor: pointer;
+}
+.toggle-group label{
+    cursor: pointer;
+}
+.manage .toggle-group .btn-success {
+    background-color: #02a499;
+    border: 1px solid #02a499;
+}
+
+
+.manage i{
+  color: white;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+#sidebar-menu>ul>li>a.mm-active{
+    color: #ffffff!important;
+}
+
+#sidebar-menu>ul>li>a{
+    color: #ffffff;
+}
+
+.topbar .topbar-left .logo{
+    line-height: 60px;
+}
+
+
+.enlarged #wrapper .left.side-menu #sidebar-menu ul>li:hover>a {
+    position: relative;
+    width: 260px;
+    color: #ffffff!important;
+    background-color: #2e2f40;
+}
+
+.activity-feed{
+    max-height: 362px;
+    overflow-y: scroll;
+}
+
+
+
+/*DMS modal Start css code*/
+
+.dms-teal, .dms-hover-teal:hover {
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+.dms-display-topright {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 30px;
+    cursor: pointer;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+.dms-container, .dms-panel {
+    padding: 3.01px 9px;
+}
+.dms-modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.dms-modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px;
+    margin-top: 30px;
+}
+
+/*DMS modal END css code*/
+
+
+.dms-container .progress{
+  border-radius: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  height: 15px;
+}
+
+
+
+/* FOlder Structure css */
+
+.notification-list .notify-item {
+    padding: 10px 20px 20px 20px;
+}
+
+/* Jquery Tags input */
+.tagsinput {
+    border: 1px solid #CCC;
+    background: #FFF;
+    padding: 6px 6px 0;
+    width: 300px;
+    overflow-y: auto;
+}
+
+.tagsinput div {
+    display: block;
+    float: left;
+}
+
+.tags_clear {
+    clear: both;
+    width: 100%;
+    height: 0px;
+}
+
+.tagsinput input {
+    width: 80px;
+    margin: 0px;
+    font-family: helvetica;
+    font-size: 13px;
+    border: 1px solid transparent;
+    padding: 3px;
+    background: transparent;
+    color: #000;
+    outline: 0px;
+}
+
+span.tag {
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    display: block;
+    float: left;
+    padding: 5px 9px;
+    text-decoration: none;
+    background: #1ABB9C;
+    color: #F1F6F7;
+    margin-right: 5px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-family: helvetica;
+}
+
+.tag:after {
+    content: " ";
+    height: 30px;
+    width: 0;
+    position: absolute;
+    /*left: 0;*/
+    top: 37px;
+    margin: 0;
+    pointer-events: none;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 11px solid #1ABB9C;
+}
+
+.tagsinput span.tag a {
+    font-weight: bold;
+    color: #ff002f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.not_valid {
+    background: #FBD8DB !important;
+    color: #90111A !important;
+}
+
+
+/* Tags input end */
+
+.imgnotfiy{
+    color: red;
+    font-weight: bold;
+}
+
+
+
+.imgarea{
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.project-item{
+    position: relative;
+}
+
+.project-item-overlay{
+    background: none repeat scroll 0 0 #2a314238!important;
+}
+
+.chekimage{
+    right: 4px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: cell;
+}
+
+.checkAll{
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.g-manage{
+    color: white;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+#deleteAll{
+    display: none;
+}
+
+.showBtn{
+    display: block!important;
+}
+
+.gallery_btn a, .gallery_btn input{
+    float: right;
+    margin-left: 5px;
+}
+.sort-td{
+    cursor:  n-resize;
+}
+
+.type_2{
+    display: none;
+}
+
+
+.select2-container .select2-selection--single {
+    border: 1px solid #e3e3e3;
+    height: 38px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    line-height: 36px;
+    padding-left: 12px;
+}
+
+.select2-container .select2-selection--single .select2-selection__arrow {
+    height: 34px;
+    width: 34px;
+    right: 3px;
+}
+.select2-container .select2-selection--single .select2-selection__arrow b {
+    border-color: #999 transparent transparent transparent;
+    border-width: 6px 6px 0 6px;
+}
+
+.parametr_values_div{
+    display: none;
+}
+
+.table-center{
+    text-align: center;
+}
+
+.cartColor {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 50%;
+}

@@ -1,0 +1,78 @@
+<!-- Start content -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="page-title-box">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <h4 class="page-title"><?=$btitle ?></h4>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="<?=base_url("gopanel") ?>">Əsas Panel</a></li>
+                        <li class="breadcrumb-item"><a href="<?=base_url("gopanel/".$class) ?>/manage"><?=$btitle ?></a></li>
+                        <li class="breadcrumb-item active"><?=$bactive ?></li>
+                    </ol>
+                </div>
+                <div class="col-sm-6">
+                    <div class="float-right d-none d-md-block">
+                        <div class="dropdown">
+                            <a class="btn btn-outline-success waves-effect waves-light" href="/gopanel/<?=$class ?>/add">
+                                <i class="fas fa-plus mr-2"></i> Əlavə et
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+
+<input 
+id="datatableOptions" 
+type="hidden"
+exportColunm = "1,2,3" 
+value=""
+/>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body table-responsive">
+                        <table id="datatable" class="table table-bordered table-striped dt-responsive" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>İkon</th>
+                                    <th>Ad</th>
+                                    <th>Link</th>
+                                    <th>Əməliyyatlar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+<?php
+foreach ($manage as $key => $value): 
+    $editlink = base_url("gopanel/").$class."/edit/?id=".$value['id'];
+    $icon     = str_replace("fa ", "fab ", $value['icon']);
+?>
+                                <tr>
+                                    <td><?=$counter++ ?></td>
+                                    <td><i style="font-size: 28px;" class="<?=$icon ?>"></i></td>
+                                    <td><?=$value['name'] ?></td>
+                                    <td><a target="_blank" href="<?=$value['link'] ?>"><?=$value['link'] ?></a></td>
+                                    <td>
+                                        <div class="manage">
+                                            <a class="btn btn-success" href="<?=$editlink?>" data-toggle="tooltip" data-placement="top" title="Məlumatı Yenilə" ><i class="fas fa-edit"></i></a>
+                                            <a class="btn btn-danger delete" href="" unit_id="<?=$value['id']?>" table_name="<?=$table ?>" data-toggle="tooltip" data-placement="top" title="Məlumatı Sil" ><i class="fas fa-trash-alt"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+<?php endforeach ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container-fluid -->
+</div>
+<!-- content -->
+
+<?php $this->load->view("/social/icons"); ?>

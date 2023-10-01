@@ -1,0 +1,32 @@
+body{
+	background: white!important;
+    color: black!important;
+    padding: 5px;
+}
+
+a{
+	color: blue;
+}
+
+.word-dwonload{
+	float: right;
+}
+
+.word-print{
+	float: right;
+	margin-right: 10px;
+}
+
+/*@media print {
+  body * {
+    visibility: hidden;
+  }
+  #section_print, #section_print * {
+    visibility: visible;
+  }
+  #section_print {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}*/

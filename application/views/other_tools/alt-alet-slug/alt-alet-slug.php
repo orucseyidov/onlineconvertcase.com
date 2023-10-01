@@ -1,0 +1,183 @@
+<section id="bannerSection">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+          <div class="banner-one">
+            <div class="banner-image">
+                <div>
+                  <img src="/assets/img/icons/compare.png">
+                </div>
+            </div>
+            <div class="banner-text">
+                <div>
+                  <h1>Compare text</h1>
+                  <p>
+                    Diffchecker will compare text to find the difference between two text files. Just paste your files and click Find Difference
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section id="textCase">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="text-area">
+            <textarea id="textCaseInput" placeholder="Type or paste your content here" class="textarea"></textarea>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="output">
+              Your output here
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="counters">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text_counters">
+                  <span>Character Count: <span class="counter-numbers" id="characterCount">0</span> </span>
+                  <span>Word Count: <span class="counter-numbers" id="wordCount">0</span></span>
+                  <span>Line Count: <span class="counter-numbers" id="lineCount">0</span></span>  
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 other-tool-btn-block">
+                  <button id="download" class="modifier-button trim-whitespace" onclick="downloadTextAsFile(); return false;">
+                    <img class="icon" src="/assets/img/icons/file.png">
+                    <span>Download text</span>
+                  </button>
+                  <button id="copy" class="modifier-button trim-whitespace" onclick="copyTextToClipboard(); return false;">
+                    <img class="icon" src="/assets/img/icons/copy.png">
+                    <span>Copy to Clipboard</span>
+                  </button>
+                  <a href="https://ko-fi.com/goweb" class="btn-kofi" target="_blank">
+                    <img src="/assets/img/icons/kofi.png" alt="Buy me a Coffee" height="14" width="21"> 
+                    Buy me a Coffee
+                  </a>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+<section id="about">
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-12 about-title-block">
+            <h3 class="about-title">About Convert case</h3>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 about-block">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Special title treatment</h2>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 about-block">
+          <div>
+            <div class="accordion">
+              <div class="card card-sm px-4 py-3 border border-light rounded mb-4">
+                  <div data-target="#panel-1" class="accordion-panel-header icon-title" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="panel-1"><span class="h6 mb-0">Does my subscription automatically renew?</span> <span class="icon"><i class="fas fa-angle-down"></i></span></div>
+                  <div class="collapse show" id="panel-1">
+                      <div class="accordion-content">
+                          <p>At ThemeTags, our mission has always been focused on bringing openness and transparency to the design process. We've always believed that by providing a space where designers can share ongoing work not only empowers them to make better products, it also helps them grow. We're proud to be a part of creating a more open culture and to continue building a product that supports this vision.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="card card-sm px-4 py-3 border border-light rounded mb-4">
+                  <div data-target="#panel-2" class="accordion-panel-header icon-title" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="panel-2"><span class="h6 mb-0">Does my subscription automatically renew?</span> <span class="icon"><i class="fas fa-angle-down"></i></span></div>
+                  <div class="collapse" id="panel-2">
+                      <div class="accordion-content">
+                          <p>At ThemeTags, our mission has always been focused on bringing openness and transparency to the design process. We've always believed that by providing a space where designers can share ongoing work not only empowers them to make better products, it also helps them grow. We're proud to be a part of creating a more open culture and to continue building a product that supports this vision.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="row mt-5 mt-lg-6">
+                  <div class="col text-center"><a href="#" class="btn btn-primary"><span class="mr-2"><i class="fas fa-question-circle"></i></span> See all FAQ</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+<section id="otherTools">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 other-tool-col">
+        <div class="other-tool-title">
+          <h3>Text Modification/Formatting</h3>
+        </div>
+        <div class="other-tool-links">
+            <a class="other-link-btn" href="">Bold Text Generator</a>
+            <a class="other-link-btn" href="">Bubble Text Generator</a>
+            <a class="other-link-btn" href="">Cursed Text Tool</a>
+            <a class="other-link-btn" href="">Duplicate Line Remover</a>
+            <a class="other-link-btn" href="">Facebook Font Generator</a>
+            <a class="other-link-btn" href="">Invisible Text Generator</a>
+            <a class="other-link-btn" href="">Italic Text Converter</a>
+            <a class="other-link-btn" href="">Mirror Text Generator</a>
+            <a class="other-link-btn" href="">Plain Text Converter</a>
+            <a class="other-link-btn" href="">Reverse Text Generator</a>
+            <a class="other-link-btn" href="">Sentence Case Converter</a>
+            <a class="other-link-btn" href="">Small Text Generator</a>
+            <a class="other-link-btn" href="">Strikethrough Text Generator</a>
+            <a class="other-link-btn" href="">Title Case Converter</a>
+            <a class="other-link-btn" href="">Underline Text Generator</a>
+            <a class="other-link-btn" href="">Unicode Text Converter</a>
+            <a class="other-link-btn" href="">Upside Down Text Generator</a>
+            <a class="other-link-btn" href="">Wide Text Generator</a>
+            <a class="other-link-btn" href="">Wingdings Converter</a>
+            <a class="other-link-btn" href="">Zalgo Glitch Text Generator</a>
+        </div>
+      </div>
+      <div class="col-12 other-tool-col">
+        <div class="other-tool-title">
+          <h3>Code & Data Translation</h3>
+        </div>
+        <div class="other-tool-links">
+          <a class="other-link-btn" href="">Binary Code Translator</a>
+          <a class="other-link-btn" href="">CSV to JSON Converter</a>
+          <a class="other-link-btn" href="">Hex to Text Converter</a>
+          <a class="other-link-btn" href="">JSON Stringify Text Generator</a>
+          <a class="other-link-btn" href="">Morse Code Translator</a>
+          <a class="other-link-btn" href="">Slugify URL Generator</a>
+          <a class="other-link-btn" href="">UTF-8 Encoder/Decoder</a>
+          <a class="other-link-btn" href="">UTM Builder Generator</a>
+        </div>
+      </div>
+      <div class="col-12 other-tool-col">
+        <div class="other-tool-title">
+          <h3>Misc. Tools</h3>
+        </div>
+        <div class="other-tool-links">
+          <a class="other-link-btn" href="">NATO Phonetic Alphabet Translator</a>
+          <a class="other-link-btn" href="">Repeat Text Generator</a>
+          <a class="other-link-btn" href="">Roman Numeral Date Converter</a>
+          <a class="other-link-btn" href="">Text Replacement Tool</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
