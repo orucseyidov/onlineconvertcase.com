@@ -361,6 +361,10 @@ textarea:focus {
 
 /*Breadcrumb*/
 
+#breadcrumb{
+    margin-top: 15px;
+}
+
 .page_header_default {
     position: relative;
     min-height: 320px;
@@ -494,7 +498,9 @@ textarea:focus {
 }
 
 /*About*/
-
+.static-page-title{
+    padding: 15px;
+}
 /*Faq*/
 
 [data-toggle]:hover {

@@ -8,22 +8,11 @@ class Home_model extends GO_Model
 		parent::__construct();
 	}
 
-	public function advantages()
+	public function home_about_blocks()
 	{
 		$this->db->select('*');
-		$this->db->from("advantages");
-		$this->db->limit(3);
+		$this->db->from("home_about_blocks");
 		$this->db->where("locale", $this->locale);
-		$this->db->order_by("rank", "ASC");
-		return $this->db->get()->result_array();
-	}
-
-	public function faq()
-	{
-		$this->db->select('*');
-		$this->db->from("faq");
-		$this->db->where("locale", $this->locale);
-		$this->db->order_by("rank", "ASC");
 		return $this->db->get()->result_array();
 	}
 
@@ -38,6 +27,7 @@ class Home_model extends GO_Model
 		$this->db->join('common_contents','common_contents.page_id = tool_groups.id','left');
 		$this->db->where("common_contents.table_name", "tool_groups");
 		$this->db->where("common_contents.locale", $this->locale);
+		$this->db->where("tool_groups.status", 1);
 		$this->db->order_by("tool_groups.rank", "ASC");
 		return $this->db->get()->result_array();
 	}
@@ -53,6 +43,7 @@ class Home_model extends GO_Model
 		$this->db->join('common_contents','common_contents.page_id = other_tools.id','left');
 		$this->db->where("common_contents.table_name", "other_tools");
 		$this->db->where("common_contents.locale", $this->locale);
+		$this->db->where("other_tools.status", 1);
 		$this->db->order_by("other_tools.rank", "ASC");
 		return $this->db->get()->result_array();
 	}
@@ -71,7 +62,21 @@ class Home_model extends GO_Model
 		$this->db->where("common_contents.table_name", "other_tools");
 		$this->db->where("common_contents.locale", $this->locale);
 		$this->db->where("other_tools.slug", $slug);
+		$this->db->where("other_tools.status", 1);
 		return $this->db->get()->row_array();
+	}
+
+
+	public function faq($page_id)
+	{
+		$this->db->select('
+			id,question,answer
+		');
+		$this->db->from("faq");
+		$this->db->where("faq.locale", $this->locale);
+		$this->db->where("faq.page_id", $page_id);
+		$this->db->order_by("rank","ASC");
+		return $this->db->get()->result_array();
 	}
 
 

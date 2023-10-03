@@ -14,6 +14,25 @@ class Pages extends GO_Controller {
 		return false;
 	}
 
+	public function about(){
+		$meta = $this->meta_seo($this->uri->segment(2));
+		$about = $this->pages->about($this->locale);
+		$this->data['about']		   = $about;
+		$this->render("/pages/about",$this->data);
+	}
+
+	public function contact(){
+		$this->getSeoInfo($this->uri->segment(2));
+		$this->render("/pages/contact",$this->data);
+	}
+
+	public function faq(){
+		$this->getSeoInfo($this->uri->segment(2));
+		$faq = $this->pages->faq($this->locale);
+		$this->data['faq'] = $faq;
+		$this->render("/pages/faq",$this->data);
+	}
+
 	public function error_404(){
 		$this->load->view("/pages/404",$this->data);
 	}
@@ -21,10 +40,10 @@ class Pages extends GO_Controller {
 
 	public function static_pages($slug = false){
 		$locale = $this->uri->segment(1);
-		$slug = $this->uri->segment(2);
-		$page = $this->pages->get_static_page($locale, $slug);
+		$slug 	= $this->uri->segment(2);
+		$page 	= $this->pages->get_static_page($locale, $slug);
 		if (isset($page['id'])) {
-			$this->data['page'] = $page;
+			$this->data['page'] 			= $page;
 			$this->data['title']			= $page['title'];
 			$this->data['key']				= $page['tags'];
 			if (!empty($page['image'])) {
@@ -37,6 +56,25 @@ class Pages extends GO_Controller {
 		else{
 			$this->error_404();
 		}
+	}
+
+
+	public function meta_seo($slug)
+	{
+		$seo 		= $this->core->get_seo_info($slug) ?? array();
+		$settings 	= $this->settings;
+		if (count($seo) > 0) {
+			$this->data['breadcrumbTitle'] = !empty($seo['title']) ? $seo['title'] : $settings['site_title'];
+			$this->data['title']  	= !empty($seo['title']) ? $seo['title'] : $settings['site_title'];
+			$this->data['desc']   	= !empty($seo['description']) ? $seo['description'] : $settings['description'];
+			$this->data['key']     	= !empty($seo['keywords']) ? $seo['keywords'] : $settings['tags'];
+			$this->data['ogimage'] 	= !empty($seo['image']) ? base_url($seo['image']) : base_url($settings['og_image']);
+		}
+		if (empty($this->data['ogimage'])) {
+			$this->data['ogimage'] = $settings['og_image'];
+		}
+
+		return $seo;
 	}
 
 

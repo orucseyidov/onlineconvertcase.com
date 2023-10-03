@@ -8,26 +8,26 @@ class Pages_model extends GO_Model
 		parent::__construct();
 	}
 
-	public function get_category($table, $slug)
+	public function about($locale)
 	{
 		$this->db->select('
-			title_' . $this->locale . ' as title,
-			id,slug
+			title,description
 		');
-		$this->db->from($table);
-		$this->db->where(array("status" => 1, "slug" => $slug));
+		$this->db->from("about");
+		$this->db->where("about.locale", $locale);
 		return $this->db->get()->row_array();
 	}
 
-	public function menu_by_slug($slug)
+	public function faq($locale)
 	{
 		$this->db->select('
-			name
+			id,question,answer
 		');
-		$this->db->from('menu');
-		$this->db->where(array("status" => 1, "slug" => $slug, "locale" => $this->locale));
-		$query  = $this->db->get();
-		return $query->row_array();
+		$this->db->from("faq");
+		$this->db->where("faq.locale", $locale);
+		$this->db->where("faq.page_id", NULL);
+		$this->db->order_by("rank","ASC");
+		return $this->db->get()->result_array();
 	}
 
 	public function get_static_page($locale, $slug)

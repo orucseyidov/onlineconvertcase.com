@@ -244,4 +244,13 @@ class Gopanel_model extends GO_Model {
 		$this->db->order_by("id","DESC");
         return $this->db->get()->result_array();
 	}
+
+	public function get_common_content($page_id,$table_name){
+		$this->db->select('id');
+		$this->db->from('common_contents');
+		$this->db->where("page_id",$page_id);
+		$this->db->where("table_name",$table_name);
+		$this->db->order_by("id","DESC");
+        return $this->db->get()->result_array();
+	}
 }

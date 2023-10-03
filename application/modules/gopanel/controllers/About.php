@@ -5,9 +5,6 @@ class About extends Gopanel {
 	function __construct(){
 		parent::__construct();
 		$this->admin_control();
-		$this->load->helper("filter");
-		$this->load->helper("seflink");
-		$this->load->helper("file_upload");
 		$this->data['btitle']	= 'Haqqımızda';
 	}
 
@@ -20,9 +17,11 @@ class About extends Gopanel {
 		if (isset($_POST['token'])) {
 			unset($_POST['token']);
 
-			$img = seflink($_POST['title']);
+			if (isset($_FILES['image']) && strlen($_FILES['image']['name'])>1) {
+				$img = seflink($_POST['title']);
 
-			$_POST['image'] = file_upload($_FILES['image'],'/uploads/images/'.$this->table.'/',$img);
+				$_POST['image'] = file_upload($_FILES['image'],'/uploads/images/'.$this->table.'/',$img);
+			}
 
 			if ($this->core->add($this->table,$_POST)) {
 				$this->session->set_flashdata('success', "Məlumat Uğurla Əlavə edildi");
@@ -43,7 +42,7 @@ class About extends Gopanel {
 	}
 
 	public function edit(){
-		$id 					= intval(filter($this->input->get('id',true)));
+		$id 					= intval($this->input->get('id',true));
 		$this->data['values'] 	= $this->core->get_values($this->table,$id);
 
 		if (isset($_POST['token'])) {

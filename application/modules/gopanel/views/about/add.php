@@ -48,10 +48,10 @@
                                     <label>Dil seçin</label>
                                     <select class="form-control" name="locale">
                                         <?php
-                                            foreach($locale as $key => $value){
-                                            $select = ($value == "en") ? "selected" : "";
+                                            foreach($languages as $key => $value){
+                                             $select = ($value['locale'] == $locale) ? "selected" : "";
                                         ?>
-                                            <option value="<?= $value; ?>" <?= $select; ?>><?= $value; ?></option>
+                                            <option value="<?= $value['locale']; ?>" <?= $select; ?>><?= $value['locale']; ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>

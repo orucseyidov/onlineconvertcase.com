@@ -7,7 +7,6 @@ class Home extends GO_Controller {
 		$this->load->model("Home_model","home");
 		$this->load->helper("filter");
 		$this->getSeoInfo("home");
-		$this->data['footerdata']			= '<script type="application/javascript" src="/assets/js/home.js"></script>';
 	}
 
 	public function index(){
@@ -15,6 +14,8 @@ class Home extends GO_Controller {
 			$slug = $this->uri->segment(2);
 			$tool = $this->home->get_other_tool($slug);
 			if (isset($tool['id'])) {
+				$this->data['tool'] = $tool;
+				$this->data['faq'] 	= $this->home->faq($tool['id']);
 				$this->renderTool($tool,$slug);
 			} else {
 				$this->renderHome();
@@ -26,12 +27,14 @@ class Home extends GO_Controller {
 	}
 
 	public function renderTool($tool,$slug){
-		if ($tool['page_status'] == 2) {
-			if (! file_exists(APPPATH.'views\\other_tools\\'.$slug."\\".$slug.".php")) {
-				$this->renderHome();
+		if ($tool['page_status'] == 1) {
+			if (file_exists(APPPATH.'views\\other_tools\\'.$slug."\\".$slug.".php")) {
+				$this->data['footerdata'] = '<script type="application/javascript" src="/assets/js/other_tools/'.$slug.'.js"></script>';
+				//Data page
+				$this->render("other_tools/{$slug}/{$slug}",$this->data);
 			}
 			else{
-				$this->render("other_tools/{$slug}/{$slug}",$this->data);
+				$this->render("home/other_tools/index",$this->data);
 			}
 		} else {
 			$this->renderHome();
@@ -39,7 +42,8 @@ class Home extends GO_Controller {
 		
 	}
 	public function renderHome(){
-		$this->data['other_tools'] = $this->test();
+		$this->data['other_tools'] 			= $this->groups();
+		$this->data['home_about_blocks'] 	= $this->home->home_about_blocks();
 		$this->render("home/home",$this->data);
 	}
 
@@ -53,7 +57,7 @@ class Home extends GO_Controller {
 		}
 	}
 
-	public function test(){
+	public function groups(){
 		$response = [];
 		$groups = $this->home->other_tool_groups();
 		$tools 	= $this->home->other_tools();

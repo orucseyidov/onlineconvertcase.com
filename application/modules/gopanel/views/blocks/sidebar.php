@@ -98,16 +98,9 @@
                     </a>
                     <ul class="submenu">
                         <li>
-                            <a href="/gopanel/advantages/manage">
+                            <a href="/gopanel/home_about_blocks/manage">
                                 <i class="far fa-chart-bar"></i>
-                                <span> Üstünlüklərimiz</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/gopanel/faq/manage">
-                                <i class="fas fa-question"></i>
-                                <span> F.A.Q</span>
+                                <span> Ana Səhifə Haqqında blokları</span>
                             </a>
                         </li>
                     </ul>
@@ -115,11 +108,11 @@
 
                 <li>
                     <a href="javascript:void(0);" class="waves-effect">
-                        <i class="fas fa-ad"></i><span> Reklamlar</span>
+                        <i class="fas fa-list-ul"></i> <span> Haqqımızda</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="/gopanel/banners/add"><i class="fas fa-plus"></i> Əlavə et</a></li>
-                        <li><a href="/gopanel/banners/manage"><i class="fas fa-fas fa-table"></i> İdarə et</a></li>
+                        <li><a href="/gopanel/about/add"><i class="fas fa-plus"></i> Əlavə et</a></li>
+                        <li><a href="/gopanel/about/manage"><i class="fas fa-fas fa-table"></i> İdarə et</a></li>
                     </ul>
                 </li>
 
@@ -135,16 +128,6 @@
 
                 <li>
                     <a href="javascript:void(0);" class="waves-effect">
-                        <i class="fas fa-angle-double-right"></i> <span> Seo Səhifələr</span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="/gopanel/seo_pages/add"><i class="fas fa-plus"></i> Əlavə et</a></li>
-                        <li><a href="/gopanel/seo_pages/manage"><i class="fas fa-fas fa-table"></i> İdarə et</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript:void(0);" class="waves-effect">
                         <i class="fas fa-angle-double-right"></i> <span> Digər Alətlər</span>
                     </a>
                     <ul class="submenu">
@@ -152,6 +135,32 @@
                         <li><a href="/gopanel/tool_groups/manage"><i class="fas fa-fas fa-table"></i> İdarə et</a></li>
                     </ul>
                 </li>
+
+                <li>
+                    <a href="/gopanel/faq/manage">
+                        <i class="fas fa-question"></i>
+                        <span> F.A.Q</span>
+                    </a>
+                </li>
+
+                <!-- <li>
+                    <a href="javascript:void(0);" class="waves-effect">
+                        <i class="fas fa-angle-double-right"></i> <span> Seo Səhifələr</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="/gopanel/seo_pages/add"><i class="fas fa-plus"></i> Əlavə et</a></li>
+                        <li><a href="/gopanel/seo_pages/manage"><i class="fas fa-fas fa-table"></i> İdarə et</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="waves-effect">
+                        <i class="fas fa-ad"></i><span> Reklamlar</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="/gopanel/banners/add"><i class="fas fa-plus"></i> Əlavə et</a></li>
+                        <li><a href="/gopanel/banners/manage"><i class="fas fa-fas fa-table"></i> İdarə et</a></li>
+                    </ul>
+                </li> -->
             </ul>
         </div>
         <!-- Sidebar -->

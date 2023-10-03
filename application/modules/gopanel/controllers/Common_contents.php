@@ -50,9 +50,15 @@ class Common_contents extends Gopanel
 
 	public function manage()
 	{
+		$control = $this->gopanel->get_common_content($this->page_id,$this->table_name);
+		if (isset($control['id'])) {
+			redirect("/gopanel/{$this->table}/edit/?id={$control['id']}&page_id={$control['page_id']}&table_name={$control['table_name']}");
+		} else {
+			redirect("{$this->app}/{$this->table}/add/?page_id={$this->page_id}&table_name={$this->table_name}");
+		}
+		
 		$this->data['datatable'] = true;
 		$this->data['manage'] 	 = $this->gopanel->get_common_contents($this->page_id, $this->table_name);
-		// debug($this->data['manage']);
 		$this->render($this->table . '/manage', $this->data);
 	}
 

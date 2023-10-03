@@ -62,7 +62,9 @@ $route['rating']					= 'Process/rating';
 $route['Process/rating']			= 'Process/rating';
 
 //Static pages
-$route['404']								= 'Pages/error_404';
+$route['(:any)/about']				= 'Pages/about';
+$route['(:any)/faq']				= 'Pages/faq';
+$route['(:any)/contact']			= 'Pages/contact';
 
 
 
@@ -94,10 +96,6 @@ $db->close();
 // System rotue
 $route['404']								= 'Pages/error_404';
 $route['lang/(:any)']						= 'Process/langChange/$1';
-
-// $route['(:any)/(:any)']         			= 'Pages/static_pages/$1';
-// $general_settings = $this->config->item('general_settings');
-// $routes = $this->config->item('routes');
 $lanugages = $this->config->item('routes');
 
 $route['(:any)'] 					= 'Home/language/$1';

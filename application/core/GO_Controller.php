@@ -69,16 +69,15 @@ class GO_Controller extends MX_Controller
 			// $this->data['lang'] 			= $this->lang;
 			$this->data['lang'] 			= $this->locale;
 			$this->data['settings'] 		= $settings;
-			$this->data['social'] 			= $this->core->social();
+			// $this->data['social'] 			= $this->core->social();
 			$this->data['contacts'] 		= $this->core->contact();
 			$this->data['menu'] 			= $this->core->menu();
-			$this->data['pages'] 			= $this->core->pages();
-			$this->data['seo_pages'] 		= $this->core->seo_pages();
-			$this->data['langs'] 			= $this->titles();
-			$this->data['content'] 			= $this->content();
+			// $this->data['pages'] 			= $this->core->pages();
+			// $this->data['seo_pages'] 		= $this->core->seo_pages();
+			// $this->data['langs'] 			= $this->titles();
+			// $this->data['content'] 			= $this->content();
 			$this->data['scripts']			= "";
 			// ob_start("sanitize_output");
-
 			$this->load->view("blocks/head", $this->data);
 			$this->load->view("blocks/header", $this->data);
 			$this->load->view($view);

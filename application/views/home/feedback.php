@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col-12">
           <div class="feedback-title">
-              <span>Saytimizda olan funksialari beyenirsiniz ?</span>
+              <span><?=content('feedback_text')['title'] ?></span>
+              <?=content('feedback_text')['desc'] ?>
           </div>
           <div class="feedback-area">
             <ul class="feedback">
@@ -75,7 +76,7 @@
             </div>
             <div class="feedback-btn">
                 <button>
-                    Submit
+                    <?=lang("submit_btn") ?>
                 </button>
             </div>
           </div>

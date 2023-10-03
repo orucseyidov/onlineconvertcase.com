@@ -43,32 +43,13 @@ class Core extends GO_Model
 
 	public function menu()
 	{
-		$this->db->select('*');
-		$this->db->from('static_pages');
-		$this->db->where("type", 1);
-		$this->db->where("locale", $this->locale);
-		return $this->db->get()->result_array();
-	}
-
-	public function pages()
-	{
-		$this->db->select('*');
-		$this->db->from('static_pages');
-		$this->db->where("type", 2);
-		$this->db->where("locale", $this->locale);
-		$this->db->order_by("id","RANDOM");
-		return $this->db->get()->result_array();
-	}
-
-	public function seo_pages()
-	{
-		$this->db->select('*');
-		$this->db->from('seo_pages');
+		$this->db->select('name,slug');
+		$this->db->from('menu');
 		$this->db->where("status", 1);
 		$this->db->where("locale", $this->locale);
-		$this->db->order_by("id","RANDOM");
 		return $this->db->get()->result_array();
 	}
+
 
 	public function info_msg($keyyword){
 		$this->db->select("title as title, description as desc");

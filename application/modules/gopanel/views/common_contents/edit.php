@@ -33,11 +33,6 @@
                                     <label>Başlıq</label>
                                     <input type="text" name="title" class="form-control" value="<?=$values['title']; ?>" >
                                 </div>
-
-                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-                                    <label>Başlıq (Menyu)</label>
-                                    <input type="text" name="title_menu" class="form-control" value="<?=$values['title_menu']; ?>" >
-                                </div>
                                 
                                 <div class="col-md-3 col-sm-12 col-xs-12 form-group">
                                     <label>Dil seçin</label>
@@ -55,6 +50,17 @@
                                     <label>Haqqında</label>
                                     <textarea class="form-control ckeditor" rows="5" name="description" ><?=$values['description']; ?></textarea>
                                 </div>
+
+                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                    <label>Başlıq (SEO)</label>
+                                    <input type="text" name="seo_title" class="form-control" value="<?=$values['seo_title']; ?>">
+                                </div>
+
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Məlumat (SEO)</label>
+                                    <textarea class="form-control ckeditor" rows="5" name="seo_description"><?=$values['seo_description']; ?></textarea>
+                                </div>
                                                   
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Açar sözlər</label>
@@ -64,25 +70,6 @@
                                 <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                                     <label>Link <small>Linkyoxdursa boş saxlaya bilərsiz</small></label>
                                     <input type="text" name="slug" class="form-control" placeholder="Nümunə : <?=base_url() ?>" value="<?=$values['slug']; ?>" required>
-                                </div>
-
-                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-                                    <label>
-                                        Status 
-                                        <small><?=$values['status'] == 1 ? 'Hal hazırda aktivdir' : 'Hal hazırda deaktivdir' ?></small> 
-                                    </label>
-                                    <select class="form-control" name="status">
-                                        <option value="1" <?=s($values['status'],1) ?> >Aktiv</option>
-                                        <option value="0" <?=s($values['status'],0) ?> >Deaktiv</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-                                    <label>Mövqey</label>
-                                    <select class="form-control" name="type">
-                                        <option value="1" <?=s($values['type'],1) ?> >Menyu</option>
-                                        <option value="2" <?=s($values['type'],2) ?> >Footer</option>
-                                    </select>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">

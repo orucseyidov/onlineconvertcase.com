@@ -9,7 +9,7 @@
                   <svg class="icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 13.5L13 6.5M6 6.5L13 13.5" stroke="#52667A" stroke-width="1.25" stroke-linecap="round"></path>
                   </svg>
-                  <span>Clear</span>
+                  <span><?=lang('clear_btn') ?></span>
                 </a>
               </div>
               <button id="sentence" class="modifier-button sort-lines" style="margin-right: 4px" onclick="toSentenceCase(); return false;">
@@ -36,7 +36,7 @@
                   312 73 75 183 108 338 100 55 -3 128 -12 161 -20z" />
                     </g>
                   </svg>
-                <span>Sentence case</span>
+                <span><?=lang('sentence_case') ?></span>
               </button>
               <button id="lower" class="modifier-button to-lowercase" style="margin-right: 4px" onclick="toLowerCaseText(); return false;">
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
@@ -59,7 +59,7 @@
                   224 -124 237 -48 544 170 686 142 93 290 116 448 72z" />
                     </g>
                 </svg>
-                <span>To lower case</span>
+                <span><?=lang('to_lower_case') ?></span>
               </button>
               <button id="upper" class="modifier-button replace-linebreaks" style="margin-right: 4px" onclick="toUpperCaseText(); return false;">
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
@@ -80,7 +80,7 @@
                 466 45 188 205 348 398 397 77 20 217 11 297 -18z" />
                   </g>
                 </svg>
-                <span>UPPER CASE</span>
+                <span><?=lang('upper_case') ?></span>
               </button>
               <button id="capitalized" class="modifier-button trim-whitespace" onclick="toCapitalizedCase(); return false;">
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
@@ -106,7 +106,7 @@
                 -540 131z" />
                   </g>
                 </svg>
-                <span>Capitalized Case</span>
+                <span><?=lang('capitalized_case') ?></span>
               </button>
               <button id="alternating" class="modifier-button trim-whitespace" onclick="toAlternatingCase(); return false;">
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
@@ -158,7 +158,7 @@
                 30 75 0 105 -21 22 -24 22 -424 23 -221 1 -412 0 -424 -3z" />
                   </g>
                 </svg>
-                <span>aLtErNaTiNg cAsE</span>
+                <span><?=lang('alternating_case') ?></span>
               </button>
               <button id="titleCase" class="modifier-button trim-whitespace" onclick="toTitleCase(); return false;">
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
@@ -175,7 +175,7 @@
                 46 -81 53 -28 8 -308 11 -930 11 -731 -1 -897 -3 -929 -15z" />
                   </g>
                 </svg>
-                <span>Title Case</span>
+                <span><?=lang("title_case") ?></span>
               </button>
               <button id="inverse" class="modifier-button trim-whitespace" onclick="toInverseCase(); return false;">
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
@@ -189,15 +189,15 @@
                 178 50 376 -87 513 -66 66 -144 108 -227 124 -80 15 -1931 12 -1994 -4z" />
                   </g>
                 </svg>
-                <span>InVeRsE CaSe</span>
+                <span><?=lang('inverse_case') ?></span>
               </button>
               <button id="download" class="modifier-button trim-whitespace" onclick="downloadTextAsFile(); return false;">
                 <img class="icon" src="/assets/img/icons/file.png">
-                <span>Download text</span>
+                <span><?=lang('download_text') ?></span>
               </button>
               <button id="copy" class="modifier-button trim-whitespace" onclick="copyTextToClipboard(); return false;">
                 <img class="icon" src="/assets/img/icons/copy.png">
-                <span>Copy to Clipboard</span>
+                <span><?=lang('copy_to_clipboard') ?></span>
               </button>
             </div>
         </div>
