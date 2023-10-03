@@ -1,33 +1,35 @@
 <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="recomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <h5 class="modal-title" id="exampleModalLabel"><?=lang('modal_title_recommend') ?></h5>
+            <button type="button" class="close" id="recomModalclose" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="recommendForm">
               <div class="form-group">
-                <label for="formName">Full Name</label>
-                <input type="email" class="form-control" id="formName" aria-describedby="emailHelp" placeholder="Enter email">
+                <label for="formName"><?=lang('modal_name') ?></label>
+                <input type="text" class="form-control" id="formName" name="fullname" placeholder="<?=lang('modal_name') ?>" required>
               </div>
               <div class="form-group">
-                <label for="emailForm">Email</label>
-                <input type="email" class="form-control" id="emailForm" placeholder="Password">
+                <label for="emailForm"><?=lang('modal_email') ?></label>
+                <input type="email" class="form-control" id="emailForm" name="email" placeholder="<?=lang('modal_email') ?>">
               </div>
               <div class="form-group">
-                <label for="formFeedback">Feedback</label>
-                <textarea class="form-control" name="" id="formFeedback"></textarea>
+                <label for="formFeedback"><?=lang('modal_feedback') ?></label>
+                <textarea class="form-control" name="comment" id="formFeedback" required></textarea>
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="checkForm">
-                <label class="form-check-label" for="checkForm">Check me out</label>
+                <label class="form-check-label" name="checkForm" for="checkForm"><?=lang("modal_check") ?></label>
               </div>
               <div>
-                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                <button type="submit" class="btn btn-primary btn-block">
+                  <?=lang("modal_submit") ?>
+                </button>
               </div>
             </form>
           </div>

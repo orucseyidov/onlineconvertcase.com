@@ -6,9 +6,10 @@
               <span><?=content('feedback_text')['title'] ?></span>
               <?=content('feedback_text')['desc'] ?>
           </div>
-          <div class="feedback-area">
+          <div class="feedback-area feedback-d-none">
             <ul class="feedback">
               <li class="angry">
+                  <input class="feedback-input" type="checkbox" name="rate" value="1">
                   <div>
                       <svg class="eye left">
                           <use xlink:href="#eye">
@@ -22,6 +23,7 @@
                   </div>
               </li>
               <li class="sad">
+                <input class="feedback-input" type="checkbox" name="rate" value="2">
                   <div>
                       <svg class="eye left">
                           <use xlink:href="#eye">
@@ -35,9 +37,11 @@
                   </div>
               </li>
               <li class="ok">
+                  <input class="feedback-input" type="checkbox" name="rate" value="3">
                   <div></div>
               </li>
               <li class="good active">
+                <input class="feedback-input" type="checkbox" name="rate" value="4" checked>
                   <div>
                       <svg class="eye left">
                           <use xlink:href="#eye">
@@ -51,6 +55,7 @@
                   </div>
               </li>
               <li class="happy">
+                <input class="feedback-input" type="checkbox" name="rate" value="5">
                   <div>
                       <svg class="eye left">
                           <use xlink:href="#eye">
@@ -70,12 +75,12 @@
               </symbol>
           </svg>
           </div>
-          <div class="feedback-form-area">
+          <div class="feedback-form-area feedback-d-none">
             <div class="feedback-comment">
-                <textarea></textarea>
+                <textarea id="commentFeedback"></textarea>
             </div>
             <div class="feedback-btn">
-                <button>
+                <button id="feedbackBtn">
                     <?=lang("submit_btn") ?>
                 </button>
             </div>

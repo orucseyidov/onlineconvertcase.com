@@ -21,7 +21,7 @@
           <div class="banner-two-center">
             <h3><?=content('recommend_tool')['title'] ?></h3>
             <p><?=content('recommend_tool')['desc'] ?></p>
-            <button class="default-btn banner-btn" data-toggle="modal" data-target="#exampleModal">
+            <button class="default-btn banner-btn" data-toggle="modal" data-target="#recomModal">
               <?=lang('recommendations_btn') ?>
             </button>
           </div>

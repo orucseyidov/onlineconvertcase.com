@@ -837,6 +837,9 @@ textarea:focus {
     font-size: 18px;
 }
 
+.feedback-input{
+    display: none;
+}
 
 /*Other tools pages*/
 

@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-12">
           <div class="text-area">
-            <textarea id="textCaseInput" class="textarea"></textarea>
+            <textarea id="textCaseInput" class="textarea" placeholder="<?=lang('textare_placeholder') ?>"></textarea>
           </div>
           <div class="counters">
               <div class="row">

@@ -58,8 +58,8 @@ $route['gopanel/login'] 			= 'gopanel/auth/login';
 
 
 //Rating routes
-$route['rating']					= 'Process/rating';
-$route['Process/rating']			= 'Process/rating';
+$route['feedback']					= 'Process/feedback';
+$route['recommend']					= 'Process/recommend';
 
 //Static pages
 $route['(:any)/about']				= 'Pages/about';
