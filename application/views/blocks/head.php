@@ -73,6 +73,19 @@
 
     gtag('config', 'G-7FN1V1MPSQ');
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    "name": "Case Converter",
+    "url": "https://www.onlineconvertcase.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.onlineconvertcase.com/{search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
   <?php
   if (isset($json_ltd) && is_array($json_ltd) && count($json_ltd)) {
     foreach ($json_ltd as $key => $value) {

@@ -48,6 +48,8 @@ class Home extends GO_Controller {
 	public function renderHome(){
 		$this->data['other_tools'] 			= $this->groups();
 		$this->data['home_about_blocks'] 	= $this->home->home_about_blocks();
+		$this->data['other_tool_json'] 		= $this->home->other_tools();
+		$this->data['json_ltd']				= ['home'];
 		$this->render("home/home",$this->data);
 	}
 
