@@ -3,7 +3,11 @@ const textCaseInput   = document.getElementById("textCaseInput");
 
 
 textCaseInput.addEventListener("input", function () {
+    counter();    
+});
 
+
+function counter(){
     let characterCount  = document.getElementById("characterCount");
     let wordCount       = document.getElementById("wordCount");
     let lineCount       = document.getElementById("lineCount");
@@ -19,7 +23,7 @@ textCaseInput.addEventListener("input", function () {
     // Line count
     let lines = text === '' ? 0 : text.split('\n').length;
     lineCount.textContent = lines;
-});
+}
 
 
 function toSentenceCase() {
@@ -135,6 +139,7 @@ function copyTextToClipboard() {
 
 function clearText() {
   textCaseInput.value = '';
+  counter();
 }
 
 
