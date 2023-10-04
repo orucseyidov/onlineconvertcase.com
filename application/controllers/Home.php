@@ -34,7 +34,8 @@ class Home extends GO_Controller {
 				$this->render("other_tools/{$slug}/{$slug}",$this->data);
 			}
 			else{
-				// debug($this->data['tool']);
+				$this->data['json_ltd']				= ['tool','faq'];
+				$this->data['other_tool_json']		= $this->home->other_tools();
 				$this->render("home/other_tools/index",$this->data);
 			}
 		} else {

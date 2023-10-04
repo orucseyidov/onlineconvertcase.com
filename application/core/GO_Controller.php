@@ -45,7 +45,7 @@ class GO_Controller extends MX_Controller
 			"locale"		=> $this->locale,
 			"languages"		=> $this->config->item("languages"),
 			"current_locale" => get_lang($this->config->item("languages"), $this->locale),
-			"api"			=> $this->config->item("api"),
+			"json_ltd"		=> [],
 		);
 
 		$this->data['seo_slug']				= false;

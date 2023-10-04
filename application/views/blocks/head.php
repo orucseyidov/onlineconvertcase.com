@@ -63,6 +63,13 @@
   if (!empty($loadstyle)) {
     $this->load->view($loadstyle);
   }
+  
+  if (isset($json_ltd) && is_array($json_ltd) && count($json_ltd)) {
+    foreach ($json_ltd as $key => $value) {
+      $this->load->view("json-ltd/{$value}");
+    }
+  }
+
   ?>
   
 </head>

@@ -15,6 +15,7 @@ class Pages extends GO_Controller {
 	}
 
 	public function about(){
+		$this->data['json_ltd']				= ['breadcrumb'];
 		$meta = $this->meta_seo($this->uri->segment(2));
 		$about = $this->pages->about($this->locale);
 		$this->data['about']		   = $about;
@@ -22,11 +23,13 @@ class Pages extends GO_Controller {
 	}
 
 	public function contact(){
+		$this->data['json_ltd']				= ['breadcrumb'];
 		$this->getSeoInfo($this->uri->segment(2));
 		$this->render("/pages/contact",$this->data);
 	}
 
 	public function faq(){
+		$this->data['json_ltd']				= ['breadcrumb'];
 		$this->getSeoInfo($this->uri->segment(2));
 		$faq = $this->pages->faq($this->locale);
 		$this->data['faq'] = $faq;
@@ -43,14 +46,16 @@ class Pages extends GO_Controller {
 		$slug 	= $this->uri->segment(2);
 		$page 	= $this->pages->get_static_page($locale, $slug);
 		if (isset($page['id'])) {
+			$this->meta_seo($slug);
 			$this->data['page'] 			= $page;
 			$this->data['title']			= $page['title'];
 			$this->data['key']				= $page['tags'];
 			if (!empty($page['image'])) {
-				$this->data['ogimage']			= $page['image'];
+				$this->data['ogimage']		= $page['image'];
 			}
 			$this->data['desc']				= mb_substr(strip_tags($page['description']), 0,300);
 			$this->data['bgimage']			= $this->data['ogimage'];
+			$this->data['json_ltd']			= ['breadcrumb'];
 			$this->render("/pages/static/static",$this->data);
 		}
 		else{
