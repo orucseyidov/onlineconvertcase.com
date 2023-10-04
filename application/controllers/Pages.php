@@ -29,7 +29,7 @@ class Pages extends GO_Controller {
 	}
 
 	public function faq(){
-		$this->data['json_ltd']				= ['breadcrumb'];
+		$this->data['json_ltd']				= ['breadcrumb','faq'];
 		$this->getSeoInfo($this->uri->segment(2));
 		$faq = $this->pages->faq($this->locale);
 		$this->data['faq'] = $faq;
