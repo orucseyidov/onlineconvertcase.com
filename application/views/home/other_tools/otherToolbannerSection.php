@@ -11,7 +11,7 @@
           <div class="banner-text">
               <div>
                 <h1><?=$tool['title'] ?></h1>
-                <?=$tool['desc'] ?>
+                <?=$tool['description'] ?>
               </div>
           </div>
         </div>
