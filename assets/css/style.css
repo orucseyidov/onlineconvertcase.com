@@ -269,6 +269,29 @@ textarea:focus {
     margin-left: 8px
 }
 
+.clearInput{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.clear-btn-mobil{
+    transition: 0.3s;
+    background: #ffffff;
+    text-decoration: none;
+    border: 1px solid #e0e6eb;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 5px 8px;
+    font-size: 18px;
+    line-height: 15px;
+    color: #52667a;
+    width: 50%;
+    text-align: center;
+}
+
 .right-btns{
     min-width: 230px;
 }

@@ -96,6 +96,12 @@
         display: none;
         visibility: hidden;
     }
+    .clearInput{
+        display: flex;
+    }
+    .clearInput .btn-kofi{
+        margin-bottom: 0!important;
+    }
     .counters{
         margin-top: 10px;
     }

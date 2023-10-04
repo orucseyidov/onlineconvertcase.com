@@ -20,6 +20,13 @@
                 </div>
               </div>
           </div>
+          <div class="clearInput">
+            <a href="https://ko-fi.com/goweb" class="btn-kofi" target="_blank">
+              <img src="/assets/img/icons/kofi.png" alt="Buy me a Coffee" height="14" width="21"> 
+              <?=lang("buy_me_a_coffee") ?>
+            </a>
+            <a class="clear-btn-mobil" href="/" onclick="clearText(); return false;"> <svg class="icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6 13.5L13 6.5M6 6.5L13 13.5" stroke="#52667A" stroke-width="1.25" stroke-linecap="round"></path> </svg> <span>Clear</span> </a>
+          </div>
         </div>
     </div>
   </div>
