@@ -42,7 +42,7 @@ class Common_contents extends Gopanel
 			} else {
 				$this->session->set_flashdata('error', "Sistem xətası baş verdi.");
 			}
-			redirect("{$this->app}/{$this->table}/add/?page_id={$_POST['page_id']}&table_name={$_POST['table_name']}");
+			redirect("{$this->app}/{$this->table}/add/?page_id={$_POST['page_id']}&t_name={$_POST['table_name']}");
 		}
 
 		$this->render($this->table . '/add', $this->data);
@@ -52,9 +52,9 @@ class Common_contents extends Gopanel
 	{
 		$control = $this->gopanel->get_common_content($this->page_id,$this->table_name);
 		if (isset($control['id'])) {
-			redirect("/gopanel/{$this->table}/edit/?id={$control['id']}&page_id={$control['page_id']}&table_name={$control['table_name']}");
+			redirect("/gopanel/{$this->table}/edit/?id={$control['id']}&page_id={$control['page_id']}&t_name={$control['table_name']}");
 		} else {
-			redirect("{$this->app}/{$this->table}/add/?page_id={$this->page_id}&table_name={$this->table_name}");
+			redirect("{$this->app}/{$this->table}/add/?page_id={$this->page_id}&t_name={$this->table_name}");
 		}
 		
 		$this->data['datatable'] = true;
@@ -85,7 +85,7 @@ class Common_contents extends Gopanel
 				$this->session->set_flashdata('error', "Sistem xətası baş verdi.");
 			}
 
-			redirect("/gopanel/{$this->table}/edit/?id={$id}&page_id={$values['page_id']}&table_name={$values['table_name']}");
+			redirect("/gopanel/{$this->table}/edit/?id={$id}&page_id={$values['page_id']}&t_name={$values['table_name']}");
 		}
 
 		$this->data['id'] 		= $id;
