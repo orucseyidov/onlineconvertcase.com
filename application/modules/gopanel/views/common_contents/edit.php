@@ -67,7 +67,7 @@
                                     <input type="text" name="keywords" class="form-control tags" value="<?=$values['keywords']; ?>">
                                 </div>
                                 
-                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Link <small>Linkyoxdursa boş saxlaya bilərsiz</small></label>
                                     <input type="text" name="slug" class="form-control" placeholder="Nümunə : <?=base_url() ?>" value="<?=$values['slug']; ?>">
                                 </div>
