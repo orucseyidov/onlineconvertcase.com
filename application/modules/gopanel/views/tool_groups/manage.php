@@ -36,6 +36,7 @@
                                     <th>№</th>
                                     <th>Başlıq</th>
                                     <th>Tools</th>
+                                    <th>Status</th>
                                     <th>Əməliyyatlar</th>
                                 </tr>
                             </thead>
@@ -53,6 +54,22 @@
                                             <a href="<?=$other_tools ?>">
                                                 <?=$value['count_tools']; ?>
                                             </a>
+                                        </td>
+                                        <td>
+                                            <input
+                                            class         ="status"
+                                            type          ="checkbox"
+                                            data-size     ="small"
+                                            data-toggle   ="toggle"
+                                            data-on       ="Aktiv"
+                                            data-off      ="Deaktiv"
+                                            data-onstyle  ="success"
+                                            data-offstyle ="danger"
+                                            dataROW       ="status"
+                                            dataID        ="<?=$value['id']; ?>"
+                                            dataTable     ="<?=$table; ?>"
+                                            <?php echo ($value['status'] == 1) ? "checked" : " " ; ?>
+                                            >
                                         </td>
                                         <td>
                                             <div class="manage">
