@@ -63,7 +63,17 @@
   if (!empty($loadstyle)) {
     $this->load->view($loadstyle);
   }
-  
+  ?>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN1V1MPSQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7FN1V1MPSQ');
+  </script>
+  <?php
   if (isset($json_ltd) && is_array($json_ltd) && count($json_ltd)) {
     foreach ($json_ltd as $key => $value) {
       $this->load->view("json-ltd/{$value}");
