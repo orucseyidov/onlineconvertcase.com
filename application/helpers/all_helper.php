@@ -282,78 +282,11 @@ function get_lang_url($current, $lang)
 }
 
 
-function get_download_url($get){
-	$result = '';
-	foreach ($get as $key => $value) {
-		if ($key != 'mim' && $key != 'name' && $key != 'download_type' ) {
-			$result .= "{$key}={$value}&";
-		}
-	}
-	return ltrim(rtrim($result,"&"),"link=");
-}
-
-function thousandsCurrencyFormat($num) {
-
-  if($num>1000) {
-
-        $x = round($num);
-        $x_number_format = number_format($x);
-        $x_array = explode(',', $x_number_format);
-        $x_parts = array('k', 'm', 'b', 't');
-        $x_count_parts = count($x_array) - 1;
-        $x_display = $x;
-        $x_display = $x_array[0] . ((int) $x_array[1][0] !== 0 ? '.' . $x_array[1][0] : '');
-        $x_display .= $x_parts[$x_count_parts - 1];
-
-        return $x_display;
-
-  }
-
-  return $num;
-}
-
-
-function link_generation($data,$type){
-	$search_id = $data['search_id'] ?? 0;
-	switch ($type) {
-		case 'withoutWatermark':
-			$download_name 	= seflink($data['nickname'].'-'.$data['desc']);
-			$link 			= $data['withoutWatermark']['url_list'][0];
-			$mim 			= 'mp4';
-			$download_type  = 1;
-		break;
-		case 'watermark':
-			$download_name 	= seflink($data['nickname'].'-'.$data['desc']);
-			$link 			= $data['watermark']['url_list'][0];
-			$mim 			= 'mp4';
-			$download_type  = 2;
-		break;
-		case 'music':
-			$download_name 	= seflink($data['nickname'].'-'.$data['desc']);
-			$link 			= $data['music']['url']['url_list'][0];
-			$mim 			= 'mp3';
-			$download_type  = 3;
-		break;
-		case 'profile':
-			$download_name 	= seflink($data['nickname'].'-'.$data['desc']);
-			$link 			= $data['avatar']['url_list'][0];
-			$mim 			= 'webp';
-			$download_type  = 4;
-		break;
-		case 'cover':
-			$download_name 	= seflink($data['nickname'].'-'.$data['desc']);
-			$link 			= $data['cover']['url_list'][0];
-			$mim 			= 'jpeg';
-			$download_type  = 5;
-		break;
-		default:
-			$download_name 	= uniqid();
-			$link 			= '';
-			$mim 			= 'jpeg';
-			$download_type  = 6;
-		break;
-	}
-    return base_url("Process/download/?link={$link}&mim={$mim}&name={$download_name}-bomtik.com&search_id={$search_id}&download_type={$download_type}");
+if (!function_exists("decode_text")) {
+    function decode_text($text)
+    {
+        return html_entity_decode(strip_tags($text));
+    }
 }
 
 

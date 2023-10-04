@@ -10,17 +10,17 @@
   <title><?= $title ?></title>
   <meta name="robots" content="index, follow">
   <meta name="title" content="<?= $title ?>" />
-  <meta name="description" content="<?= $desc ?>" />
+  <meta name="description" content="<?= decode_text($desc) ?>" />
   <meta name="keywords" content="<?= $key ?>">
   <meta property="og:locale" content="<?=ucwords($locale)."_".$locale ?>" />
   <meta property="og:image" content="<?= $ogimage ?>" />
   <meta property="og:type" content="Online Tools" />
   <meta property="og:title" content="<?= $title ?>" />
   <meta property="og:site_name" content="<?= $settings['site_title']; ?>" />
-  <meta property="og:description" content="<?= $desc ?>" />
+  <meta property="og:description" content="<?= decode_text($desc) ?>" />
   <meta property="og:url" content="<?= base_url($_SERVER['REQUEST_URI']) ?>" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" content="<?= $desc ?>" />
+  <meta name="twitter:description" content="<?= decode_text($desc) ?>" />
   <meta name="twitter:title" content="<?= $title ?>" />
   <meta name="token" content="<?= $token ?>">
   <meta name="device" content="<?= $device ?>">
