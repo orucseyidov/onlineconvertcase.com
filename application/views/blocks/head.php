@@ -13,7 +13,7 @@
   <meta name="description" content="<?= $desc ?>" />
   <meta name="keywords" content="<?= $key ?>">
   <meta property="og:locale" content="<?=ucwords($locale)."_".$locale ?>" />
-  <meta property="og:image" content="<?= base_url($ogimage) ?>" />
+  <meta property="og:image" content="<?= $ogimage ?>" />
   <meta property="og:type" content="Online Tools" />
   <meta property="og:title" content="<?= $title ?>" />
   <meta property="og:site_name" content="<?= $settings['site_title']; ?>" />
