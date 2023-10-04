@@ -80,7 +80,7 @@ class Home extends GO_Controller {
 	public function meta_seo($tool)
 	{
 		$settings 	= $this->settings;
-		if (count($seo) > 0) {
+		if (count($tool) > 0) {
 			$this->data['breadcrumbTitle'] = !empty($tool['title']) ? $tool['title'] : $settings['site_title'];
 			$this->data['title']  	= !empty($tool['title']) ? $tool['title'] : $settings['site_title'];
 			$this->data['desc']   	= !empty($tool['description']) ? $tool['description'] : $settings['description'];
