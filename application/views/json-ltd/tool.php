@@ -15,7 +15,7 @@
       foreach ($other_tool_json as $key => $value): 
         $tool_line .= '{"@type": "HowToTool","name": "'.$value['title'].'"},';  
       endforeach; 
-      echo rtrim(rtrim($tool_line,','),"}");
+      echo rtrim($tool_line,',');
       ?>
     ],
   <?php endif ?>
