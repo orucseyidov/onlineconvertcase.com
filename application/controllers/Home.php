@@ -16,6 +16,7 @@ class Home extends GO_Controller {
 			if (isset($tool['id'])) {
 				$this->data['tool'] = $tool;
 				$this->data['faq'] 	= $this->home->faq($tool['id']);
+				$this->meta_seo($tool);
 				$this->renderTool($tool,$slug);
 			} else {
 				$this->renderHome();
@@ -34,6 +35,7 @@ class Home extends GO_Controller {
 				$this->render("other_tools/{$slug}/{$slug}",$this->data);
 			}
 			else{
+
 				$this->data['json_ltd']				= ['tool','faq'];
 				$this->data['other_tool_json']		= $this->home->other_tools();
 				$this->render("home/other_tools/index",$this->data);
@@ -72,5 +74,23 @@ class Home extends GO_Controller {
 			}
 		}
 		return $response;
+	}
+
+
+	public function meta_seo($tool)
+	{
+		$settings 	= $this->settings;
+		if (count($seo) > 0) {
+			$this->data['breadcrumbTitle'] = !empty($tool['title']) ? $tool['title'] : $settings['site_title'];
+			$this->data['title']  	= !empty($tool['title']) ? $tool['title'] : $settings['site_title'];
+			$this->data['desc']   	= !empty($tool['description']) ? $tool['description'] : $settings['description'];
+			$this->data['key']     	= !empty($tool['keywords']) ? $tool['keywords'] : $settings['tags'];
+			$this->data['ogimage'] 	= !empty($tool['image']) ? base_url($tool['image']) : base_url($settings['og_image']);
+		}
+		if (empty($this->data['ogimage'])) {
+			$this->data['ogimage'] = $settings['og_image'];
+		}
+
+		// return $seo;
 	}
 }
