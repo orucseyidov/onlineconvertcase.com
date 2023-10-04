@@ -11,7 +11,7 @@
     "@type": "ListItem", 
     "position": 2, 
     "name": "<?=$breadcrumbTitle ?? $title ?>",
-    "item": "<?=base_url($this->uri->segment(2)) ?>"  
+    "item": "<?=base_url($locale.'/'.$this->uri->segment(2)) ?>"  
   }]
 }
 </script>
