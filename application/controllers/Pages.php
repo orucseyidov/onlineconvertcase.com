@@ -79,7 +79,7 @@ class Pages extends GO_Controller {
 			$this->data['ogimage'] = $settings['og_image'];
 		}
 
-		return $seo;
+		// return $seo;
 	}
 
 
