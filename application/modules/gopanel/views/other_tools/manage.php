@@ -43,7 +43,7 @@
                                 <?php
                                     foreach ($manage as $key => $value): 
                                         $editlink = base_url("gopanel/{$class}/edit/?id={$value['id']}");
-                                        $contents = base_url("gopanel/common_contents/manage/?page_id={$value['id']}&table_name={$class}");
+                                        $contents = base_url("gopanel/common_contents/manage/?page_id={$value['id']}&t_name={$class}");
                                 ?>
                                     <tr>
                                         <td><?=$counter++ ?></td>
