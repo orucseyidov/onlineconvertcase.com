@@ -10,8 +10,8 @@
           </div>
           <div class="banner-text">
               <div>
-                <h1><?=content("home_intro_text")['title'] ?></h1>
-                <?=content("home_intro_text")['desc'] ?>
+                <h1><?=$tool['title'] ?></h1>
+                <?=$tool['desc'] ?>
               </div>
           </div>
         </div>

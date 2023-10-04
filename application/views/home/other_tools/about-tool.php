@@ -7,9 +7,9 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 about-block">
           <div class="card">
             <div class="card-body">
-              <h2 class="card-title"><?$tool['title'] ?></h2>
+              <h2 class="card-title"><?$tool['seo_title'] ?></h2>
               <p class="card-text">
-                <?$tool['description'] ?>
+                <?=$tool['seo_description'] ?>
               </p>
             </div>
           </div>
