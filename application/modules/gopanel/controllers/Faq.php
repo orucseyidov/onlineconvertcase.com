@@ -13,6 +13,7 @@ class Faq extends Gopanel
 		$this->load->helper("file_upload");
 		$this->data['btitle']	= ' Ən çox verilən suallar';
 		$this->page_id = isset($_GET['page_id']) ? $_GET['page_id'] : NULL;
+		$this->data['other_groups'] = $this->gopanel->get_tools_others();
 	}
 
 	public function index()
@@ -22,10 +23,13 @@ class Faq extends Gopanel
 
 	public function add()
 	{
+
 		// core
 		if (isset($_POST['token'])) {
 			unset($_POST['token']);
-
+			if (isset($_POST['page_id']) && (empty($_POST['page_id']) || is_null($_POST['page_id']))) {
+				$_POST['page_id'] = NULL;
+			}
 			if ($this->core->add($this->table, $_POST)) {
 				$this->session->set_flashdata('success', "Məlumat Uğurla Əlavə edildi");
 			} else {
@@ -40,7 +44,7 @@ class Faq extends Gopanel
 	public function manage()
 	{
 		$this->data['datatable'] = true;
-		$this->data['manage'] 	 = $this->gopanel->get_select_all($this->table, "*", null, $this->locale, "rank");
+		$this->data['manage'] 	 = $this->gopanel->get_faqs();
 		$this->render($this->table . '/manage', $this->data);
 	}
 
@@ -51,7 +55,9 @@ class Faq extends Gopanel
 
 		if (isset($_POST['token'])) {
 			unset($_POST['token']);
-
+			if (isset($_POST['page_id']) && (empty($_POST['page_id']) || is_null($_POST['page_id']))) {
+				$_POST['page_id'] = NULL;
+			}
 			if ($this->core->update($this->table, $id, $_POST)) {
 				$this->session->set_flashdata('success', "Məlumat Uğurla Dəyişdirildi!");
 				$this->data['values'] 	= $this->core->get_values($this->table, $id);

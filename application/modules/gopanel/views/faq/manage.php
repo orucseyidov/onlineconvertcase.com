@@ -35,6 +35,7 @@
                                 <tr>
                                     <th><i class="fas fa-expand-arrows-alt"></i></th>
                                     <th>№</th>
+                                    <th>Səhifə</th>
                                     <th>Sual</th>
                                     <th>Cavab</th>
                                     <th>Dil</th>
@@ -50,6 +51,7 @@
                                     <tr id="ord-<?=$value['id']?>">
                                         <td class="sort-td"><i class="fas fa-arrows-alt-v"></i></td>
                                         <td><?=$counter++ ?></td>
+                                        <td><?=$value['page_name'] ?></td>
                                         <td><?=$value['question']; ?></td>
                                         <td><?=mb_substr(strip_tags($value['answer']), 0,50) ?></td>
                                         <td><?=$value['locale'] ?></td>

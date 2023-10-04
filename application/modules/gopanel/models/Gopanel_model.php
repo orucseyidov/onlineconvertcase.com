@@ -253,4 +253,23 @@ class Gopanel_model extends GO_Model {
 		$this->db->order_by("id","DESC");
         return $this->db->get()->result_array();
 	}
+
+
+	public function get_tools_others(){
+		$this->db->select('*');
+		$this->db->from('other_tools');
+		$this->db->order_by("id","DESC");
+        return $this->db->get()->result_array();
+	}
+
+
+	public function get_faqs(){
+		$this->db->select('
+			faq.*,
+			(SELECT name FROM other_tools WHERE id=faq.page_id) as page_name
+		');
+		$this->db->from('faq');
+		$this->db->order_by("id","DESC");
+        return $this->db->get()->result_array();
+	}
 }
