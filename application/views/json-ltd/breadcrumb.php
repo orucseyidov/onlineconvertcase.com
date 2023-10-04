@@ -10,7 +10,7 @@
   },{
     "@type": "ListItem", 
     "position": 2, 
-    "name": "<?=breadcrumbTitle ?? $title ?>",
+    "name": "<?=$breadcrumbTitle ?? $title ?>",
     "item": "<?=$this->uri->segment(2) ?>"  
   }]
 }
