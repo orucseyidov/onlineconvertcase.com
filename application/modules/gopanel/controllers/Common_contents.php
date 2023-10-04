@@ -12,7 +12,7 @@ class Common_contents extends Gopanel
 		$this->load->helper("file_upload");
 		$this->data['btitle']	= ' Statik səhifələr';
 		$this->page_id 		= isset($_GET['page_id']) ? $_GET['page_id'] : NULL;
-		$this->table_name 	= isset($_GET['table_name']) ? $_GET['table_name'] : NULL;
+		$this->table_name 	= isset($_GET['t_name']) ? $_GET['t_name'] : NULL;
 		$this->data['page_id'] = $this->page_id;
 		$this->data['table_name'] = $this->table_name;
 	}
