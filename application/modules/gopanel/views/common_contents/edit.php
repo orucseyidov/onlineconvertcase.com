@@ -76,9 +76,11 @@
                                     <label>Şəkli</label>
                                     <small class="pull-right imgnotfiy">Ölçü 804 x 400</small>
                                     <input type="file" name="image" class="filestyle" data-buttonname="btn-secondary" data-buttonText="Şəkil Seçin" data-classIcon="fas fa-file-import" data-buttonBefore="false">
-                                    <a class="imgarea" target="_blank" href="<?=$values['image']; ?>">
-                                        <img style="max-width: 250px;" src="<?=base_url($values['image']) ?>">
-                                    </a>
+                                    <?php if (!is_null($values['image'])): ?>
+                                        <a class="imgarea" target="_blank" href="<?=$values['image']; ?>">
+                                            <img style="max-width: 250px;" src="<?=base_url($values['image']) ?>">
+                                        </a>
+                                    <?php endif ?>
                                 </div>
 
                                 <div class="hidden-inputs">
