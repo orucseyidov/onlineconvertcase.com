@@ -12,24 +12,15 @@ class Sitemap_model extends GO_Model {
 	public function menu()
 	{
 		$this->db->select('*');
-		$this->db->from('static_pages');
-		$this->db->where("type", 1);
+		$this->db->from('menu');
+		$this->db->where("slug !=","/");
 		return $this->db->get()->result_array();
 	}
 
-	public function pages()
+	public function other_tools()
 	{
 		$this->db->select('*');
-		$this->db->from('static_pages');
-		$this->db->where("type", 2);
-		return $this->db->get()->result_array();
-	}
-
-
-	public function seo_pages()
-	{
-		$this->db->select('*');
-		$this->db->from('seo_pages');
+		$this->db->from('other_tools');
 		return $this->db->get()->result_array();
 	}
 }

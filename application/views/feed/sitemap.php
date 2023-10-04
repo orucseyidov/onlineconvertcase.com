@@ -8,20 +8,11 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml"   
 >
 	<url>
-	  <loc><?=base_url() ?></loc>
+	  <loc><?=base_url('en') ?></loc>
 	  <lastmod><?= date("Y-m-d") ?></lastmod>
 	  <changefreq>daily</changefreq>
 	  <priority>1.00</priority>
 	</url>
-	<?php foreach ($languages as $key => $value): ?>
-		<url>
-		  <loc><?=base_url($value['locale']) ?></loc>
-		  <!-- <xhtml:link rel="alternate" hreflang="<?=$value['locale'] ?>" href="<?=base_url($value['locale']) ?>" /> -->
-		  <lastmod><?= date("Y-m-d") ?></lastmod>
-		  <changefreq>daily</changefreq>
-		  <priority>1.00</priority>
-		</url>
-	<?php endforeach ?>
 	<?php foreach ($menu as $key => $value): ?>
 		<url>
 		  <loc><?=base_url($value['locale']."/".$value['slug']) ?></loc>
@@ -30,17 +21,9 @@
 		  <priority>1.00</priority>
 		</url>
 	<?php endforeach ?>
-	<?php foreach ($pages as $key => $value): ?>
+	<?php foreach ($tools as $key => $value): ?>
 		<url>
-		  <loc><?=base_url($value['locale']."/".$value['slug']) ?></loc>
-		  <lastmod><?= date("Y-m-d") ?></lastmod>
-		  <changefreq>daily</changefreq>
-		  <priority>1.00</priority>
-		</url>
-	<?php endforeach ?>
-	<?php foreach ($seo_pages as $key => $value): ?>
-		<url>
-		  <loc><?=base_url($value['locale']."/".$value['slug']) ?></loc>
+		  <loc><?=base_url("en/".$value['slug']) ?></loc>
 		  <lastmod><?= date("Y-m-d") ?></lastmod>
 		  <changefreq>daily</changefreq>
 		  <priority>1.00</priority>

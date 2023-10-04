@@ -70,6 +70,8 @@ $route['(:any)/contact']			= 'Pages/contact';
 
 
 // Other pages
+$route['robots.txt']				= 'Sitemap/robots';
+$route['robots']					= 'Sitemap/robots';
 $route['sitemap.xml']				= 'Sitemap/index';
 $route['sitemap']					= 'Sitemap/index';
 $route['rss.xml']					= 'Sitemap/rss';

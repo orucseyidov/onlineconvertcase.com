@@ -18,8 +18,7 @@ class Sitemap extends GO_Controller {
 	public function index(){
 		
 		$this->data['menu'] 			= $this->map->menu();
-		$this->data['pages'] 			= $this->map->pages();
-		$this->data['seo_pages'] 		= $this->map->seo_pages();
+		$this->data['tools'] 			= $this->map->other_tools();
 		header("Content-type: text/xml");
 		$this->load->view("feed/sitemap",$this->data);
 	}
@@ -33,6 +32,12 @@ class Sitemap extends GO_Controller {
 		$this->data['productstatus']	= $this->settings['products'];
 		header("Content-type: text/xml");
 		$this->load->view("feed/rss",$this->data);
+	}
+
+
+
+	public function robots(){
+		
 	}
 
 
