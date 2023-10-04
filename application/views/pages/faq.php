@@ -13,11 +13,11 @@
                     foreach ($faq as $key => $value):
                 ?>
                     <div class="card card-sm px-4 py-3 border border-light rounded mb-4">
-                        <div data-target="#panel-<?=$vallue['id'] ?>" class="accordion-panel-header icon-title" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="panel-<?=$vallue['id'] ?>">
+                        <div data-target="#panel-<?=$value['id'] ?>" class="accordion-panel-header icon-title" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="panel-<?=$value['id'] ?>">
                             <span class="h6 mb-0"><?=$value['question'] ?></span> 
                             <span class="icon"><i class="fas fa-angle-down"></i></span>
                         </div>
-                        <div class="collapse show" id="panel-<?=$vallue['id'] ?>">
+                        <div class="collapse show" id="panel-<?=$value['id'] ?>">
                             <div class="accordion-content">
                                 <p><?=$value['answer'] ?></p>
                             </div>
