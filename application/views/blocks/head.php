@@ -43,9 +43,9 @@
   <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- Style -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>">
-  <link rel="stylesheet" href="/assets/css/responsive.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" async>
+  <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>" async>
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=<?= time() ?>" async>
   <!--Style css and-->
   <!-- <link rel="pingback" href="<?=base_url("pingback") ?>" /> -->
   <link rel="canonical" href="<?=current_url() ?>" />
