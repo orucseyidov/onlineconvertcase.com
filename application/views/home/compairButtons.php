@@ -192,11 +192,11 @@
                 <span><?=lang('inverse_case') ?></span>
               </button>
               <button id="download" class="modifier-button trim-whitespace" onclick="downloadTextAsFile(); return false;">
-                <img class="icon" src="/assets/img/icons/file.png">
+                <img class="icon" alt="Download your text" src="/assets/img/icons/file.png">
                 <span><?=lang('download_text') ?></span>
               </button>
               <button id="copy" class="modifier-button trim-whitespace" onclick="copyTextToClipboard(); return false;">
-                <img class="icon" src="/assets/img/icons/copy.png">
+                <img class="icon" alt="Copy to clipboard" src="/assets/img/icons/copy.png">
                 <span><?=lang('copy_to_clipboard') ?></span>
               </button>
             </div>

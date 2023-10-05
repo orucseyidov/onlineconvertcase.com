@@ -5,7 +5,7 @@
         <div class="banner-one">
           <div class="banner-image">
               <div>
-                <img src="/assets/img/icons/compare.png">
+                <img alt="onlineconvertcase.com"  src="/assets/img/icons/compare.png">
               </div>
           </div>
           <div class="banner-text">

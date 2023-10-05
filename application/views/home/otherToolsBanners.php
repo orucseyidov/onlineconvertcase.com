@@ -6,7 +6,7 @@
           <div class="other-tool-banners">
             <div class="other-tool-banners-img">
               <div class="other-tool-banners-img-border">
-                <img src="/assets/img/icons/compress.png">
+                <img alt="Online image compressor" src="/assets/img/icons/compress.png">
               </div>
             </div>
             <div class="other-tool-banners-text">
@@ -27,7 +27,7 @@
           <div class="other-tool-banners">
             <div class="other-tool-banners-img">
               <div class="other-tool-banners-img-border">
-                <img src="/assets/img/icons/svg.png">
+                <img alt="Jpg To Svg" src="/assets/img/icons/svg.png">
               </div>
             </div>
             <div class="other-tool-banners-text">

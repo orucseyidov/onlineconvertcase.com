@@ -9,7 +9,7 @@
                           <div class="menu-and-logo">
                             <div class="logo-desktop">
                                 <a href="">
-                                  <img src="/assets/img/logo-dark.png">
+                                  <img alt="Convert case" src="/assets/img/logo-dark.png">
                                 </a>
                             </div>
                             <div class="menu-desktop">
