@@ -8,7 +8,7 @@
                       <div class="col-12 menu-area">
                           <div class="menu-and-logo">
                             <div class="logo-desktop">
-                                <a href="">
+                                <a href="<?=base_url($locale) ?>">
                                   <img alt="Convert case" src="/assets/img/logo-dark.png">
                                 </a>
                             </div>
