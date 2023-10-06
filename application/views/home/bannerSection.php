@@ -20,7 +20,7 @@
         <div class="banner-two">
           <div class="banner-two-center">
             <h3><?=content('recommend_tool')['title'] ?></h3>
-            <p><?=content('recommend_tool')['desc'] ?></p>
+            <?=content('recommend_tool')['desc'] ?>
             <button class="default-btn banner-btn" data-toggle="modal" data-target="#recomModal">
               <?=lang('recommendations_btn') ?>
             </button>
