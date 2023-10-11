@@ -39,6 +39,55 @@ function clearText() {
 }
 
 
+function downloadTextAsFile() {
+  let filename = 'online-text-convert';
+  let text = textCaseInput.value;
+  // const blob = new Blob([text], { type: 'text/plain' });
+  let blob = new Blob([new TextEncoder().encode(text)], { type: 'text/plain;charset=UTF-8' });
+  let a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
+}
+
+// Other tools functions
+
+function copyTextToClipboardOther() {
+    var outputDiv = document.getElementById('output');
+    var range = document.createRange();
+    range.selectNode(outputDiv);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    
+    try {
+        document.execCommand('copy');
+        console.log('Metin panoya kopyalandı.');
+    } catch (err) {
+        console.error('Metin kopyalama işlemi başarısız oldu: ', err);
+    }
+
+    window.getSelection().removeAllRanges();
+}
+
+function downloadTextAsFileOther() {
+    let filename = 'online-text-convert';
+    let text = document.getElementById('output').innerText; // "output" div içeriğini alır
+    let blob = new Blob([new TextEncoder().encode(text)], { type: 'text/plain;charset=UTF-8' });
+    let a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+}
+
+
 
 document.querySelectorAll('.feedback li').forEach(entry => entry.addEventListener('click', e => {
     // Diğer seçili "li" öğelerini temizle
@@ -145,4 +194,8 @@ document.querySelector('body').addEventListener('submit', function(e) {
     }
     return false;
 });
+
+
+
+
 

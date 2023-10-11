@@ -9,7 +9,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <div class="output" id="output">
-              Your output here
+              𝗧𝘆𝗽𝗲 𝗼𝗿 𝗽𝗮𝘀𝘁𝗲 𝘆𝗼𝘂𝗿 𝗰𝗼𝗻𝘁𝗲𝗻𝘁 𝗵𝗲𝗿𝗲
           </div>
         </div>
         <div class="col-12">
@@ -21,11 +21,11 @@
                   <span>Line Count: <span class="counter-numbers" id="lineCount">0</span></span>  
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 other-tool-btn-block">
-                  <button id="download" class="modifier-button trim-whitespace" onclick="downloadTextAsFile(); return false;">
+                  <button id="download" class="modifier-button trim-whitespace" onclick="downloadTextAsFileOther(); return false;">
                     <img class="icon" src="/assets/img/icons/file.png">
                     <span>Download text</span>
                   </button>
-                  <button id="copy" class="modifier-button trim-whitespace" onclick="copyTextToClipboard(); return false;">
+                  <button id="copy" class="modifier-button trim-whitespace" onclick="copyTextToClipboardOther(); return false;">
                     <img class="icon" src="/assets/img/icons/copy.png">
                     <span>Copy to Clipboard</span>
                   </button>
