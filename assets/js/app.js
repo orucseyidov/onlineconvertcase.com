@@ -1,6 +1,29 @@
 
 const textCaseInput   = document.getElementById("textCaseInput");
 
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+
+function toastrMessage(text,type = 'success'){
+    toastr[type](text);
+}
+
+
 
 textCaseInput.addEventListener("input", function () {
     counter();    
@@ -62,14 +85,13 @@ function copyTextToClipboardOther() {
     range.selectNode(outputDiv);
     window.getSelection().removeAllRanges();
     window.getSelection().addRange(range);
-    
     try {
         document.execCommand('copy');
-        console.log('Metin panoya kopyalandı.');
+        toastrMessage("The output has been copied to the clipboard.");
     } catch (err) {
+        toastrMessage("Copying text failed: " + err);
         console.error('Metin kopyalama işlemi başarısız oldu: ', err);
     }
-
     window.getSelection().removeAllRanges();
 }
 
@@ -85,6 +107,7 @@ function downloadTextAsFileOther() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(a.href);
+    toastrMessage("Your output has been uploaded successfully");
 }
 
 

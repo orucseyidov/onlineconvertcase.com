@@ -32,7 +32,7 @@
               <?php endforeach ?>
               <div class="row mt-5 mt-lg-6">
                   <div class="col text-center">
-                    <a href="<?=base_url("{$locale}/faq") ?>" class="btn btn-primary">
+                    <a href="<?=base_url("faq") ?>" class="btn btn-primary">
                       <span class="mr-2"><i class="fas fa-question-circle"></i></span> See all FAQ
                     </a>
                   </div>
