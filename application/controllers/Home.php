@@ -10,8 +10,8 @@ class Home extends GO_Controller {
 	}
 
 	public function index(){
-		if ($this->uri->segment(2)) {
-			$slug = $this->uri->segment(2);
+		if ($this->uri->segment(1)) {
+			$slug = $this->uri->segment(1);
 			$tool = $this->home->get_other_tool($slug);
 			if (isset($tool['id'])) {
 				$this->data['tool'] = $tool;
@@ -28,24 +28,39 @@ class Home extends GO_Controller {
 	}
 
 	public function renderTool($tool,$slug){
-		if ($tool['page_status'] == 1) {
-			if (file_exists(APPPATH.'views\\other_tools\\'.$slug."\\".$slug.".php")) {
-				$this->data['footerdata'] = '<script type="application/javascript" src="/assets/js/other_tools/'.$slug.'.js"></script>';
-				//Data page
-				$this->render("other_tools/{$slug}/{$slug}",$this->data);
+		if ($tool['page_status'] == 2) {
+			if (!is_null($tool['view'])) {
+				$file 	= $tool['view'];
+				if (file_exists(APPPATH.'views\\other_tools\\'.$file."\\index.php")) {
+					$this->data['json_ltd']	  			= ['tool','faq'];
+					$this->data['other_tool_json']		= $this->home->other_tools();
+					$this->data['footerdata'] .= '<script type="application/javascript" src="/assets/js/other_tools/'.$tool['javascript'].'.js?v='.time().'" async></script>';
+					$this->render("other_tools/{$file}/index",$this->data);
+				}
+				else{
+					$this->renderHome();
+				}
 			}
 			else{
-
-				$this->data['json_ltd']				= ['tool','faq'];
+				if (!is_null($tool['javascript'])) {
+					$this->data['footerdata'] .= '<script type="application/javascript" src="/assets/js/other_tools/'.$tool['javascript'].'.js?v='.time().'" async></script>';
+				}
+				$this->data['json_ltd']	  			= ['tool','faq'];
 				$this->data['other_tool_json']		= $this->home->other_tools();
-				$this->render("home/other_tools/index",$this->data);
+				$this->render("other_tools/static/index",$this->data);
 			}
 		} else {
-			$this->renderHome();
+			$this->data['footerdata'] 			.= '<script src="/assets/js/slider.js?v=1" async></script>';
+			$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js" async></script>';
+			$this->data['json_ltd']				= ['tool','faq'];
+			$this->data['other_tool_json']		= $this->home->other_tools();
+			$this->render("home/other_tools/index",$this->data);
 		}
 		
 	}
 	public function renderHome(){
+		$this->data['footerdata'] 			.= '<script src="/assets/js/slider.js?v=1" async></script>';
+		$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js"></script>';
 		$this->data['other_tools'] 			= $this->groups();
 		$this->data['home_about_blocks'] 	= $this->home->home_about_blocks();
 		$this->data['other_tool_json'] 		= $this->home->other_tools();

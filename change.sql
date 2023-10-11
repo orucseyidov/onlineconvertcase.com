@@ -16,3 +16,9 @@ INSERT INTO `titles` (`id`, `keyword`, `title`, `locale`) VALUES
 -- Yeniler
 ALTER TABLE `static_pages` CHANGE `tags` `keywords` VARCHAR(1500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
 ALTER TABLE `static_pages` ADD `meta_title` VARCHAR(500) NULL AFTER `slug`, ADD `meta_description` TEXT NULL AFTER `meta_title`;
+ALTER TABLE `other_tools` ADD `file` VARCHAR(255) NULL AFTER `slug`;
+
+
+
+ALTER TABLE `other_tools` CHANGE `file` `view` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `other_tools` ADD `javascript` VARCHAR(255) NULL AFTER `view`;

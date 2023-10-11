@@ -41,6 +41,16 @@
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Faylın Adı</label>
+                                    <input type="text" name="view" class="form-control">
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Javascript Faylın Adı</label>
+                                    <input type="text" name="javascript" class="form-control">
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Səhifə Statusu</label>
                                     <select class="form-control" name="page_status">
                                         <option value="1">Ana Səhifə</option>

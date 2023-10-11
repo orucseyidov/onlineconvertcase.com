@@ -26,6 +26,10 @@ class Other_tools extends Gopanel
 		// core
 		if (isset($_POST['token'])) {
 			unset($_POST['token']);
+
+			$_POST['view'] = empty($_POST['view']) ? NULL : $_POST['view'];
+			$_POST['javascript'] = empty($_POST['javascript']) ? NULL : $_POST['javascript'];
+
 			if ($this->core->add($this->table, $_POST)) {
 				$this->session->set_flashdata('success', "Məlumat Uğurla Əlavə edildi");
 			} else {
@@ -51,7 +55,9 @@ class Other_tools extends Gopanel
 
 		if (isset($_POST['token'])) {
 			unset($_POST['token']);
-
+			$_POST['view'] = empty($_POST['view']) ? NULL : $_POST['view'];
+			$_POST['javascript'] = empty($_POST['javascript']) ? NULL : $_POST['javascript'];
+			
 			if ($this->core->update($this->table, $id, $_POST)) {
 				$this->session->set_flashdata('success', "Məlumat Uğurla Dəyişdirildi!");
 				$this->data['values'] 	= $this->core->get_values($this->table, $id);

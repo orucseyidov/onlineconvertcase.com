@@ -31,12 +31,30 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Başlıq</label>
-                                    <input type="text" name="title" class="form-control" value="<?=$values['title']; ?>" required>
+                                    <input type="text" name="name" class="form-control" value="<?=$values['name']; ?>" required>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <label>Kontent</label>
-                                    <textarea class="form-control ckeditor" name="description"><?=$values['description']; ?></textarea>
+                                    <label>Slug</label>
+                                    <input type="text" name="slug" value="<?=$values['slug']; ?>" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Faylın Adı</label>
+                                    <input type="text" name="view" value="<?=$values['view']; ?>" class="form-control">
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Javascript Faylın Adı</label>
+                                    <input type="text" name="javascript" value="<?=$values['javascript']; ?>" class="form-control">
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Səhifə Statusu</label>
+                                    <select class="form-control" name="page_status">
+                                        <option value="1" <?=s($values['page_status'],1) ?>>Ana Səhifə</option>
+                                        <option value="2" <?=s($values['page_status'],2) ?>>Öz Səhifəsi</option>
+                                    </select>
                                 </div>
 
                                 <div class="hidden-inputs">
