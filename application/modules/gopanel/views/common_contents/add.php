@@ -82,7 +82,7 @@
 
                                 <div class="hidden-inputs">
                                     <input type="hidden" name="page_id" value="<?= $page_id ?>">
-                                    <input type="hidden" name="table_name" value="<?= $table_name ?>">
+                                    <input type="hidden" name="t_name" value="<?= $table_name ?>">
                                     <input type="hidden" name="token" value="<?= $token ?>">
                                 </div>
 

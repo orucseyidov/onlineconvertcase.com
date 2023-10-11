@@ -37,6 +37,10 @@ class Common_contents extends Gopanel
 				$_POST['image'] = NULL;
 			}
 
+
+			$_POST['table_name'] = $_POST['t_name'];
+			unset($_POST['t_name']);
+
 			if ($this->core->add($this->table, $_POST)) {
 				$this->session->set_flashdata('success', "Məlumat Uğurla Əlavə edildi");
 			} else {
