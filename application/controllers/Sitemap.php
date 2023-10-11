@@ -19,6 +19,7 @@ class Sitemap extends GO_Controller {
 		
 		$this->data['menu'] 			= $this->map->menu();
 		$this->data['tools'] 			= $this->map->other_tools();
+		$this->data['seo'] 				= $this->map->seo_pages();
 		header("Content-type: text/xml");
 		$this->load->view("feed/sitemap",$this->data);
 	}

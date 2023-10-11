@@ -19,8 +19,17 @@ class Sitemap_model extends GO_Model {
 
 	public function other_tools()
 	{
-		$this->db->select('*');
+		$this->db->select('slug');
 		$this->db->from('other_tools');
+		return $this->db->get()->result_array();
+	}
+
+	public function seo_pages()
+	{
+		$this->db->select('slug');
+		$this->db->from('static_pages');
+		$this->db->where("status", 1);
+		$this->db->where("type", 2);
 		return $this->db->get()->result_array();
 	}
 }

@@ -29,5 +29,13 @@
 		  <priority>1.00</priority>
 		</url>
 	<?php endforeach ?>
+	<?php foreach ($seo as $key => $value): ?>
+		<url>
+		  <loc><?=base_url($value['slug']) ?></loc>
+		  <lastmod><?= date("Y-m-d") ?></lastmod>
+		  <changefreq>daily</changefreq>
+		  <priority>1.00</priority>
+		</url>
+	<?php endforeach ?>
 
 </urlset>
