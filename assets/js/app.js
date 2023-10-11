@@ -87,9 +87,9 @@ function copyTextToClipboardOther() {
     window.getSelection().addRange(range);
     try {
         document.execCommand('copy');
-        toastrMessage("The output has been copied to the clipboard.");
+        toastr['success']("The output has been copied to the clipboard.");
     } catch (err) {
-        toastrMessage("Copying text failed: " + err);
+        toastr['success']("Copying text failed: " + err);
         console.error('Metin kopyalama işlemi başarısız oldu: ', err);
     }
     window.getSelection().removeAllRanges();
