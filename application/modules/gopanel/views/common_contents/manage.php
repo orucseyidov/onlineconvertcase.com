@@ -7,14 +7,14 @@
                     <h4 class="page-title"><?=$btitle ?></h4>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?=base_url("gopanel") ?>">Əsas Panel</a></li>
-                        <li class="breadcrumb-item"><a href="<?=base_url("/gopanel/{$class}/manage/?page_id={$page_id}&table_name={$table_name}") ?>"><?=$btitle ?></a></li>
+                        <li class="breadcrumb-item"><a href="<?=base_url("/gopanel/{$class}/manage/?page_id={$page_id}&t_name={$table_name}") ?>"><?=$btitle ?></a></li>
                         <li class="breadcrumb-item active"><?=$bactive ?></li>
                     </ol>
                 </div>
                 <div class="col-sm-6">
                     <div class="float-right d-none d-md-block">
                         <div class="dropdown">
-                            <a class="btn btn-outline-success waves-effect waves-light" href="<?=base_url("/gopanel/{$class}/add/?page_id={$page_id}&table_name={$table_name}") ?>">
+                            <a class="btn btn-outline-success waves-effect waves-light" href="<?=base_url("/gopanel/{$class}/add/?page_id={$page_id}&t_name={$table_name}") ?>">
                                 <i class="fas fa-plus mr-2"></i> Əlavə et
                             </a>
                         </div>
