@@ -529,6 +529,15 @@ img{
 .static-page-title{
     padding: 15px;
 }
+
+.static-page-image{
+    margin-top: var(--defaults-margin-top);
+}
+
+.static-page-text{
+    
+}
+
 /*Faq*/
 
 [data-toggle]:hover {
@@ -903,3 +912,93 @@ img{
 
 #gtx-trans{display: none!important;}
 
+/*Carusel usefulllinks*/
+#usefullLinks{
+    margin-top: var(--defaults-section-margin-top);
+}
+.usefulllinks {
+  padding: 35px;
+  position: relative;
+  overflow-x: hidden;
+/*  max-width: 1000px;*/
+  background: #fff;
+  border-radius: 13px;
+}
+
+.usefullLinks-title{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+    color: #3850b7!important;
+    text-align: center;
+}
+
+.usefulllinks .usefull-icon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+.usefull-icon:first-child {
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, #fff 70%, transparent);
+}
+.usefull-icon:last-child {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(-90deg, #fff 70%, transparent);
+}
+.usefull-icon i {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+}
+.usefull-icon i:hover {
+  background: #efedfb;
+}
+.usefull-icon:first-child i {
+  margin-left: 15px;
+} 
+.usefull-icon:last-child i {
+  margin-right: 15px;
+} 
+.usefulllinks .usefull-tabs-box {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.usefull-tabs-box.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+.usefull-tabs-box .usefull-tab {
+  cursor: pointer;
+  font-size: 1.18rem;
+  white-space: nowrap;
+  background: #f5f4fd;
+  padding: 13px 20px;
+  border-radius: 30px;
+  border: 1px solid #d8d5f2;
+}
+.usefull-tabs-box .usefull-tab:hover{
+  background: #efedfb;
+}
+.usefull-tabs-box.dragging .usefull-tab {
+  user-select: none;
+  pointer-events: none;
+}
+.usefull-tabs-box .usefull-tab.active{
+  color: #fff;
+  background: #5372F0;
+  border-color: transparent;
+}

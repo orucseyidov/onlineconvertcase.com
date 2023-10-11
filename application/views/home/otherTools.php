@@ -11,7 +11,7 @@
               if(isset($value['tools']) && is_array($value['tools'])):
                 foreach ($value['tools'] as $toolsKey => $toolsValue):
             ?>
-              <a itemprop="url" class="other-link-btn" href="<?=base_url("en/{$toolsValue['slug']}") ?>">
+              <a itemprop="url" class="other-link-btn" href="<?=base_url($toolsValue['slug']) ?>">
                 <span itemprop="name"><?=$toolsValue['title'] ?></span>
               </a>
             <?php 

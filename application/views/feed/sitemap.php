@@ -8,14 +8,14 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml"   
 >
 	<url>
-	  <loc><?=base_url('en') ?></loc>
+	  <loc><?=base_url() ?></loc>
 	  <lastmod><?= date("Y-m-d") ?></lastmod>
 	  <changefreq>daily</changefreq>
 	  <priority>1.00</priority>
 	</url>
 	<?php foreach ($menu as $key => $value): ?>
 		<url>
-		  <loc><?=base_url($value['locale']."/".$value['slug']) ?></loc>
+		  <loc><?=base_url($value['slug']) ?></loc>
 		  <lastmod><?= date("Y-m-d") ?></lastmod>
 		  <changefreq>daily</changefreq>
 		  <priority>1.00</priority>
@@ -23,7 +23,7 @@
 	<?php endforeach ?>
 	<?php foreach ($tools as $key => $value): ?>
 		<url>
-		  <loc><?=base_url("en/".$value['slug']) ?></loc>
+		  <loc><?=base_url($value['slug']) ?></loc>
 		  <lastmod><?= date("Y-m-d") ?></lastmod>
 		  <changefreq>daily</changefreq>
 		  <priority>1.00</priority>

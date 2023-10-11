@@ -29,17 +29,12 @@
                     <div class="card-body">
                         <form action="?id=<?=$id ?>" method="POST" enctype="multipart/form-data">
                             <div class="row">
-                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Başlıq</label>
                                     <input type="text" name="title" class="form-control" value="<?=$values['title']; ?>" >
                                 </div>
-
-                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
-                                    <label>Başlıq (Menyu)</label>
-                                    <input type="text" name="title_menu" class="form-control" value="<?=$values['title_menu']; ?>" >
-                                </div>
                                 
-                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Dil seçin</label>
                                     <select class="form-control" name="locale">
                                         <?php
@@ -52,13 +47,23 @@
                                 </div>
                                 
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <label>Haqqında</label>
+                                    <label>Ətraflı</label>
                                     <textarea class="form-control ckeditor" rows="5" name="description" ><?=$values['description']; ?></textarea>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Başlıq (Meta)</label>
+                                    <input type="text" name="meta_title" value="<?=$values['meta_title']; ?>" class="form-control">
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Meta Description</label>
+                                    <textarea class="form-control" rows="5" name="meta_description"><?=$values['meta_description']; ?></textarea>
                                 </div>
                                                   
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Açar sözlər</label>
-                                    <input type="text" name="tags" class="form-control tags" value="<?=$values['tags']; ?>" required>
+                                    <input type="text" name="keywords" class="form-control tags" value="<?=$values['keywords']; ?>" required>
                                 </div>
                                 
                                 <div class="col-md-6 col-sm-12 col-xs-12 form-group">
@@ -81,7 +86,7 @@
                                     <label>Mövqey</label>
                                     <select class="form-control" name="type">
                                         <option value="1" <?=s($values['type'],1) ?> >Menyu</option>
-                                        <option value="2" <?=s($values['type'],2) ?> >Footer</option>
+                                        <option value="2" <?=s($values['type'],2) ?> >Usefull Links</option>
                                     </select>
                                 </div>
 

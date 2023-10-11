@@ -10,4 +10,7 @@ if (isset($other_tools) && is_array($other_tools) && count($other_tools)) {
   $this->load->view("home/otherTools");
 }
 $this->load->view("home/feedback");
+if (isset($usefull_links) && is_array($usefull_links) && count($usefull_links)) {
+  $this->load->view("home/usefull-links");
+}
 ?>

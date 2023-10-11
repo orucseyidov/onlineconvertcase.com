@@ -42,21 +42,46 @@ class Pages extends GO_Controller {
 	
 
 	public function static_pages($slug = false){
-		$locale = $this->uri->segment(1);
-		$slug 	= $this->uri->segment(2);
+		// $locale = $this->uri->segment(1);
+		$locale = 'en';
+		$slug 	= $this->uri->segment(1);
 		$page 	= $this->pages->get_static_page($locale, $slug);
 		if (isset($page['id'])) {
 			$this->meta_seo($slug);
 			$this->data['page'] 			= $page;
 			$this->data['title']			= $page['title'];
-			$this->data['key']				= $page['tags'];
+			$this->data['key']				= $page['keywords'];
 			if (!empty($page['image'])) {
 				$this->data['ogimage']		= $page['image'];
 			}
-			$this->data['desc']				= mb_substr(strip_tags($page['description']), 0,300);
+			$this->data['desc']				= mb_substr(strip_tags($page['meta_description']), 0,300);
 			$this->data['bgimage']			= $this->data['ogimage'];
 			$this->data['json_ltd']			= ['breadcrumb'];
 			$this->render("/pages/static/static",$this->data);
+		}
+		else{
+			$this->error_404();
+		}
+	}
+
+
+	public function static_pages_seo($slug = false){
+		// $locale = $this->uri->segment(1);
+		$locale = 'en';
+		$slug 	= $this->uri->segment(1);
+		$page 	= $this->pages->get_static_page($locale, $slug);
+		if (isset($page['id'])) {
+			$this->meta_seo($slug);
+			$this->data['page'] 			= $page;
+			$this->data['title']			= $page['title'];
+			$this->data['key']				= $page['keywords'];
+			if (!empty($page['image'])) {
+				$this->data['ogimage']		= $page['image'];
+			}
+			$this->data['desc']				= mb_substr(strip_tags($page['meta_description']), 0,300);
+			$this->data['bgimage']			= $this->data['ogimage'];
+			$this->data['json_ltd']			= ['breadcrumb'];
+			$this->render("/pages/static/seo",$this->data);
 		}
 		else{
 			$this->error_404();

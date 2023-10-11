@@ -62,9 +62,9 @@ $route['feedback']					= 'Process/feedback';
 $route['recommend']					= 'Process/recommend';
 
 //Static pages
-$route['(:any)/about']				= 'Pages/about';
-$route['(:any)/faq']				= 'Pages/faq';
-$route['(:any)/contact']			= 'Pages/contact';
+$route['about']						= 'Pages/about';
+$route['faq']						= 'Pages/faq';
+$route['contact']					= 'Pages/contact';
 
 
 
@@ -85,12 +85,18 @@ $route['pingback']					= 'Pages/pingback';
 $db =& DB();
 $static_pages 	= $db->get('static_pages')->result_array() ?? [];
 foreach ($static_pages as $key => $value) {
-	$route['(:any)/'.$value['slug']]            = 'Pages/static_pages/$1';
+	// $route['(:any)/'.$value['slug']]            = 'Pages/static_pages/$1';
+	if ($value['type'] == 1) {
+		$route[$value['slug']]            			= 'Pages/static_pages/$1';
+	} else {
+		$route[$value['slug']]            			= 'Pages/static_pages_seo/$1';
+	}
 }
 
 $other_tools 	= $db->get('other_tools')->result_array() ?? [];
 foreach ($other_tools as $key => $value) {
-	$route['(:any)/'.$value['slug']]            = 'Home/index/$1';
+	// $route['(:any)/'.$value['slug']]            = 'Home/index/$1';
+	$route[$value['slug']]            		= 'Home/index/$1';
 }
 $db->close();
 

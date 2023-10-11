@@ -30,17 +30,12 @@
                         <form action="" method="POST" enctype="multipart/form-data">
                             <div class="row">
 
-                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Başlıq</label>
                                     <input type="text" name="title" class="form-control">
                                 </div>
 
-                                <div class="col-md-6 col-sm-12 col-xs-12 form-group">
-                                    <label>Başlıq (Menyu)</label>
-                                    <input type="text" name="title_menu" class="form-control">
-                                </div>
-
-                                <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Dil seçin</label>
                                     <select class="form-control" name="locale">
                                         <?php
@@ -53,18 +48,28 @@
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <label>Haqqında</label>
+                                    <label>Ətraflı</label>
                                     <textarea class="form-control ckeditor" rows="5" name="description"></textarea>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Başlıq (Meta)</label>
+                                    <input type="text" name="meta_title" class="form-control">
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Meta Description</label>
+                                    <textarea class="form-control" rows="5" name="meta_description"></textarea>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Açar sözlər</label>
-                                    <input type="text" name="tags" class="form-control tags" required>
+                                    <input type="text" name="keywords" class="form-control tags" required>
                                 </div>
 
                                 <div class="col-md-6 col-sm-12 col-xs-12 form-group">
                                     <label>Link <small>Linkyoxdursa boş saxlaya bilərsiz</small></label>
-                                    <input type="text" name="slug" class="form-control" placeholder="Nümunə : <?= base_url() ?>" required>
+                                    <input type="text" name="slug" class="form-control" placeholder="Nümunə : yazi-haqqinda-slug" required>
                                 </div>
 
 
@@ -80,7 +85,7 @@
                                     <label>Mövqey</label>
                                     <select class="form-control" name="type">
                                         <option value="1">Menyu</option>
-                                        <option value="2">Footer</option>
+                                        <option value="2">Usefull Links</option>
                                     </select>
                                 </div>
 

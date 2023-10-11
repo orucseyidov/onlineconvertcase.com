@@ -36,7 +36,7 @@
                                     <th>№</th>
                                     <th>Dil</th>
                                     <th>Başlıq</th>
-                                    <th>Haqqında</th>
+                                    <th>Tipi</th>
                                     <th>Status</th>
                                     <th>Əməliyyatlar</th>
                                 </tr>
@@ -51,7 +51,7 @@
                                         <td><?=$counter++ ?></td>
                                         <td><?=$value['locale'] ?></td>
                                         <td><?=$value['title']; ?></td>
-                                        <td><?=mb_substr(strip_tags($value['description']), 0,50) ?></td>
+                                        <td><?=$value['type'] == 1 ? 'Menyu' : 'Usefull Links' ?></td>
                                         <td>
                                             <input
                                             class         ="status"
