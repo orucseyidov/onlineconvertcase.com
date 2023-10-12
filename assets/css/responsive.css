@@ -78,6 +78,7 @@
     .textarea{
 /*        max-height: 200px;*/
         min-height: 200px;
+        margin-bottom: 5px;
     }
     .modifiers-and-options{
         display: flex;
@@ -111,13 +112,22 @@
         justify-content: center;
     }
 
-    .other-tool-btn-block{
+    #textCase .other-tool-btn-block{
         flex-direction: column;
     }
 
-    .other-tool-btn-block button {
+    #textCase .other-tool-btn-block button {
         margin-bottom: 5px;
     }
+
+    #textCase .other-tool-btn-block .btn-kofi{
+        text-align: center;
+    }
+
+    #textCase .output{
+        min-height: 210px;
+    }
+
 
     
 }

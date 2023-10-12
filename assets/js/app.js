@@ -17,7 +17,7 @@ toastr.options = {
   "hideEasing": "linear",
   "showMethod": "fadeIn",
   "hideMethod": "fadeOut"
-}
+};
 
 function toastrMessage(text,type = 'success'){
     toastr[type](text);
@@ -53,6 +53,7 @@ function counter(){
 function copyTextToClipboard() {
   textCaseInput.select();
   document.execCommand('copy');
+  toastrMessage("The output has been copied to the clipboard.");
 }
 
 
@@ -75,6 +76,7 @@ function downloadTextAsFile() {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(a.href);
+  toastrMessage("Your output has been uploaded successfully");
 }
 
 // Other tools functions
@@ -87,9 +89,9 @@ function copyTextToClipboardOther() {
     window.getSelection().addRange(range);
     try {
         document.execCommand('copy');
-        toastr['success']("The output has been copied to the clipboard.");
+        toastrMessage("The output has been copied to the clipboard.");
     } catch (err) {
-        toastr['success']("Copying text failed: " + err);
+        toastrMessage("Copying text failed: " + err);
         console.error('Metin kopyalama işlemi başarısız oldu: ', err);
     }
     window.getSelection().removeAllRanges();

@@ -45,7 +45,7 @@
   <!-- Style -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" async>
   <link href="/assets/css/fontawsome-all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://codeseven.github.io/toastr/build/toastr.min.css" async>
+  <link rel="stylesheet" href="/assets/css/toastr.min.css?v=1" async>
   <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>" async>
   <link rel="stylesheet" href="/assets/css/responsive.css?v=<?= time() ?>" async>
   <link rel="canonical" href="<?=current_url() ?>" />

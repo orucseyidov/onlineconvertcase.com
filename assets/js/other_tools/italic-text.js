@@ -65,17 +65,51 @@ var italicCharacters = {
 };
 
 
+// function textToItalic(inputText) {
+//     var outputText  = "";
+//     var inputText   = textCaseInput.value;
+//     for (var i = 0; i < inputText.length; i++) {
+//         var character = inputText[i];
+//         if (italicCharacters[character]) {
+//             outputText += italicCharacters[character];
+//         } else {
+//             outputText += character;
+//         }
+//     }
+//     document.getElementById("output").innerHTML = outputText;
+// }
+
+
 function textToItalic(inputText) {
-    var outputText  = "";
-    var inputText   = textCaseInput.value;
-    for (var i = 0; i < inputText.length; i++) {
-        var character = inputText[i];
-        if (italicCharacters[character]) {
-            outputText += italicCharacters[character];
-        } else {
-            outputText += character;
+    var outputText = "";
+    var lines = inputText.split('\n');
+
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        var words = line.split(' ');
+
+        for (var j = 0; j < words.length; j++) {
+            var word = words[j];
+            var italicWord = "";
+
+            for (var k = 0; k < word.length; k++) {
+                var character = word[k];
+                if (italicCharacters[character]) {
+                    italicWord += italicCharacters[character];
+                } else {
+                    italicWord += character;
+                }
+            }
+
+            outputText += italicWord;
+            if (j < words.length - 1) {
+                outputText += ' ';
+            }
         }
+
+        outputText += '<br>';
     }
+
     document.getElementById("output").innerHTML = outputText;
 }
 

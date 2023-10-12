@@ -1,5 +1,5 @@
-function textToBold() {
-    var boldCharacters = {
+
+var boldCharacters = {
         A: "𝗔",
         B: "𝗕",
         C: "𝗖",
@@ -63,16 +63,55 @@ function textToBold() {
         8: "𝟴",
         9: "𝟵"
     };
-    var inputText   = textCaseInput.value;
+
+
+// function textToBold() {
+//     var inputText   = textCaseInput.value;
+//     var outputText = "";
+
+//     for (var i = 0; i < inputText.length; i++) {
+//         var character = inputText[i];
+//         if (boldCharacters[character]) {
+//             outputText += boldCharacters[character];
+//         } else {
+//             outputText += character;
+//         }
+//     }
+//     document.getElementById("output").innerHTML = outputText;
+// }
+
+
+function textToBold() {
+    var inputText = textCaseInput.value;
+    var lines = inputText.split('\n');
     var outputText = "";
-    for (var i = 0; i < inputText.length; i++) {
-        var character = inputText[i];
-        if (boldCharacters[character]) {
-            outputText += boldCharacters[character];
-        } else {
-            outputText += character;
+
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        var words = line.split(' ');
+
+        for (var j = 0; j < words.length; j++) {
+            var word = words[j];
+            var boldWord = "";
+
+            for (var k = 0; k < word.length; k++) {
+                var character = word[k];
+                if (boldCharacters[character]) {
+                    boldWord += boldCharacters[character];
+                } else {
+                    boldWord += character;
+                }
+            }
+
+            outputText += boldWord;
+            if (j < words.length - 1) {
+                outputText += ' ';
+            }
         }
+
+        outputText += '<br>';
     }
+
     document.getElementById("output").innerHTML = outputText;
 }
 

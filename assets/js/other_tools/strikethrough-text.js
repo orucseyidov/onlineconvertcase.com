@@ -67,19 +67,54 @@ var strikethroughCharacters = {
 
 
 
+// function textToStrikethrough(inputText) {
+//     var outputText = "";
+//     var inputText   = textCaseInput.value;
+//     for (var i = 0; i < inputText.length; i++) {
+//         var character = inputText[i];
+//         if (strikethroughCharacters[character]) {
+//             outputText += strikethroughCharacters[character];
+//         } else {
+//             outputText += character;
+//         }
+//     }
+//     return outputText;
+// }
+
+
 function textToStrikethrough(inputText) {
     var outputText = "";
-    var inputText   = textCaseInput.value;
-    for (var i = 0; i < inputText.length; i++) {
-        var character = inputText[i];
-        if (strikethroughCharacters[character]) {
-            outputText += strikethroughCharacters[character];
-        } else {
-            outputText += character;
+    var lines = inputText.split('\n');
+
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+        var words = line.split(' ');
+
+        for (var j = 0; j < words.length; j++) {
+            var word = words[j];
+            var strikethroughWord = "";
+
+            for (var k = 0; k < word.length; k++) {
+                var character = word[k];
+                if (strikethroughCharacters[character]) {
+                    strikethroughWord += strikethroughCharacters[character];
+                } else {
+                    strikethroughWord += character;
+                }
+            }
+
+            outputText += strikethroughWord;
+            if (j < words.length - 1) {
+                outputText += ' ';
+            }
         }
+
+        outputText += '<br>';
     }
+
     return outputText;
 }
+
 
 
 textCaseInput.addEventListener("input", function(e) {
