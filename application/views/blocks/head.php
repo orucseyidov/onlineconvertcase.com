@@ -48,17 +48,8 @@
   <link rel="stylesheet" href="https://codeseven.github.io/toastr/build/toastr.min.css" async>
   <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>" async>
   <link rel="stylesheet" href="/assets/css/responsive.css?v=<?= time() ?>" async>
-  <!--Style css and-->
-  <!-- <link rel="pingback" href="<?=base_url("pingback") ?>" /> -->
   <link rel="canonical" href="<?=current_url() ?>" />
   <?php 
-  foreach ($languages as $key => $value):
-    if ($locale != $value['locale']) {
-  ?>
-        <link rel="alternate" href="<?= get_lang_url($locale, $value['locale']) ?>" hreflang="<?=$value['locale'] ?>" />
-  <?php 
-    }
-  endforeach;
   if (!empty($headdata)) {
     echo $headdata;
   }
