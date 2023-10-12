@@ -285,7 +285,7 @@ function get_lang_url($current, $lang)
 if (!function_exists("decode_text")) {
     function decode_text($text)
     {
-        return html_entity_decode(strip_tags($text));
+        return str_replace("\n"," ",html_entity_decode(strip_tags($text)));
     }
 }
 
