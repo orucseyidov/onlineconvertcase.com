@@ -113,7 +113,7 @@ function textToStrikethrough() {
         outputText += '<br>';
     }
 
-    return outputText;
+    document.getElementById("output").innerHTML = outputText;
 }
 
 
