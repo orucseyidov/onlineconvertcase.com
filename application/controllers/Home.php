@@ -98,9 +98,9 @@ class Home extends GO_Controller {
 	public function meta_seo($tool)
 	{
 		$settings 	= $this->settings;
-		if (count($tool) > 0) {
-			$this->data['title']  	= !empty($tool['title']) ? $tool['title'] : $settings['site_title'];
-			$this->data['desc']   	= !empty($tool['description']) ? $tool['description'] : $settings['description'];
+		if (isset($tool['id'])) {
+			$this->data['title']  	= !empty($tool['seo_title']) ? $tool['seo_title'] : $settings['site_title'];
+			$this->data['desc']   	= !empty($tool['seo_description']) ? mb_substr(strip_tags($tool['seo_description']), 0,300) : $settings['description'];
 			$this->data['key']     	= !empty($tool['keywords']) ? $tool['keywords'] : $settings['tags'];
 			$this->data['ogimage'] 	= !empty($tool['image']) ? base_url($tool['image']) : base_url($settings['og_image']);
 		}

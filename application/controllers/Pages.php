@@ -75,7 +75,6 @@ class Pages extends GO_Controller {
 			$this->meta_seo($slug);
 			$this->data['page'] 			= $page;
 			$this->data['title']			= $page['title'];
-			$this->data['desc']				= $page['meta_description'];
 			$this->data['key']				= $page['keywords'];
 			if (!empty($page['image'])) {
 				$this->data['ogimage']		= $page['image'];
