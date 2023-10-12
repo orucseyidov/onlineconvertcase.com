@@ -99,7 +99,6 @@ class Home extends GO_Controller {
 	{
 		$settings 	= $this->settings;
 		if (count($tool) > 0) {
-			$this->data['breadcrumbTitle'] = !empty($tool['title']) ? $tool['title'] : $settings['site_title'];
 			$this->data['title']  	= !empty($tool['title']) ? $tool['title'] : $settings['site_title'];
 			$this->data['desc']   	= !empty($tool['description']) ? $tool['description'] : $settings['description'];
 			$this->data['key']     	= !empty($tool['keywords']) ? $tool['keywords'] : $settings['tags'];
