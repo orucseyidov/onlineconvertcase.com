@@ -26,6 +26,7 @@
   <meta name="device" content="<?= $device ?>">
   <!-- verifications -->
   <meta name="yandex-verification" content="73fbc5f7be1216de" />
+  <meta name="msvalidate.01" content="A883D18E64B8BAF70021D484FB774A71" />
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
