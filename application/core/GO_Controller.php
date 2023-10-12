@@ -58,7 +58,7 @@ class GO_Controller extends MX_Controller
 		$settings         			= $this->settings;
 
 		if ($settings['site_status'] == 1) {
-			if ($this->uri->segment(2) == false) {
+			if ($this->uri->segment(1) == false) {
 				$this->getMeta($settings);
 			}
 			$this->data['altlink'] 			= false;
