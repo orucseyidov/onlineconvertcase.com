@@ -82,8 +82,9 @@ var strikethroughCharacters = {
 // }
 
 
-function textToStrikethrough(inputText) {
+function textToStrikethrough() {
     var outputText = "";
+    var inputText   = textCaseInput.value;
     var lines = inputText.split('\n');
 
     for (var i = 0; i < lines.length; i++) {
