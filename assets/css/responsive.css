@@ -111,5 +111,13 @@
         justify-content: center;
     }
 
+    .other-tool-btn-block{
+        flex-direction: column;
+    }
+
+    .other-tool-btn-block button {
+        margin-bottom: 2px;
+    }
+
     
 }
