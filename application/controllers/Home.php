@@ -107,7 +107,5 @@ class Home extends GO_Controller {
 		if (empty($this->data['ogimage'])) {
 			$this->data['ogimage'] = $settings['og_image'];
 		}
-		debug($this->data);
-		// return $seo;
 	}
 }
