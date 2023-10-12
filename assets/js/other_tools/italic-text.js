@@ -80,9 +80,10 @@ var italicCharacters = {
 // }
 
 
-function textToItalic(inputText) {
-    var outputText = "";
-    var lines = inputText.split('\n');
+function textToItalic() {
+    var outputText  = "";
+    var inputText   = textCaseInput.value;
+    var lines       = inputText.split('\n');
 
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
