@@ -9,7 +9,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <div class="output" id="output">
-              𝗧𝘆𝗽𝗲 𝗼𝗿 𝗽𝗮𝘀𝘁𝗲 𝘆𝗼𝘂𝗿 𝗰𝗼𝗻𝘁𝗲𝗻𝘁 𝗵𝗲𝗿𝗲
+              type or paste your content here
           </div>
         </div>
         <div class="col-12">
