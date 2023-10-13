@@ -40,14 +40,14 @@
                                     <th>Əməliyyatlar</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="sortable" class="sortableIcon" data-table="<?=$table ?>">
                                 <?php
                                     foreach ($manage as $key => $value): 
                                         $editlink       = base_url("gopanel/").$class."/edit/?id=".$value['id'];
                                         $other_tools    = base_url("gopanel/other_tools/manage/?group={$value['id']}");
                                         $contents       = base_url("gopanel/common_contents/manage/?page_id={$value['id']}&t_name={$class}");
                                 ?>
-                                    <tr>
+                                    <tr id="ord-<?=$value['id']?>">
                                         <td><?=$counter++ ?></td>
                                         <td><?=$value['name']; ?></td>
                                         <td>
