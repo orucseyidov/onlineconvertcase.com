@@ -1,6 +1,25 @@
 /* For Desktop View */
-@media screen and (min-width: 1024px) {
-    
+@media screen and (max-width: 1024px) {
+    .banner-two{
+        padding: 15px;
+    }
+    .banner-btn{
+        padding: 5px;
+    }
+    .modifier-button{
+        font-size: 10px;
+        padding: 3px 5px;
+    }
+    .icon {
+        height: 0.9rem;
+        width: 0.9rem;
+    }
+    .right-btns {
+        min-width: 50px;
+    }
+    .clear-btn-web{
+        margin-top: 3px;
+    }
 }
  
 /* For Tablet View */
