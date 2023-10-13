@@ -33,6 +33,7 @@
                         <table id="datatable" class="table table-bordered table-striped dt-responsive" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                                 <tr>
+                                    <th><i class="fas fa-expand-arrows-alt"></i></th>
                                     <th>№</th>
                                     <th>Başlıq</th>
                                     <th>Tools</th>
@@ -48,6 +49,7 @@
                                         $contents       = base_url("gopanel/common_contents/manage/?page_id={$value['id']}&t_name={$class}");
                                 ?>
                                     <tr id="ord-<?=$value['id']?>">
+                                        <td class="sort-td"><i class="fas fa-arrows-alt-v"></i></td>
                                         <td><?=$counter++ ?></td>
                                         <td><?=$value['name']; ?></td>
                                         <td>
