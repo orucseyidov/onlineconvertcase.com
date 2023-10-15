@@ -32,7 +32,7 @@ class Home extends GO_Controller {
 			if (!is_null($tool['view'])) {
 				$view 	= $tool['view'];
 				// file_exists(APPPATH.'views\\other_tools\\'.$file."\\index.php")
-				if (is_null($view)) {
+				if (!is_null($view)) {
 					$this->data['json_ltd']	  			= ['tool','faq'];
 					$this->data['other_tool_json']		= $this->home->other_tools();
 					$this->data['footerdata'] .= '<script type="application/javascript" src="/assets/js/other_tools/'.$tool['javascript'].'.js?v='.time().'" async></script>';
