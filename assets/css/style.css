@@ -271,6 +271,20 @@ img{
     color: #52667a;
 }
 
+.modifier-select{
+    transition: 0.3s;
+    background: #ffffff;
+    text-decoration: none;
+    border: 1px solid #e0e6eb;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #52667a;
+}
+
 .clear-btn-web{
     float: right; 
     margin-left: 8px
@@ -907,9 +921,10 @@ img{
     justify-content: end;
     padding-top: 5px;
     padding-bottom: 5px;
+    gap: 5px;
 }
 .other-tool-btn-block button{
-    margin-right: 5px;
+/*    margin-right: 5px;*/
 }
 
 

@@ -36,6 +36,32 @@ const bubbleCharacters = {
     '7': '⑦',
     '8': '⑧',
     '9': '⑨',
+    'a': 'ⓐ',
+    'b': 'ⓑ',
+    'c': 'ⓒ',
+    'd': 'ⓓ',
+    'e': 'ⓔ',
+    'f': 'ⓕ',
+    'g': 'ⓖ',
+    'h': 'ⓗ',
+    'i': 'ⓘ',
+    'j': 'ⓙ',
+    'k': 'ⓚ',
+    'l': 'ⓛ',
+    'm': 'ⓜ',
+    'n': 'ⓝ',
+    'o': 'ⓞ',
+    'p': 'ⓟ',
+    'q': 'ⓠ',
+    'r': 'ⓡ',
+    's': 'ⓢ',
+    't': 'ⓣ',
+    'u': 'ⓤ',
+    'v': 'ⓥ',
+    'w': 'ⓦ',
+    'x': 'ⓧ',
+    'y': 'ⓨ',
+    'z': 'ⓩ',
     ' ': ' ',
 };
 
@@ -76,9 +102,36 @@ const bubbleCharactersBold = {
     '7': '7',
     '8': '8',
     '9': '9',
+    'a': '🅐',
+    'b': '🅑',
+    'c': '🅒',
+    'd': '🅓',
+    'e': '🅔',
+    'f': '🅕',
+    'g': '🅖',
+    'h': '🅗',
+    'i': '🅘',
+    'j': '🅙',
+    'k': '🅚',
+    'l': '🅛',
+    'm': '🅜',
+    'n': '🅝',
+    'o': '🅞',
+    'p': '🅟',
+    'q': '🅠',
+    'r': '🅡',
+    's': '🅢',
+    't': '🅣',
+    'u': '🅤',
+    'v': '🅥',
+    'w': '🅦',
+    'x': '🅧',
+    'y': '🅨',
+    'z': '🅩',
     ' ': ' ',
 };
 
+var selectElement = document.getElementById('typeStyle');
 
 
 
@@ -86,7 +139,8 @@ function generateBubbleText() {
     var outputText = "";
     var inputText = textCaseInput.value;
     var lines = inputText.split('\n');
-
+    var selectedValue = selectElement.value;
+    characterSet = selectedValue == 1 ? bubbleCharacters : bubbleCharactersBold;
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
         var words = line.split(' ');
@@ -97,9 +151,10 @@ function generateBubbleText() {
 
             for (var k = 0; k < word.length; k++) {
                 var character = word[k];
-                if (bubbleCharacters[character]) {
-                    bubbleTextWord += bubbleCharacters[character];
+                if (characterSet[character]) {
+                    bubbleTextWord += characterSet[character];
                 } else {
+
                     bubbleTextWord += character;
                 }
             }
@@ -118,5 +173,10 @@ function generateBubbleText() {
 
 
 textCaseInput.addEventListener("input", function(e) {
+    generateBubbleText();
+});
+
+
+selectElement.addEventListener('change', function() {
     generateBubbleText();
 });
