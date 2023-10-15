@@ -1,12 +1,31 @@
-RewriteEngine on
-RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteEngine On
+
+
+
+# Check if the request is not for an existing file
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Check if the request URI does not end with a trailing slash
+RewriteCond %{REQUEST_URI} !(.*)/$
+
+# Add an exception for your admin panel (change "gopanel" to the actual path)
+RewriteCond %{REQUEST_URI} !^/gopanel/
+
+# Check for the X-Requested-With header to identify AJAX requests
+RewriteCond %{HTTP:X-Requested-With} !XMLHttpRequest
+# If both conditions are met (not an existing file and not an admin panel route), add a trailing slash and issue a 301 redirect
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+
+
+
+RewriteCond %{HTTP_HOST} ^onlineconvertcase\.com [NC]
+RewriteRule ^(.*)$ https://www.onlineconvertcase.com/$1 [L,R=301]
+RewriteCond $1 !^(index\.php|resources)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L,QSA]
 
-#RewriteCond $1 !^(index\.php)
-#RewriteRule ^(.*)$ /index.php/$1 [L]
 
-<Files ~ "\.(png|jpe?g|gif)$">
-  Header set X-Robots-Tag "noindex, nofollow"
-</Files>
+
+
