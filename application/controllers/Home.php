@@ -10,9 +10,10 @@ class Home extends GO_Controller {
 	}
 
 	public function index(){
+		$this->data['other_tools'] 			= $this->groups();
 		if ($this->uri->segment(1)) {
-			$slug = $this->uri->segment(1);
-			$tool = $this->home->get_other_tool($slug);
+			$slug 	= $this->uri->segment(1);
+			$tool 	= $this->home->get_other_tool($slug);
 			if (isset($tool['id'])) {
 				$this->data['tool'] = $tool;
 				$this->data['faq'] 	= $this->home->faq($tool['id']);
@@ -61,7 +62,6 @@ class Home extends GO_Controller {
 	public function renderHome(){
 		$this->data['footerdata'] 			.= '<script src="/assets/js/slider.js?v=1" async></script>';
 		$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js"></script>';
-		$this->data['other_tools'] 			= $this->groups();
 		$this->data['home_about_blocks'] 	= $this->home->home_about_blocks();
 		$this->data['other_tool_json'] 		= $this->home->other_tools();
 		$this->data['usefull_links'] 		= $this->home->usefull_links();

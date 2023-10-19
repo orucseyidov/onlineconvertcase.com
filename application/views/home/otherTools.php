@@ -10,6 +10,9 @@
             <?php 
               if(isset($value['tools']) && is_array($value['tools'])):
                 foreach ($value['tools'] as $toolsKey => $toolsValue):
+                  if (isset($tool['slug']) && $toolsValue['slug'] == $this->uri->segment(1)) {
+                    continue;
+                  }
             ?>
               <a itemprop="url" class="other-link-btn" href="<?=base_url($toolsValue['slug']) ?>">
                 <span itemprop="name"><?=$toolsValue['title'] ?></span>

@@ -72,6 +72,7 @@ class Pages extends GO_Controller {
 		$slug 	= $this->uri->segment(1);
 		$page 	= $this->pages->get_static_page($locale, $slug);
 		if (isset($page['id'])) {
+			$this->data['other_tools'] 			= $this->groups();
 			$this->meta_seo($slug);
 			$this->data['page'] 			= $page;
 			$this->data['title']			= $page['title'];
@@ -87,6 +88,22 @@ class Pages extends GO_Controller {
 		else{
 			$this->error_404();
 		}
+	}
+
+	public function groups(){
+		$this->load->model("Home_model","home");
+		$response = [];
+		$groups = $this->home->other_tool_groups();
+		$tools 	= $this->home->other_tools();
+		foreach ($groups as $key => $value) {
+			$response[$key] = $value;
+			foreach ($tools as $toolKey => $tool) {
+				if ($tool['group_id'] == $value['id']) {
+					$response[$key]['tools'][] = $tool;
+				}
+			}
+		}
+		return $response;
 	}
 
 

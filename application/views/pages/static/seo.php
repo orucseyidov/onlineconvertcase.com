@@ -16,3 +16,8 @@
       </div>
   </div>
 </section>
+<?php
+if (isset($other_tools) && is_array($other_tools) && count($other_tools)) {
+  $this->load->view("home/otherTools");
+}
+?>

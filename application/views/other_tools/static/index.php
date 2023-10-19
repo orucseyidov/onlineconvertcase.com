@@ -40,4 +40,9 @@
     </div>
   </div>
 </section>
-<?php $this->load->view("other_tools/inc/about-tool"); ?>
+<?php 
+$this->load->view("other_tools/inc/about-tool");
+if (isset($other_tools) && is_array($other_tools) && count($other_tools)) {
+  $this->load->view("home/otherTools");
+}
+?>
