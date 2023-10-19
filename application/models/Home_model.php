@@ -56,6 +56,8 @@ class Home_model extends GO_Model
 			common_contents.description,
 			common_contents.seo_title,
 			common_contents.seo_description,
+			common_contents.meta_title,
+			common_contents.meta_description,
 			common_contents.keywords,
 			common_contents.image
 		");
