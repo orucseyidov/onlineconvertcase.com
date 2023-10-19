@@ -10,7 +10,7 @@
           </div>
           <div class="banner-text">
               <div>
-                <h1><?=$tool['title_seo'] ?></h1>
+                <h1><?=$tool['seo_title'] ?></h1>
                 <?=$tool['description'] ?>
               </div>
           </div>
