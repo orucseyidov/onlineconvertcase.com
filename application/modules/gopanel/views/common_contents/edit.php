@@ -61,6 +61,17 @@
                                     <label>Məlumat (SEO)</label>
                                     <textarea class="form-control ckeditor" rows="5" name="seo_description"><?=$values['seo_description']; ?></textarea>
                                 </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Başlıq (META)</label>
+                                    <input type="text" name="meta_title" class="form-control" value="<?=$values['meta_title']; ?>">
+                                </div>
+
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label>Məlumat (META)</label>
+                                    <textarea class="form-control" rows="5" name="meta_description"><?=$values['meta_description']; ?></textarea>
+                                </div>
                                                   
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     <label>Açar sözlər</label>

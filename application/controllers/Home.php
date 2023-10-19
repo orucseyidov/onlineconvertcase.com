@@ -100,8 +100,8 @@ class Home extends GO_Controller {
 	{
 		$settings 	= $this->settings;
 		if (isset($tool['id'])) {
-			$this->data['title']  	= !empty($tool['seo_title']) ? $tool['seo_title'] : $settings['site_title'];
-			$this->data['desc']   	= !empty($tool['seo_description']) ? mb_substr(strip_tags($tool['seo_description']), 0,300) : $settings['description'];
+			$this->data['title']  	= !empty($tool['meta_title']) ? $tool['seo_title'] : $settings['meta_title'];
+			$this->data['desc']   	= !empty($tool['meta__description']) ? mb_substr(strip_tags($tool['meta__description']), 0,300) : $settings['description'];
 			$this->data['key']     	= !empty($tool['keywords']) ? $tool['keywords'] : $settings['tags'];
 			$this->data['ogimage'] 	= !empty($tool['image']) ? base_url($tool['image']) : base_url($settings['og_image']);
 		}

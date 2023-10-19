@@ -113,8 +113,8 @@ class Pages extends GO_Controller {
 		$settings 	= $this->settings;
 		if (count($seo) > 0) {
 			$this->data['breadcrumbTitle'] = !empty($seo['title']) ? $seo['title'] : $settings['site_title'];
-			$this->data['title']  	= !empty($seo['title']) ? $seo['title'] : $settings['site_title'];
-			$this->data['desc']   	= !empty($seo['description']) ? $seo['description'] : $settings['description'];
+			$this->data['title']  	= !empty($seo['meta_title']) ? $seo['meta_title'] : $settings['site_title'];
+			$this->data['desc']   	= !empty($seo['meta_description']) ? $seo['meta_description'] : $settings['description'];
 			$this->data['key']     	= !empty($seo['keywords']) ? $seo['keywords'] : $settings['tags'];
 			$this->data['ogimage'] 	= !empty($seo['image']) ? base_url($seo['image']) : base_url($settings['og_image']);
 		}

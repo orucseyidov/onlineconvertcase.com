@@ -22,3 +22,7 @@ ALTER TABLE `other_tools` ADD `file` VARCHAR(255) NULL AFTER `slug`;
 
 ALTER TABLE `other_tools` CHANGE `file` `view` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL;
 ALTER TABLE `other_tools` ADD `javascript` VARCHAR(255) NULL AFTER `view`;
+
+-- lasted
+
+ALTER TABLE `common_contents` ADD `meta_title` VARCHAR(500) NULL AFTER `seo_description`, ADD `meta_description` TEXT NULL AFTER `meta_title`;
