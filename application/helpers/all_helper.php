@@ -283,9 +283,15 @@ function get_lang_url($current, $lang)
 
 
 if (!function_exists("decode_text")) {
-    function decode_text($text)
+    function decode_text($text,$replace =[])
     {
-        return str_replace("\n"," ",html_entity_decode(strip_tags($text)));
+        $text = str_replace("\n"," ",html_entity_decode(strip_tags($text)));
+        if(count($replace)){
+        	foreach ($replace as $key => $value) {
+        		$text = str_replace($value, '', $text);
+        	}
+        }
+        return $text;
     }
 }
 

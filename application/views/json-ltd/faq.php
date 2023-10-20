@@ -13,7 +13,7 @@
                       "name": "'.$value['question'].'",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "'.str_replace('\"','',decode_text($value['answer'])).'"
+                        "text": "'.decode_text($value['answer'],['"']).'"
                         }
                       },';  
         endforeach; 
