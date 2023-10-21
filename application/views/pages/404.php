@@ -1,4 +1,3 @@
-<?php $this->load->view("blocks/breadcrumb") ?>
 <section class="page_404">
   <div class="container">
     <div class="row"> 
