@@ -16,7 +16,7 @@ class Pages extends GO_Controller {
 
 	public function about(){
 		$this->data['json_ltd']				= ['breadcrumb'];
-		$meta = $this->meta_seo($this->uri->segment(2));
+		$meta = $this->meta_seo($this->uri->segment(1));
 		$about = $this->pages->about($this->locale);
 		$this->data['about']		   = $about;
 		$this->render("/pages/about",$this->data);
@@ -24,20 +24,22 @@ class Pages extends GO_Controller {
 
 	public function contact(){
 		$this->data['json_ltd']				= ['breadcrumb'];
-		$this->getSeoInfo($this->uri->segment(2));
+		$this->getSeoInfo($this->uri->segment(1));
 		$this->render("/pages/contact",$this->data);
 	}
 
 	public function faq(){
 		$this->data['json_ltd']				= ['breadcrumb','faq'];
-		$this->getSeoInfo($this->uri->segment(2));
+		$this->getSeoInfo($this->uri->segment(1));
 		$faq = $this->pages->faq($this->locale);
 		$this->data['faq'] = $faq;
 		$this->render("/pages/faq",$this->data);
 	}
 
 	public function error_404(){
-		$this->load->view("/pages/404",$this->data);
+		$this->data['json_ltd']				= ['breadcrumb'];
+		$this->getSeoInfo($this->uri->segment(1));
+		$this->render("/pages/404",$this->data);
 	}
 	
 
