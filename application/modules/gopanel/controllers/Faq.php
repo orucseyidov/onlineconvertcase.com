@@ -44,7 +44,7 @@ class Faq extends Gopanel
 	public function manage()
 	{
 		$this->data['datatable'] = true;
-		$this->data['manage'] 	 = $this->gopanel->get_faqs();
+		$this->data['manage'] 	 = $this->gopanel->get_faqs($this->page_id);
 		$this->render($this->table . '/manage', $this->data);
 	}
 

@@ -263,12 +263,15 @@ class Gopanel_model extends GO_Model {
 	}
 
 
-	public function get_faqs(){
+	public function get_faqs($page_id = null){
 		$this->db->select('
 			faq.*,
 			(SELECT name FROM other_tools WHERE id=faq.page_id) as page_name
 		');
 		$this->db->from('faq');
+		if (!is_null($page_id)) {
+			$this->db->where("page_id",$page_id);
+		}
 		$this->db->order_by("id","DESC");
         return $this->db->get()->result_array();
 	}

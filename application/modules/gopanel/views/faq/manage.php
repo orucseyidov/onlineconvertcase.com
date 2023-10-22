@@ -25,7 +25,34 @@
         <!-- end row -->
 
         <input id="datatableOptions" type="hidden" exportColunm = "1,2,3" value="" />
-
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="" method="GET" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12 col-xs-12 form-group">
+                                    <label>Səhifə seçin</label>
+                                    <select class="form-control" name="page_id">
+                                        <option value="">Səhifə seçin</option>
+                                        <?php
+                                        foreach ($other_groups as $key => $value) {
+                                        ?>
+                                            <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 col-sm-12 col-xs-12 form-group" style="padding-top: 26px;">
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light btn-block ">
+                                        <i class="fas fa-search"></i> Filterle
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
