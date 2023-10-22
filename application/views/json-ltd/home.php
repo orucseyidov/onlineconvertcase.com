@@ -3,7 +3,7 @@
   "@context": "https://schema.org/", 
   "@type": "HowTo", 
   "name": "<?=$title ?>",
-  "description": "<?=$desc ?>",
+  "description": "<?=decode_text($desc,['"']) ?>",
   <?php if (!is_null($ogimage)): ?>
     "image": "<?=base_url($ogimage) ?>",
   <?php endif; ?>
