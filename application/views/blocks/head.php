@@ -77,7 +77,7 @@
     "url": "https://www.onlineconvertcase.com/",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://www.onlineconvertcase.com/?q=search_term_string",
+      "target": "https://www.onlineconvertcase.com/search_term_string",
       "query-input": "required name=search_term_string"
     }
   }
