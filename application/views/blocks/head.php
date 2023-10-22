@@ -74,12 +74,7 @@
     "@context": "https://schema.org/",
     "@type": "WebSite",
     "name": "Case Converter",
-    "url": "https://www.onlineconvertcase.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.onlineconvertcase.com/search_term_string",
-      "query-input": "required name=search_term_string"
-    }
+    "url": "https://www.onlineconvertcase.com/"
   }
   </script>
   <?php
