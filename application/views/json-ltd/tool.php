@@ -3,7 +3,7 @@
   "@context": "https://schema.org/", 
   "@type": "HowTo", 
   "name": "<?=$tool['title'] ?>",
-  "description": "<?=$tool['description'] ?>",
+  "description": "<?=decode_text($tool['description']) ?>",
   <?php if (!is_null($tool['image'])): ?>
     "image": "<?=base_url($tool['image']) ?>",
   <?php endif; ?>
