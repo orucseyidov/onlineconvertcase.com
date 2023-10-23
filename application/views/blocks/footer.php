@@ -27,7 +27,7 @@
     <script src="//cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" async></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
     <script src="/assets/js/toastr.min.js?v=1.1" async></script>
-    <script src="/assets/js/app.js?v=1.7" async></script>
+    <script src="/assets/js/app.js?v=1.8" async></script>
     <?=$footerdata; ?>
   </body>
 </html>
