@@ -1,26 +1,28 @@
 
 const textCaseInput   = document.getElementById("textCaseInput");
 
-toastr.options = {
-  "closeButton": false,
-  "debug": false,
-  "newestOnTop": false,
-  "progressBar": false,
-  "positionClass": "toast-top-right",
-  "preventDuplicates": false,
-  "onclick": null,
-  "showDuration": "300",
-  "hideDuration": "1000",
-  "timeOut": "5000",
-  "extendedTimeOut": "1000",
-  "showEasing": "swing",
-  "hideEasing": "linear",
-  "showMethod": "fadeIn",
-  "hideMethod": "fadeOut"
-};
+if (typeof toastr === 'function') {
+    toastr.options = {
+      "closeButton": false,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": false,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    };
 
-function toastrMessage(text,type = 'success'){
-    toastr[type](text);
+    function toastrMessage(text,type = 'success'){
+        toastr[type](text);
+    }
 }
 
 
@@ -220,6 +222,25 @@ document.querySelector('body').addEventListener('submit', function(e) {
       xhr.send(JSON.stringify(jsonFormData));
     }
     return false;
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var truncateDiv = document.getElementById('truncateDiv');
+    var btn = document.getElementById('show_button');
+    var isTruncated = true;
+
+    btn.addEventListener('click', function() {
+        if (isTruncated) {
+            truncateDiv.classList.remove('truncate-text');
+            btn.textContent = 'Shorten Text';
+        } else {
+            truncateDiv.classList.add('truncate-text');
+            btn.textContent = 'Show more';
+        }
+
+        isTruncated = !isTruncated;
+    });
 });
 
 

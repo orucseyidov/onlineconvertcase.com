@@ -1062,3 +1062,11 @@ img{
 .contant_box_404{
     margin-top:-50px;
 }
+
+#show_button{
+    text-align: right;
+    width: 100%;
+    display: none;
+    color: #007bff;
+    text-decoration: underline;
+}

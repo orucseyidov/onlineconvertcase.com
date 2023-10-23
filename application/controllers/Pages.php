@@ -37,7 +37,8 @@ class Pages extends GO_Controller {
 	}
 
 	public function error_404(){
-		$this->data['json_ltd']				= ['breadcrumb'];
+		$this->data['json_ltd']					= ['breadcrumb'];
+		$this->data['footerdata'] 				.= '<script type="application/javascript" src="/assets/js/home.js" async></script>';
 		$this->getSeoInfo($this->uri->segment(1));
 		$this->render("/pages/404",$this->data);
 	}

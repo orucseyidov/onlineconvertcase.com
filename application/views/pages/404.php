@@ -1,3 +1,7 @@
+<?php 
+  $this->load->view("home/textCase");
+  $this->load->view("home/compairButtons");
+?>
 <section class="page_404">
   <div class="container">
     <div class="row"> 

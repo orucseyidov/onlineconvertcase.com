@@ -73,6 +73,16 @@
         display: none;
         visibility: hidden;
     }
+    .truncate-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* İlk üç satırı görüntüler */
+        -webkit-box-orient: vertical;
+    }
+    #show_button{
+        display: block;
+    }
     .logo-desktop{
         max-width: 100%;
     }
