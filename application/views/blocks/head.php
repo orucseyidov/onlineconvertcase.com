@@ -51,6 +51,7 @@
   <link rel="stylesheet" href="/assets/css/toastr.min.css?v=1" async>
   <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>" async>
   <link rel="stylesheet" href="/assets/css/responsive.css?v=<?= time() ?>" async>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" async/>
   <link rel="canonical" href="<?=current_url() ?>" />
   <?php 
   if (!empty($headdata)) {

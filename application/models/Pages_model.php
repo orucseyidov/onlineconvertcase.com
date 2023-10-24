@@ -71,7 +71,8 @@ class Pages_model extends GO_Model
 			SELECT
 			    `other_tools`.slug,
 			    common_contents.meta_title,
-			    common_contents.meta_description
+			    common_contents.meta_description,
+			    common_contents.keywords
 			FROM other_tools
 			LEFT JOIN common_contents ON common_contents.page_id = other_tools.id
 			WHERE common_contents.table_name = 'other_tools'
@@ -110,7 +111,7 @@ class Pages_model extends GO_Model
 	public function get_static_page_search_sql($string,$locale='en')
 	{
 		$sql = "
-			SELECT static_pages.meta_title, static_pages.meta_description, static_pages.slug
+			SELECT static_pages.meta_title, static_pages.meta_description, static_pages.keywords, static_pages.slug
 			FROM static_pages
 			WHERE static_pages.status = 1
 			AND static_pages.type = 2

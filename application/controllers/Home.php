@@ -52,8 +52,8 @@ class Home extends GO_Controller {
 				$this->render("other_tools/static/index",$this->data);
 			}
 		} else {
-			$this->data['footerdata'] 			.= '<script src="/assets/js/slider.js?v=1" async></script>';
-			$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js" async></script>';
+			// $this->data['footerdata'] 			.= '<script src="/assets/js/slider.js?v=1" async></script>';
+			$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js?v=1" async></script>';
 			$this->data['json_ltd']				= ['tool','faq'];
 			$this->data['other_tool_json']		= $this->home->other_tools();
 			$this->render("home/other_tools/index",$this->data);
@@ -61,8 +61,8 @@ class Home extends GO_Controller {
 		
 	}
 	public function renderHome(){
-		$this->data['footerdata'] 			.= '<script src="/assets/js/slider.js?v=1" async></script>';
-		$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js"></script>';
+		// $this->data['footerdata'] 			.= '<script src="/assets/js/slider.js?v=1" async></script>';
+		$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js?v=1"></script>';
 		$this->data['home_about_blocks'] 	= $this->home->home_about_blocks();
 		$this->data['other_tool_json'] 		= $this->home->other_tools();
 		$this->data['usefull_links'] 		= $this->home->usefull_links();

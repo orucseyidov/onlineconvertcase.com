@@ -47,33 +47,6 @@ function hash_pass($pass)
 
 
 
-function getUserIP()
-{
-    // Get real visitor IP behind CloudFlare network
-    if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-              $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-              $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-    }
-    $client  = @$_SERVER['HTTP_CLIENT_IP'];
-    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-    $remote  = $_SERVER['REMOTE_ADDR'];
-
-    if(filter_var($client, FILTER_VALIDATE_IP))
-    {
-        $ip = $client;
-    }
-    elseif(filter_var($forward, FILTER_VALIDATE_IP))
-    {
-        $ip = $forward;
-    }
-    else
-    {
-        $ip = $remote;
-    }
-
-    return $ip;
-}
-
 
 function GetIP(){
 	if(getenv("HTTP_CLIENT_IP")) {
@@ -191,40 +164,6 @@ function content($key){
 	return $result;
 }
 
-function mylog($msg, $param)
-{
-
-	$ext = '.log';
-	$date_fmt = "Y-m-d H:i:s";
-
-	$path 	= isset($param['path']) ? $param['path'] : 'Logs/';
-	$level 	= isset($param['level']) ? $param['level'] : 'error';
-
-	$level = strtoupper($level);
-	/* HERE YOUR LOG FILENAME YOU CAN CHANGE ITS NAME */
-	$filepath = $path . 'log-' . date('Y-m-d') . $ext;
-	$message  = '';
-
-	if (!file_exists($filepath) && $ext == '.php') {
-		// debug($filepath);
-		$message .= "<" . "?php  if ( ! defined('BASEPATH'))
-	    	exit('No direct script access allowed'); ?" . ">\n\n";
-	}
-	if (!$fp = fopen($filepath, FOPEN_WRITE_CREATE)) {
-		return FALSE;
-	}
-
-	$message .= $level . ' ' . (($level == 'INFO') ? ' -' : '-') . ' ';
-	$message .= date($date_fmt) . ' --> ' . $msg . "\n";
-
-	flock($fp, LOCK_EX);
-	fwrite($fp, $message);
-	flock($fp, LOCK_UN);
-	fclose($fp);
-
-	@chmod($filepath, FILE_WRITE_MODE);
-	return TRUE;
-}
 
 
 
@@ -289,6 +228,22 @@ if (!function_exists("decode_text")) {
         $text = str_replace('"', '', $text);
         return $text;
     }
+}
+
+if (!function_exists("search_keywrods")) {
+	function search_keywrods($keywords,$break = 5){
+		$keywords = explode(",", $keywords);
+        shuffle($keywords);
+        $counter = 0;
+        $result = '&lrm; ';
+        foreach ($keywords as $key => $value){
+        	$counter++;
+        	$result .= ' <a href="'.base_url("search/?q={$value}").'">'.$value.'</a> ·';
+        	if ($counter == $break)
+        		break;
+        }
+    	return rtrim($result,' ·');
+	}
 }
 
 

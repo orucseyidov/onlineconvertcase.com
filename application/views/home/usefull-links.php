@@ -1,3 +1,4 @@
+
 <section id="usefullLinks">
   <div class="container-fluid">
     <div class="row">
@@ -5,25 +6,50 @@
           <h4><?=content("home_usefull_text")['title'] ?></h4>
           <?=content("home_usefull_text")['desc'] ?>
         </div>
-        <div class="col-12">
-          <div class="usefulllinks">
-            <div class="usefull-icon">
-              <i id="left" class="fas fa-angle-left"></i>
-            </div>
-            <ul class="usefull-tabs-box">
-              <?php foreach ($usefull_links as $key => $value): ?>
-                <li class="usefull-tab">
-                  <a href="<?=base_url($value['slug']) ?>">
-                    <?=$value['title'] ?>
-                  </a>
-                </li>
-              <?php endforeach ?>
-            </ul>
-            <div class="usefull-icon">
-              <i id="right" class="fas fa-angle-right"></i>
+        
+    </div>
+    <div class="swiper usefullLinksCarusel">
+      <div class="row swiper-wrapper">
+        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 about-block swiper-slide">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
           </div>
         </div>
+        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 about-block swiper-slide">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 about-block swiper-slide">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 about-block swiper-slide">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>

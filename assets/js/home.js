@@ -119,3 +119,18 @@ function generateCursedText() {
 }
 
 
+
+let swiper = new Swiper(".usefullLinksCarusel", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  direction: 'vertical',
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
