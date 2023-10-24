@@ -162,4 +162,9 @@ class Pages extends GO_Controller {
 		   echo "error: Ping back error";
 	} 
 
+
+	public function search(){
+		$this->render("/pages/static/search",$this->data);
+	}
+
 }

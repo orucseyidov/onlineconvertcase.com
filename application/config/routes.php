@@ -65,6 +65,7 @@ $route['recommend']					= 'Process/recommend';
 $route['about']						= 'Pages/about';
 $route['faq']						= 'Pages/faq';
 $route['contact']					= 'Pages/contact';
+$route['search']					= 'Pages/search';
 
 
 
