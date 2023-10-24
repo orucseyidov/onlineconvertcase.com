@@ -27,7 +27,9 @@
     <script src="//cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" async></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
     <script src="/assets/js/toastr.min.js?v=1.1" async></script>
-    <script src="//cdn.jsdelivr.net/npm/swiper@9.0.5/swiper-bundle.min.js" async></script>
+    <?php if ($scriptsLoad['swiper']): ?>
+      <script src="//cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <?php endif ?>
     <script src="/assets/js/app.js?v=1.8" async></script>
     <?=$footerdata; ?>
   </body>

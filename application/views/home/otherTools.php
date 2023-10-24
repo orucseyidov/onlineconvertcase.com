@@ -4,7 +4,7 @@
       <?php foreach ($other_tools as $key => $value): ?>
         <div class="col-12 other-tool-col">
           <div class="other-tool-title">
-            <h3><?=$value['title'] ?></h3>
+            <span class="about-title"><?=$value['title'] ?></span>
           </div>
           <div class="other-tool-links" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
             <?php 
@@ -15,7 +15,7 @@
                   }
             ?>
               <a itemprop="url" class="other-link-btn" href="<?=base_url($toolsValue['slug']) ?>">
-                <span itemprop="name"><?=$toolsValue['title'] ?></span>
+                <h2 itemprop="name"><?=$toolsValue['title'] ?></h2>
               </a>
             <?php 
                 endforeach;

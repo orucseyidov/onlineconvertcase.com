@@ -10,6 +10,7 @@ class Home extends GO_Controller {
 	}
 
 	public function index(){
+		$this->data['scriptsLoad']['swiper'] = true;	
 		$this->data['other_tools'] 			= $this->groups();
 		if ($this->uri->segment(1)) {
 			$slug 	= $this->uri->segment(1);
@@ -28,7 +29,7 @@ class Home extends GO_Controller {
 		}
 	}
 
-	public function renderTool($tool,$slug){		
+	public function renderTool($tool,$slug){	
 		if ($tool['page_status'] == 2) {
 			if (!is_null($tool['view'])) {
 				$view 	= $tool['view'];
@@ -53,7 +54,7 @@ class Home extends GO_Controller {
 			}
 		} else {
 			// $this->data['footerdata'] 			.= '<script src="/assets/js/slider.js?v=1" async></script>';
-			$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js?v=1" async></script>';
+			$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js?v='.time().'" async></script>';
 			$this->data['json_ltd']				= ['tool','faq'];
 			$this->data['other_tool_json']		= $this->home->other_tools();
 			$this->render("home/other_tools/index",$this->data);
@@ -62,7 +63,7 @@ class Home extends GO_Controller {
 	}
 	public function renderHome(){
 		// $this->data['footerdata'] 			.= '<script src="/assets/js/slider.js?v=1" async></script>';
-		$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js?v=1"></script>';
+		$this->data['footerdata'] 			.= '<script type="application/javascript" src="/assets/js/home.js?v='.time().'" async></script>';
 		$this->data['home_about_blocks'] 	= $this->home->home_about_blocks();
 		$this->data['other_tool_json'] 		= $this->home->other_tools();
 		$this->data['usefull_links'] 		= $this->home->usefull_links();

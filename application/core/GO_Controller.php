@@ -46,6 +46,9 @@ class GO_Controller extends MX_Controller
 			"languages"		=> $this->config->item("languages"),
 			"current_locale" => get_lang($this->config->item("languages"), $this->locale),
 			"json_ltd"		=> [],
+			'scriptsLoad'	=> [
+				'swiper' => false
+			]
 		);
 
 		$this->data['seo_slug']				= false;

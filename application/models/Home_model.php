@@ -86,7 +86,7 @@ class Home_model extends GO_Model
 
 	public function usefull_links()
 	{
-		$this->db->select('title,slug,id');
+		$this->db->select('title,meta_description,slug,id');
 		$this->db->from("static_pages");
 		$this->db->where("locale", $this->locale);
 		$this->db->where("status", 1);
