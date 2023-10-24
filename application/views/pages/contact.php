@@ -1,5 +1,5 @@
 <?php $this->load->view("blocks/breadcrumb") ?>
-<section class="contact-section pb-0">
+<section class="contact-section pb-0" style="display:none;">
   <div class="container">
       <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-4 mb-lg-0">
@@ -10,7 +10,7 @@
                       </div>
                       <div>
                           <h5 class="h6">Call Us</h5>
-                          <p class="text-muted mb-0">+123 456-78900</p>
+                          <p class="text-muted mb-0">+1994552725195</p>
                       </div>
                   </div>
               </div>
@@ -36,7 +36,7 @@
                       </div>
                       <div>
                           <h5 class="h6">Mail Us</h5>
-                          <p class="text-muted mb-0">help@yourdomain.com</p>
+                          <p class="text-muted mb-0">help@onlineconvertcase.com</p>
                       </div>
                   </div>
               </div>
@@ -98,7 +98,7 @@
                   <h2>Looking for a excellent Business idea?</h2>
                   <p class="lead">Seamlessly deliver pandemic e-services and next-generation initiatives.</p>
 
-                  <a href="#" class="btn btn-outline-secondary align-items-center">Get Directions <span class="fas fa-arrow-right pl-2"></span></a>
+                  <a href="https://maps.app.goo.gl/Mq7JJViPNhRbDM8RA" class="btn btn-outline-secondary align-items-center">Get Directions <span class="fas fa-arrow-right pl-2"></span></a>
 
                   <hr class="my-5">
 
@@ -108,8 +108,8 @@
                       Factory, United State, 13420
                   </address>
                   <br>
-                  <span>Phone: +1234567890123</span> <br>
-                  <span>Email: <a href="mailto:email@yourdomain.com" class="link-color">email@yourdomain.com</a></span>
+                  <span>Phone: +1994 55 272 51 95</span> <br>
+                  <span>Email: <a href="mailto:email@onlineconvertcase.com" class="link-color">email@onlineconvertcase.com</a></span>
 
               </div>
           </div>
