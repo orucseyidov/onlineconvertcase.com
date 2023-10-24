@@ -3,25 +3,48 @@
   <div class="container">
       <div class="row">
         <div class="col-12 search-input-div">
-            <input type="text" class="form-control search-input xdsoft_input" name="q" data-autocomplete="true" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" value="convertcase" data-search-input="true" style="font-size: 16px;">
+            <form method="GET" action="<?=base_url("search")?>">
+              <input type="text" class="form-control search-input xdsoft_input" name="q" data-autocomplete="true" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" value="<?=$query_string ?>" data-search-input="true" style="font-size: 16px;">
+            </form>
         </div>
         <div class="col-md-8">
+            <?php if (count($tools) || count($pages)): ?>
             <div class="web-results">
+                <?php foreach ($tools as $key => $value): ?>
                 <div class="web-result" id="web-result-1">
-                  <a class="web-result-title" href="https://www.onlineconvertcase.com/" target="_blank">
+                  <a class="web-result-title" href="<?=base_url($value['slug']) ?>" target="_blank">
                     <h3 class="web-result-title-heading">
-                      <b>Convert Case</b>
+                      <b><?=$value['meta_title'] ?></b>
                     </h3>
                   </a>
                   <div class="web-result-domain">
-                    <img src="/assets/favicon/apple-icon-76x76.png" class="web-result-favicon">onlineconvertcase.com
+                    <img src="/assets/favicon/apple-icon-76x76.png" class="web-result-favicon"><?=base_url($value['slug']) ?>
                   </div>
-                  <p class="web-result-desc">Easily convert text between different letter cases: lower case, UPPER CASE, Sentence case, Capitalized Case, aLtErNaTiNg cAsE and more online.</p>
+                  <div class="web-result-desc">
+                    <p><?=$value['meta_description'] ?></p>
+                  </div>
                 </div>
+                <?php endforeach; ?>
+                <?php foreach ($pages as $key => $value): ?>
+                <div class="web-result" id="web-result-1">
+                  <a class="web-result-title" href="<?=base_url($value['slug']) ?>" target="_blank">
+                    <h3 class="web-result-title-heading">
+                      <b><?=$value['meta_title'] ?></b>
+                    </h3>
+                  </a>
+                  <div class="web-result-domain">
+                    <img src="/assets/favicon/apple-icon-76x76.png" class="web-result-favicon"><?=base_url($value['slug']) ?>
+                  </div>
+                  <div class="web-result-desc">
+                    <p><?=$value['meta_description'] ?></p>
+                  </div>
+                </div>
+                <?php endforeach ?>
             </div>
+            <?php else: ?>
             <div class="">
-              <div class="no-results" style="display:none;">
-                <p>No results found for: <strong>sdfashgasidhasjkashdbasndnuibadnjmasdbjnkmasbh</strong>
+              <div class="no-results">
+                <p>No results found for: <strong><?=$query_string ?></strong>
                 </p>
                 <p>Suggestions</p>
                 <ul class="px-3">
@@ -32,6 +55,7 @@
                 </ul>
               </div>
             </div>
+            <?php endif; ?>
         </div>
         <div class="col-md-4">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

@@ -164,6 +164,10 @@ class Pages extends GO_Controller {
 
 
 	public function search(){
+		$query_string = $this->input->get('q');
+		$this->data['query_string'] = $query_string ?? 'convertcase';
+		$this->data['tools'] = $this->pages->other_tools_search_sql($query_string);
+		$this->data['pages'] = $this->pages->get_static_page_search_sql($query_string);
 		$this->render("/pages/static/search",$this->data);
 	}
 

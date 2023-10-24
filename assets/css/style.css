@@ -1117,6 +1117,11 @@ img{
 
 .web-result .web-result-domain {
     color: #009e45;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* İlk üç satırı görüntüler */
+    -webkit-box-orient: vertical;
 }
 
 .web-result .web-result-favicon {
@@ -1129,4 +1134,9 @@ img{
     color: #878787;
     margin: 0.3rem 0 0;
     font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* İlk üç satırı görüntüler */
+    -webkit-box-orient: vertical;
 }
