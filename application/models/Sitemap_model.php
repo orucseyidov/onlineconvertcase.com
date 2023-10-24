@@ -13,6 +13,7 @@ class Sitemap_model extends GO_Model {
 	{
 		$this->db->select('*');
 		$this->db->from('menu');
+		$this->db->where("status",1);
 		$this->db->where("slug !=","/");
 		return $this->db->get()->result_array();
 	}
@@ -21,6 +22,7 @@ class Sitemap_model extends GO_Model {
 	{
 		$this->db->select('slug');
 		$this->db->from('other_tools');
+		$this->db->where("status",1);
 		return $this->db->get()->result_array();
 	}
 
