@@ -1,5 +1,5 @@
 <?php $this->load->view("other_tools/inc/otherToolbannerSection"); ?>
-<section id="textCase">
+<div id="textCase">
   <div class="container-fluid">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -22,11 +22,11 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 other-tool-btn-block">
                   <button id="download" class="modifier-button trim-whitespace" onclick="downloadTextAsFileOther(); return false;">
-                    <img class="icon" src="/assets/img/icons/file.png">
+                    <img alt="Download text" class="icon" src="/assets/img/icons/file.png">
                     <span>Download text</span>
                   </button>
                   <button id="copy" class="modifier-button trim-whitespace" onclick="copyTextToClipboardOther(); return false;">
-                    <img class="icon" src="/assets/img/icons/copy.png">
+                    <img alt="Copy to Clipboard" class="icon" src="/assets/img/icons/copy.png">
                     <span>Copy to Clipboard</span>
                   </button>
                   <a href="https://ko-fi.com/goweb" class="btn-kofi" target="_blank">
@@ -39,7 +39,7 @@
         </div>
     </div>
   </div>
-</section>
+</div>
 <?php 
 $this->load->view("other_tools/inc/about-tool");
 if (isset($other_tools) && is_array($other_tools) && count($other_tools)) {
