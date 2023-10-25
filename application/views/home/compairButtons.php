@@ -13,7 +13,7 @@
                 </a>
               </div>
               <button id="sentence" class="modifier-button sort-lines" style="margin-right: 4px" onclick="toSentenceCase(); return false;">
-                  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                       <path d="M4400 4055 l0 -85 140 0 140 0 0 -1410 0 -1410 -140 0 -140 0 0 -85
                   0 -85 360 0 360 0 0 85 0 85 -140 0 -140 0 0 1410 0 1410 140 0 140 0 0 85 0
@@ -39,7 +39,7 @@
                 <span><?=lang('sentence_case') ?></span>
               </button>
               <button id="lower" class="modifier-button to-lowercase" style="margin-right: 4px" onclick="toLowerCaseText(); return false;">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                     <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                       <path d="M1200 2756 c-526 -111 -859 -617 -751 -1141 111 -539 665 -874 1199
                   -725 85 24 183 66 237 103 l38 26 25 -51 c87 -175 350 -138 392 55 8 37 10
@@ -62,7 +62,7 @@
                 <span><?=lang('to_lower_case') ?></span>
               </button>
               <button id="upper" class="modifier-button replace-linebreaks" style="margin-right: 4px" onclick="toUpperCaseText(); return false;">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                   <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                     <path d="M1265 4259 c-357 -47 -672 -304 -785 -640 -51 -150 -50 -128 -50
                 -1406 0 -1056 2 -1198 15 -1231 64 -152 273 -172 370 -34 l30 44 3 569 2 569
@@ -83,7 +83,7 @@
                 <span><?=lang('upper_case') ?></span>
               </button>
               <button id="capitalized" class="modifier-button trim-whitespace" onclick="toCapitalizedCase(); return false;">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                   <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                     <path d="M1425 4341 c-976 -486 -1288 -646 -1312 -672 -40 -43 -53 -77 -53
                 -139 0 -43 15 -79 110 -270 99 -196 115 -223 151 -247 59 -39 147 -44 209 -11
@@ -109,7 +109,7 @@
                 <span><?=lang('capitalized_case') ?></span>
               </button>
               <button id="alternating" class="modifier-button trim-whitespace" onclick="toAlternatingCase(); return false;">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                   <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                     <path d="M1857 4616 c-55 -15 -144 -73 -174 -114 -11 -15 -31 -48 -44 -72
                 l-24 -45 0 -380 0 -380 28 -53 c36 -68 94 -124 165 -159 l57 -28 275 0 275 0
@@ -161,7 +161,7 @@
                 <span><?=lang('alternating_case') ?></span>
               </button>
               <button id="titleCase" class="modifier-button trim-whitespace" onclick="toTitleCase(); return false;">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                   <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                     <path d="M361 4578 c-66 -15 -126 -79 -141 -152 -17 -83 0 -148 54 -202 24
                 -25 57 -46 81 -53 27 -7 247 -11 698 -11 l657 0 0 -1738 0 -1739 23 -44 c15
@@ -178,7 +178,7 @@
                 <span><?=lang("title_case") ?></span>
               </button>
               <button id="inverse" class="modifier-button trim-whitespace" onclick="toInverseCase(); return false;">
-                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="21" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
                   <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="#52667A">
                     <path d="M1555 5106 c-83 -20 -146 -56 -211 -120 -136 -137 -171 -337 -87
                 -514 34 -73 131 -170 203 -204 90 -41 144 -48 405 -48 l245 0 0 -1660 0 -1660
