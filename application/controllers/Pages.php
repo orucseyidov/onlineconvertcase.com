@@ -85,7 +85,7 @@ class Pages extends GO_Controller {
 			}
 			$this->data['desc']				= mb_substr(strip_tags($page['meta_description']), 0,300);
 			$this->data['bgimage']			= $this->data['ogimage'];
-			$this->data['json_ltd']			= ['breadcrumb'];
+			$this->data['json_ltd']			= ['breadcrumb','article'];
 			$this->render("/pages/static/seo",$this->data);
 		}
 		else{

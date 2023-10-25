@@ -1,16 +1,14 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Title of a News Article",
-  "articleBody": "Body of a News Article",
+  "@type": "Article",
+  "headline": "<?=$page['title'] ?>",
+  "articleBody": "<?=$page['meta_description'] ?>",
   "image": [
-    "https://example.com/photos/1x1/photo.jpg",
-    "https://example.com/photos/4x3/photo.jpg",
-    "https://example.com/photos/16x9/photo.jpg"
+    "<?=base_url($page['image']) ?>"
    ],
-  "datePublished": "2015-02-05T08:00:00+08:00",
-  "dateModified": "2015-02-05T09:20:00+08:00",
+  "datePublished": "<?=$page['created_at'] ?>",
+  "dateModified": "<?=date('Y-m-d H:i:s') ?>",
   "author": [{
       "@type": "Organization",
       "name": "Convert Case",
