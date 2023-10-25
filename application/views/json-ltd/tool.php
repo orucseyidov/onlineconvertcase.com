@@ -3,6 +3,7 @@
   "@context": "https://schema.org/", 
   "@type": "HowTo", 
   "name": "<?=$tool['title'] ?>",
+  "totalTime": "PT<?=strline($tool['description'])?>S",
   "description": "<?=decode_text($tool['description']) ?>",
   <?php if (!is_null($tool['image'])): ?>
     "image": "<?=base_url($tool['image']) ?>",
