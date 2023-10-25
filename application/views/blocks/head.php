@@ -5,28 +5,28 @@
   <base href="<?= base_url() ?>">
   <!-- Required meta tags -->
   <!-- <meta http-equiv="content-language" content="<?=$locale ?>-<?=strtoupper($locale) ?>"> -->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?= $title ?></title>
   <meta name="robots" content="index, follow">
-  <meta name="title" content="<?= $title ?>" />
-  <meta name="description" content="<?= decode_text($desc) ?>" />
+  <meta name="title" content="<?= $title ?>">
+  <meta name="description" content="<?= decode_text($desc) ?>">
   <meta name="keywords" content="<?= $key ?>">
-  <meta property="og:locale" content="<?=ucwords($locale)."_".$locale ?>" />
-  <meta property="og:image" content="<?= $ogimage ?>" />
+  <meta property="og:locale" content="<?=ucwords($locale)."_".$locale ?>">
+  <meta property="og:image" content="<?= $ogimage ?>">
   <meta property="og:type" content="Online Tools" />
-  <meta property="og:title" content="<?= $title ?>" />
-  <meta property="og:site_name" content="<?= $settings['site_title']; ?>" />
-  <meta property="og:description" content="<?= decode_text($desc) ?>" />
-  <meta property="og:url" content="<?= base_url($_SERVER['REQUEST_URI']) ?>" />
+  <meta property="og:title" content="<?= $title ?>">
+  <meta property="og:site_name" content="<?= $settings['site_title']; ?>">
+  <meta property="og:description" content="<?= decode_text($desc) ?>">
+  <meta property="og:url" content="<?= base_url($_SERVER['REQUEST_URI']) ?>">
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" content="<?= decode_text($desc) ?>" />
-  <meta name="twitter:title" content="<?= $title ?>" />
+  <meta name="twitter:description" content="<?= decode_text($desc) ?>">
+  <meta name="twitter:title" content="<?= $title ?>">
   <meta name="token" content="<?= $token ?>">
   <meta name="device" content="<?= $device ?>">
   <!-- verifications -->
-  <meta name="yandex-verification" content="73fbc5f7be1216de" />
-  <meta name="msvalidate.01" content="A883D18E64B8BAF70021D484FB774A71" />
+  <meta name="yandex-verification" content="73fbc5f7be1216de">
+  <meta name="msvalidate.01" content="A883D18E64B8BAF70021D484FB774A71">
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
@@ -52,9 +52,9 @@
   <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>">
   <link rel="stylesheet" href="/assets/css/responsive.css?v=<?= time() ?>">
   <?php if ($scriptsLoad['swiper']): ?>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.css">
   <?php endif ?>
-  <link rel="canonical" href="<?=current_url() ?>" />
+  <link rel="canonical" href="<?=current_url() ?>">
   <?php 
   if (!empty($headdata)) {
     echo $headdata;
