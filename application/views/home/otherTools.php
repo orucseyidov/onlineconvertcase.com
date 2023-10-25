@@ -15,7 +15,7 @@
                   }
             ?>
               <a itemprop="url" class="other-link-btn" href="<?=base_url($toolsValue['slug']) ?>">
-                <h2 itemprop="name"><?=$toolsValue['title'] ?></h2>
+                <h3 itemprop="name"><?=$toolsValue['title'] ?></h3>
               </a>
             <?php 
                 endforeach;
