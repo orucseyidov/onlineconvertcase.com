@@ -43,3 +43,4 @@
     </div>
   </div>
 </section>
+<?php $this->load->view("inc/otherInfromation"); ?>
