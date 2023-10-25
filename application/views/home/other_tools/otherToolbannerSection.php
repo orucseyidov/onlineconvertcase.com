@@ -13,7 +13,7 @@
                 <h1><?=$tool['seo_title'] ?></h1>
                 <?=$tool['description'] ?>
               </div>
-              <butt id="show_button">Show more</a>
+              <a id="show_button">Show more</a>
           </div>
         </div>
       </div>
