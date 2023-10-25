@@ -9,7 +9,7 @@
               <div class="card">
                 <div class="card-body">
                   <h3 class="card-title"><?=$value['title'] ?></h3>
-                  <p class="card-text"><?=$value['description'] ?></p>
+                  <div class="card-text"><?=$value['description'] ?></div>
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@
 <head>
   <base href="<?= base_url() ?>">
   <!-- Required meta tags -->
-  <meta http-equiv="content-language" content="<?=$locale ?>">
+  <meta http-equiv="content-language" content="<?=$locale ?>-<?=strtoupper($locale) ?>">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><?= $title ?></title>
