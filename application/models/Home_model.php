@@ -95,5 +95,19 @@ class Home_model extends GO_Model
 	}
 
 
+	public function other_info($id){
+		$this->db->select("
+			common_contents.id,
+			common_contents.title,
+			common_contents.description,
+		");
+		$this->db->from("other_tools");
+		$this->db->join('common_contents','common_contents.page_id = other_tools.id','left');
+		$this->db->where("common_contents.table_name", "other_tools_other_info");
+		$this->db->where("common_contents.locale", $this->locale);
+		$this->db->where("common_contents.page_id", $id);
+		return $this->db->get()->result_array();
+	}
+
 	
 }

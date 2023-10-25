@@ -36,6 +36,7 @@
                                     <th><i class="fas fa-expand-arrows-alt"></i></th>
                                     <th>№</th>
                                     <th>Başlıq</th>
+                                    <th>Diger Yazilar</th>
                                     <th>Status</th>
                                     <th>Əməliyyatlar</th>
                                 </tr>
@@ -45,11 +46,17 @@
                                     foreach ($manage as $key => $value): 
                                         $editlink = base_url("gopanel/{$class}/edit/?id={$value['id']}");
                                         $contents = base_url("gopanel/common_contents/manage/?page_id={$value['id']}&t_name={$class}");
+                                        $contents2 = base_url("gopanel/common_contents/manage/?page_id={$value['id']}&t_name=other_tools_other_info");
                                 ?>
                                     <tr id="ord-<?=$value['id']?>">
                                         <td class="sort-td"><i class="fas fa-arrows-alt-v"></i></td>
                                         <td><?=$counter++ ?></td>
                                         <td><?=$value['name']; ?></td>
+                                        <td>
+                                            <a href="<?=$contents2 ?>">
+                                                Diger metnler [<?=$value['count_contents']; ?>]
+                                            </a>
+                                        </td>
                                         <td>
                                             <input
                                             class         ="status"

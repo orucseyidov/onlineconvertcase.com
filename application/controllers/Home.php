@@ -18,6 +18,7 @@ class Home extends GO_Controller {
 			if (isset($tool['id'])) {
 				$this->data['tool'] = $tool;
 				$this->data['faq'] 	= $this->home->faq($tool['id']);
+				$this->data['other_info'] = $this->home->other_info($tool['id']);
 				$this->meta_seo($tool);
 				$this->renderTool($tool,$slug);
 			} else {

@@ -20,7 +20,10 @@ class Tools_model extends GO_Model {
 
 
 	public function other_tools($group){
-		$this->db->select("*");
+		$this->db->select("
+			other_tools.*,
+			(SELECT COUNT(id) FROM common_contents WHERE table_name='other_tools_other_info' AND page_id=other_tools.id) as count_contents
+		");
 		$this->db->from("other_tools");
 		$this->db->where("group_id",$group);
 		return $this->db->get()->result_array();
