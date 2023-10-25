@@ -1,4 +1,4 @@
-<section id="compairButtons">
+<div id="compairButtons">
   <div class="container-fluid">
     <div class="compair-option-buttons">
       <div class="row">
@@ -204,4 +204,4 @@
       </div>
     </div>
   </div>
-</section>
+</div>
