@@ -1,4 +1,4 @@
-<section id="feedback" class="feedback-section">
+<div id="feedback" class="feedback-section">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -88,4 +88,4 @@
       </div>
     </div>
   </div>
-</section>
+</div>

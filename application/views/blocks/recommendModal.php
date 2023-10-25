@@ -23,8 +23,8 @@
                 <textarea class="form-control" name="comment" id="formFeedback" required></textarea>
               </div>
               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="checkForm">
-                <label class="form-check-label" name="checkForm" for="checkForm"><?=lang("modal_check") ?></label>
+                <input type="checkbox" class="form-check-input" name="checkForm" id="checkForm">
+                <label class="form-check-label" for="checkForm"><?=lang("modal_check") ?></label>
               </div>
               <div>
                 <button type="submit" class="btn btn-primary btn-block">
