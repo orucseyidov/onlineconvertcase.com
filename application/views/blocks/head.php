@@ -46,13 +46,13 @@
   <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- Style -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" async>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
   <link href="/assets/css/fontawsome-all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/toastr.min.css?v=1" async>
-  <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>" async>
-  <link rel="stylesheet" href="/assets/css/responsive.css?v=<?= time() ?>" async>
+  <link rel="stylesheet" href="/assets/css/toastr.min.css?v=1">
+  <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>">
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=<?= time() ?>">
   <?php if ($scriptsLoad['swiper']): ?>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.css" async/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.css"/>
   <?php endif ?>
   <link rel="canonical" href="<?=current_url() ?>" />
   <?php 
