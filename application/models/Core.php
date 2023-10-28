@@ -46,7 +46,8 @@ class Core extends GO_Model
 	{
 		$this->db->select('*');
 		$this->db->from('seo_keywords');
-		 $this->db->order_by('rand()');
+		$this->db->order_by('rand()');
+		$this->db->limit(rand(10,15));
 		return $this->db->get()->result_array();
 	}
 
