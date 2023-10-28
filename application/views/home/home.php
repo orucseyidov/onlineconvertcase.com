@@ -2,6 +2,8 @@
 $this->load->view("home/bannerSection");
 $this->load->view("home/textCase");
 $this->load->view("home/compairButtons");
+$this->load->view("blocks/reviews");
+
 if (isset($home_about_blocks) && is_array($home_about_blocks) && count($home_about_blocks)) {
   $this->load->view("home/about");
 }

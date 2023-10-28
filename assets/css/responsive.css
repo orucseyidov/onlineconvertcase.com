@@ -69,7 +69,7 @@
 
 @media only screen and (max-width: 991px) {
    /* For  all mobile phones: */
-    .m-none, .menu-desktop, .banner-image, #otherToolsBanners, .bymecofee{
+    .m-none, .menu-desktop, .banner-image, #otherToolsBanners, .bymecofee, .rewievs-line{
         display: none;
         visibility: hidden;
     }
@@ -156,7 +156,19 @@
     #textCase .output{
         min-height: 210px;
     }
-
+    .rewievs{
+        padding: 20px 0 10px;
+        flex-direction: column;
+    }
+    .rewievs-link{
+        width: 100%;
+/*        padding: 13px 0;*/
+        column-gap: 19px;
+        border-right: none;
+        justify-content: flex-end;
+        border-bottom: 1px solid #CDD1E0;
+        margin-bottom: 20px;
+    }
 
     
 }

@@ -1,3 +1,7 @@
+
+          
+
+
             <?php if (isset($seo_keywords) && is_array($seo_keywords)): ?>
               
             <?php endif ?>
