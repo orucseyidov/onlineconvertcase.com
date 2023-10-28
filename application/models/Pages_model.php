@@ -79,15 +79,21 @@ class Pages_model extends GO_Model
 			AND common_contents.locale = '{$locale}'
 			AND other_tools.status = 1
 			AND other_tools.slug IS NOT NULL
-			AND (common_contents.title LIKE '%{$string}%'
-			     OR common_contents.description LIKE '%{$string}%'
-			     OR common_contents.seo_title LIKE '%{$string}%'
-			     OR common_contents.seo_description LIKE '%{$string}%'
-			     OR common_contents.meta_title LIKE '%{$string}%'
-			     OR common_contents.meta_description LIKE '%{$string}%'
-			     OR common_contents.keywords LIKE '%{$string}%')
-			ORDER BY other_tools.rank ASC;
+			AND 
 		";
+		$sqlLike ='';
+		foreach ($string as $key => $value) {
+			$sqlLike .= "
+				(common_contents.title LIKE '%{$value}%'
+			     OR common_contents.description LIKE '%{$value}%'
+			     OR common_contents.seo_title LIKE '%{$value}%'
+			     OR common_contents.seo_description LIKE '%{$value}%'
+			     OR common_contents.meta_title LIKE '%{$value}%'
+			     OR common_contents.meta_description LIKE '%{$value}%'
+			     OR common_contents.keywords LIKE '%{$value}%') OR ";
+		}
+		$sqlLike = rtrim($sqlLike, " OR");
+		$sql .= "($sqlLike) ORDER BY other_tools.rank ASC";
 		return $this->db->query($sql)->result_array();
 	}
 
@@ -117,13 +123,25 @@ class Pages_model extends GO_Model
 			AND static_pages.type = 2
 			AND static_pages.locale = '{$locale}'
 			AND static_pages.slug IS NOT NULL
-			AND (static_pages.title LIKE '%{$string}%'
-			     OR static_pages.description LIKE '%{$string}%'
-			     OR static_pages.meta_title LIKE '%{$string}%'
-			     OR static_pages.meta_description LIKE '%{$string}%'
-			     OR static_pages.keywords LIKE '%{$string}%')
-			ORDER BY static_pages.id DESC;
-		";
+			AND ";
+		$sqlLike = '';
+		foreach ($string as $key => $value) {
+			$sqlLike .= "(static_pages.title LIKE '%{$value}%'
+			     OR static_pages.description LIKE '%{$value}%'
+			     OR static_pages.meta_title LIKE '%{$value}%'
+			     OR static_pages.meta_description LIKE '%{$value}%'
+			     OR static_pages.keywords LIKE '%{$value}%') OR";
+		}
+		$sqlLike = rtrim($sqlLike, " OR");
+		$sql .= "($sqlLike) ORDER BY static_pages.id DESC";
 		return $this->db->query($sql)->result_array();
+	}
+
+	public function get_keyword($string)
+	{
+		$this->db->select("*");
+		$this->db->from("seo_keywords");
+		$this->db->like('seo_keywords.keyword', $string);
+		return $this->db->get()->row_array();
 	}
 }
