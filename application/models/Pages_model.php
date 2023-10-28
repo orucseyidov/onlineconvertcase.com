@@ -93,7 +93,8 @@ class Pages_model extends GO_Model
 			     OR common_contents.keywords LIKE '%{$value}%') OR ";
 		}
 		$sqlLike = rtrim($sqlLike, " OR");
-		$sql .= "($sqlLike) ORDER BY other_tools.id RAND() ";
+		$sql .= "($sqlLike) ORDER BY RAND() ";
+		debug($sql);
 		return $this->db->query($sql)->result_array();
 	}
 
@@ -133,7 +134,7 @@ class Pages_model extends GO_Model
 			     OR static_pages.keywords LIKE '%{$value}%') OR";
 		}
 		$sqlLike = rtrim($sqlLike, " OR");
-		$sql .= "($sqlLike) ORDER BY static_pages.id RAND() ";
+		$sql .= "($sqlLike) ORDER BY RAND() ";
 		return $this->db->query($sql)->result_array();
 	}
 
