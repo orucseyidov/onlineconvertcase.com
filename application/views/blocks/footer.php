@@ -8,9 +8,13 @@
                     <span>Most searched words</span>
                   </div>
                   <div class="col-12" id="mostSearchedWordsList">
-                    <?php foreach ($seo_keywords as $key => $value): ?>
-                      <a class="most-word" href="<?=base_url("search/?q={$value['keyword']}") ?>"><?=$value['keyword'] ?></a> · 
-                    <?php endforeach ?>
+                    <?php 
+                    $keys = '';
+                      foreach ($seo_keywords as $key => $value){
+                        $keys .= '<a class="most-word" href="'.base_url("search/?q={$value['keyword']}").'">'.$value['keyword'].'</a> · '
+                      }
+                      echo rtrim($keys,' · ');
+                    ?>
                   </div>
                 </div>
               </div>
