@@ -11,7 +11,7 @@
                     <?php 
                     $keys = '';
                       foreach ($seo_keywords as $key => $value){
-                        $keys .= '<a class="most-word" href="'.base_url("search/?q={$value['keyword']}").'">'.$value['keyword'].'</a> · '
+                        $keys .= '<a class="most-word" href="'.base_url("search/?q={$value['keyword']}").'">'.$value['keyword'].'</a> · ';
                       }
                       echo rtrim($keys,' · ');
                     ?>
