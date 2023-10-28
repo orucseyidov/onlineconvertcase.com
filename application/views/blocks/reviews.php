@@ -16,7 +16,7 @@
            </a>
            <div class="rewievs-line"></div>
            <a class="rewievs-link" href="https://www.sitejabber.com/reviews/onlineconvertcase.com" target="_blank" rel="noopener noreferrer">
-             <img src="/assets/img/icons/sitejabber-logo-new.svg" alt="Trust pilot" class="rewievs-logo">
+             <img src="/assets/img/icons/sitejabber-logo-new.svg" alt="Sitejabber" class="rewievs-logo">
              <div class="rewievs-stars">
                <div class="rewievs-star">
                  <img src="/assets/img/icons/sitejabber-logo-stars.svg" class="rewievs-stars-icon" alt="4.8">
