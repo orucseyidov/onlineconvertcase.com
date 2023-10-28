@@ -94,7 +94,7 @@ class Pages_model extends GO_Model
 		}
 		$sqlLike = rtrim($sqlLike, " OR");
 		$sql .= "($sqlLike) ORDER BY RAND() ";
-		debug($sql);
+		// debug($sql);
 		return $this->db->query($sql)->result_array();
 	}
 
