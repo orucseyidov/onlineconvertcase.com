@@ -9,7 +9,7 @@
                   </div>
                   <div class="col-12" id="mostSearchedWordsList">
                     <?php foreach ($seo_keywords as $key => $value): ?>
-                      <a class="most-word" href="<?=base_url("search/?q={$value['keyword']}") ?>"><?=$value['keyword'] ?></a>
+                      <a class="most-word" href="<?=base_url("search/?q={$value['keyword']}") ?>"><?=$value['keyword'] ?></a> · 
                     <?php endforeach ?>
                   </div>
                 </div>
