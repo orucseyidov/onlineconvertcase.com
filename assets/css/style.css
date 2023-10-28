@@ -1181,3 +1181,25 @@ img{
 #otherInfromation .card{
     margin-bottom: 15px;
 }
+
+#mostSearchedWords{
+    text-align: center;
+}
+
+#mostSearchedWords .section-title{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#mostSearchedWords .section-title span{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+    color: #3850b7!important;
+}
+#mostSearchedWordsList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}

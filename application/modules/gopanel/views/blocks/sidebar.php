@@ -143,6 +143,14 @@
                     </a>
                 </li>
 
+
+                <li>
+                    <a href="/gopanel/seo_keywords/manage">
+                        <i class="fas fa-question"></i>
+                        <span> Seo Açar Sözlər</span>
+                    </a>
+                </li>
+
                 <!-- <li>
                     <a href="javascript:void(0);" class="waves-effect">
                         <i class="fas fa-angle-double-right"></i> <span> Seo Səhifələr</span>

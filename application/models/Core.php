@@ -41,6 +41,15 @@ class Core extends GO_Model
 		return $this->db->get()->result_array();
 	}
 
+
+	public function keyword()
+	{
+		$this->db->select('*');
+		$this->db->from('seo_keywords');
+		 $this->db->order_by('rand()');
+		return $this->db->get()->result_array();
+	}
+
 	public function menu()
 	{
 		$this->db->select('name,slug');

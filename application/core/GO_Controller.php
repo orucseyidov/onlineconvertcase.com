@@ -72,7 +72,7 @@ class GO_Controller extends MX_Controller
 			// $this->data['lang'] 			= $this->lang;
 			$this->data['lang'] 			= $this->locale;
 			$this->data['settings'] 		= $settings;
-			// $this->data['social'] 			= $this->core->social();
+			$this->data['seo_keywords']		= $this->core->keyword();
 			$this->data['contacts'] 		= $this->core->contact();
 			$this->data['menu'] 			= $this->core->menu();
 			$this->data['scripts']			= "";

@@ -1,3 +1,22 @@
+            <?php if (isset($seo_keywords) && is_array($seo_keywords)): ?>
+              
+            <?php endif ?>
+            <div id="mostSearchedWords">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 section-title">
+                    <span>Most searched words</span>
+                  </div>
+                  <div class="col-12" id="mostSearchedWordsList">
+                    <?php foreach ($seo_keywords as $key => $value): ?>
+                      <a class="most-word" href="<?=base_url("search/?q={$value['keyword']}") ?>"><?=$value['keyword'] ?></a>
+                    <?php endforeach ?>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
             <footer>
               <div class="footer">
                   <div class="container-fluid">
