@@ -9,7 +9,7 @@
              <div class="rewievs-stars">
                <div class="rewievs-star">
                  <img src="/assets/img/icons/trust-pilot-stars.svg" class="rewievs-stars-icon" alt="4.8">
-                 <p class="rewievs-avg">0.0</p>
+                 <p class="rewievs-avg">4.0</p>
                </div>
                <p class="rewievs-desc">Trusted by more than 0 people</p>
              </div>
@@ -20,7 +20,7 @@
              <div class="rewievs-stars">
                <div class="rewievs-star">
                  <img src="/assets/img/icons/sitejabber-logo-stars.svg" class="rewievs-stars-icon" alt="4.8">
-                 <p class="rewievs-avg">0.0</p>
+                 <p class="rewievs-avg">4.0</p>
                </div>
                <p class="rewievs-desc">Trusted by more than 0 people</p>
              </div>
