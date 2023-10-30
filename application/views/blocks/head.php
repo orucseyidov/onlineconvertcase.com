@@ -72,6 +72,7 @@
 
     gtag('config', 'G-7FN1V1MPSQ');
   </script>
+  <?php if ($this->uri->segment(1) === FALSE): ?>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
@@ -88,6 +89,7 @@
       }
   }
   </script>
+  <?php endif ?>
   <?php
   if (isset($json_ltd) && is_array($json_ltd) && count($json_ltd)) {
     foreach ($json_ltd as $key => $value) {
