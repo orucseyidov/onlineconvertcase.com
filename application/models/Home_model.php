@@ -66,7 +66,6 @@ class Home_model extends GO_Model
 		$this->db->where("common_contents.table_name", "other_tools");
 		$this->db->where("common_contents.locale", $this->locale);
 		$this->db->where("other_tools.slug", $slug);
-		$this->db->where("other_tools.status", 1);
 		return $this->db->get()->row_array();
 	}
 

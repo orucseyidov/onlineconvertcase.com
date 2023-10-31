@@ -15,6 +15,7 @@ class Home extends GO_Controller {
 		if ($this->uri->segment(1)) {
 			$slug 	= $this->uri->segment(1);
 			$tool 	= $this->home->get_other_tool($slug);
+			// debug($tool);
 			if (isset($tool['id'])) {
 				$this->data['tool'] = $tool;
 				$this->data['faq'] 	= $this->home->faq($tool['id']);
