@@ -16,7 +16,7 @@
                           <ul class="footer-menu">
                             <?php foreach ($menu as $key => $value): ?>
                               <li>
-                                <a href="<?=base_url(ltrim($value['slug'],"/")) ?>"><?=$value['name'] ?></a>
+                                <a href="<?=base_url(ltrim($value['slug'],"/")) ?>/"><?=$value['name'] ?></a>
                               </li>
                             <?php endforeach ?>
                           </ul>

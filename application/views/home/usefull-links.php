@@ -14,7 +14,7 @@
         <div class="usefull-card about-block swiper-slide">
           <div class="card">
             <div class="card-body">
-              <a href="<?=base_url($value['slug']) ?>" class="card-title"><?=$value['title'] ?></a>
+              <a href="<?=base_url($value['slug']) ?>/" class="card-title"><?=$value['title'] ?></a>
               <p class="card-text"><?=$value['meta_description'] ?></p>
             </div>
           </div>

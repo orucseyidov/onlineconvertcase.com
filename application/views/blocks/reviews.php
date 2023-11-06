@@ -27,13 +27,13 @@
            </a>
            <div class="rewievs-line"></div>
            <div class="rewievs-end">
-             <a class="rewievs-end-desc">
+             <div class="rewievs-end-desc">
                <svg class="MuiSvgIcon-root rewievs-ned-icon" focusable="false" viewBox="0 0 16 13" aria-hidden="true" style="fill: none; font-size: 16px;">
                  <rect x="2.57" y="2.5" width="11" height="7" rx=".5" stroke="currentColor"></rect>
                  <path fill="currentColor" d="M2.07 7h12v1h-12z"></path>
                  <path d="m15.07 1-14 11" stroke="#68676C"></path>
                </svg>No credit card required
-             </a>
+             </div>
            </div>
          </div>
 

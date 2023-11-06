@@ -14,7 +14,7 @@
                     continue;
                   }
             ?>
-              <a itemprop="url" class="other-link-btn" href="<?=base_url($toolsValue['slug']) ?>">
+              <a itemprop="url" class="other-link-btn" href="<?=base_url($toolsValue['slug']) ?>/">
                 <h3 itemprop="name"><?=$toolsValue['title'] ?></h3>
               </a>
             <?php 
