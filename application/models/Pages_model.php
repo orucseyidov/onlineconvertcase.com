@@ -145,4 +145,22 @@ class Pages_model extends GO_Model
 		$this->db->like('seo_keywords.keyword', $string);
 		return $this->db->get()->row_array();
 	}
+
+
+	public function other_tool_search_sql($string,$locale='en'){
+		$this->db->select("
+			`other_tools`.slug,`other_tools`.id
+		");
+		$this->db->from("other_tools");
+		$this->db->join('common_contents','common_contents.page_id = other_tools.id','left');
+		$this->db->where("common_contents.table_name", "other_tools");
+		$this->db->where("common_contents.locale", $this->locale);
+		$this->db->where("other_tools.status", 1);
+		$this->db->where("other_tools.slug !=", NULL);
+		$this->db->like('common_contents.title', $string);
+        $this->db->or_like('common_contents.seo_title',$string);
+        $this->db->or_like('common_contents.meta_title',$string);
+		$this->db->order_by("other_tools.rank", "ASC");
+		return $this->db->get()->row_array();
+	}
 }

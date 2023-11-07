@@ -165,18 +165,25 @@ class Pages extends GO_Controller {
 
 	public function search(){
 		$q 		      = $this->input->get('q');
-		$search 	  = $this->pages->get_keyword($q);
 		$query_string = explode(" ", $q);
-		$this->data['query_string'] = $q ?? 'convertcase';
-		$this->data['tools'] = $this->pages->other_tools_search_sql($query_string);
-		$this->data['pages'] = $this->pages->get_static_page_search_sql($query_string);
-		$this->data['search']= $this->pages->get_static_page_search_sql($query_string);
-		if (isset($search['id'])) {
-			$this->data['title']  	= $q;
-			$this->data['desc']   	= $q;
-			$this->data['key']     	= $q;
+		// $search 	  = $this->pages->get_keyword($q);
+		// $this->data['query_string'] = $q ?? 'convertcase';
+		// $this->data['tools'] = $this->pages->other_tools_search_sql($query_string);
+		// $this->data['pages'] = $this->pages->get_static_page_search_sql($query_string);
+		// $this->data['search']= $this->pages->get_static_page_search_sql($query_string);
+		// if (isset($search['id'])) {
+		// 	$this->data['title']  	= $q;
+		// 	$this->data['desc']   	= $q;
+		// 	$this->data['key']     	= $q;
+		// }
+		// $this->render("/pages/static/search",$this->data);
+		$tool = $this->pages->other_tool_search_sql($q);
+		if (isset($tool['id'])) {
+			redirect(base_url($tool['slug']."/"));
 		}
-		$this->render("/pages/static/search",$this->data);
+		else{
+			redirect(base_url('404/'));
+		}
 	}
 
 }
