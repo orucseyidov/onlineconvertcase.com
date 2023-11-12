@@ -13,7 +13,7 @@
                   <span> <?=lang("line_count") ?> <span class="counter-numbers" id="lineCount">0</span></span>  
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bymecofee">
-                  <a href="https://ko-fi.com/goweb" class="btn-kofi" target="_blank">
+                  <a href="https://ko-fi.com/goweb" class="btn-kofi" target="_blank" rel="noopener noreferrer">
                     <img src="/assets/img/icons/kofi.png" alt="Buy me a Coffee Case Converter" height="14" width="21"> 
                     <?=lang("buy_me_a_coffee") ?>
                   </a>
@@ -21,7 +21,7 @@
               </div>
           </div>
           <div class="clearInput">
-            <a href="https://ko-fi.com/goweb" class="btn-kofi" target="_blank">
+            <a href="https://ko-fi.com/goweb" class="btn-kofi" target="_blank" rel="noopener noreferrer">
               <img  src="/assets/img/icons/kofi.png" alt="Buy me a Coffee Convert Case" height="14" width="21"> 
               <?=lang("buy_me_a_coffee") ?>
             </a>

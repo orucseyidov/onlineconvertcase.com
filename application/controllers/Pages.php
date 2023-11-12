@@ -37,6 +37,7 @@ class Pages extends GO_Controller {
 	}
 
 	public function error_404(){
+		header("HTTP/1.0 404 Not Found");
 		$this->data['json_ltd']					= ['breadcrumb'];
 		$this->data['footerdata'] 				.= '<script type="application/javascript" src="/assets/js/home.js" async></script>';
 		$this->getSeoInfo($this->uri->segment(1));
