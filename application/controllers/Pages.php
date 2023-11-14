@@ -19,6 +19,7 @@ class Pages extends GO_Controller {
 		$meta = $this->meta_seo($this->uri->segment(1));
 		$about = $this->pages->about($this->locale);
 		$this->data['about']		   = $about;
+		$this->getSeoInfo($this->uri->segment(1));
 		$this->render("/pages/about",$this->data);
 	}
 
