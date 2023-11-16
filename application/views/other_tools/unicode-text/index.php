@@ -34,7 +34,7 @@
                     <img alt="Copy to Clipboard" class="icon" src="/assets/img/icons/copy.png">
                     <span>Copy to Clipboard</span>
                   </button>
-                  <a href="https://ko-fi.com/goweb" class="btn-kofi" target="_blank">
+                  <a href="https://ko-fi.com/goweb" class="btn-kofi" target="_blank" rel="noopener noreferrer">
                     <img src="/assets/img/icons/kofi.png" alt="Buy me a Coffee" height="14" width="21"> 
                     Buy me a Coffee
                   </a>

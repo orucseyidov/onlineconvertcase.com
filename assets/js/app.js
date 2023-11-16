@@ -230,17 +230,19 @@ document.addEventListener("DOMContentLoaded", function() {
     var btn = document.getElementById('show_button');
     var isTruncated = true;
 
-    btn.addEventListener('click', function() {
-        if (isTruncated) {
-            truncateDiv.classList.remove('truncate-text');
-            btn.textContent = 'Shorten Text';
-        } else {
-            truncateDiv.classList.add('truncate-text');
-            btn.textContent = 'Show more';
-        }
+    if (btn) {
+        btn.addEventListener('click', function() {
+            if (isTruncated) {
+                truncateDiv.classList.remove('truncate-text');
+                btn.textContent = 'Shorten Text';
+            } else {
+                truncateDiv.classList.add('truncate-text');
+                btn.textContent = 'Show more';
+            }
 
-        isTruncated = !isTruncated;
-    });
+            isTruncated = !isTruncated;
+        });
+    }
 });
 
 

@@ -120,30 +120,32 @@ function generateCursedText() {
 
 
 
-let swiper = new Swiper(".usefullLinksCarusel", {
-  // slidesPerView: 4,
-  // spaceBetween:15,
-  direction: 'horizontal',
-  loop: true,
-  breakpoints: {
-      350: {
-          slidesPerView: 1,
-      },
-      750: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-      },
-      1000: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-      }
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+if ($(".usefullLinksCarusel").length > 0) {
+  let swiper = new Swiper(".usefullLinksCarusel", {
+    // slidesPerView: 4,
+    // spaceBetween:15,
+    direction: 'horizontal',
+    loop: true,
+    breakpoints: {
+        350: {
+            slidesPerView: 1,
+        },
+        750: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        },
+        1000: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
