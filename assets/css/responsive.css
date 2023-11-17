@@ -83,8 +83,8 @@
     #show_button{
         display: block;
     }
-    .logo-desktop{
-        max-width: 100%;
+    .navbar-brand{
+        max-width: 70%;
     }
     .banner-one{
         margin-right: 0px;

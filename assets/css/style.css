@@ -99,63 +99,17 @@ img{
     transition: var(--defaults-animationTime);
 }
 
-.logo-desktop{
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.menu-header{
+    margin-top: 10px;
 }
-.logo-desktop img{
-    max-width: 100%;
+.navbar-brand{
+    margin: 0;
+    padding: 0;
 }
-.menu-area {
-    display: flex;
-    margin-top: 15px;
-    justify-content: space-between;
+.navbar-brand img{
+    max-width: 90%;
 }
 
-.menu-and-logo{
-    display: flex;
-    justify-content: start;
-}
-
-
-.menu-desktop{}
-.menu-desktop ul{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-.menu-desktop ul li{
-    list-style: none;
-    margin-right: 10px;
-    border: 0;
-    -webkit-appearance: none;
-    appearance: none;
-    padding: 12px 15px;
-    border-radius: 4px;
-    background: var(--color-blue);
-    justify-content: center;
-    min-width: 80px;
-    display: flex;
-    line-height: 25px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menu-desktop ul li a{
-    width: 100%;
-    text-decoration: none;
-    color: var(--text-white);
-}
-.menu-desktop ul li.active{
-    border-bottom: 2px solid var(--color-blue);
-}
-
-.language-select{
-    display: none;
-}
 
 #bannerSection{
     margin-top: var(--defaults-section-margin-top);

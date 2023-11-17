@@ -1,7 +1,7 @@
 <section id="bannerSection">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8 col-lg-9 col-sm-12 col-xs-12 banner-one-col">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 banner-one-col">
         <div class="banner-one">
           <div class="banner-image">
               <div>
@@ -16,7 +16,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-lg-3 col-sm-12 col-xs-12  banner-two-col">
+      <!-- <div class="col-md-4 col-lg-3 col-sm-12 col-xs-12  banner-two-col">
         <div class="banner-two">
           <div class="banner-two-center">
             <h3><?=content('recommend_tool')['title'] ?></h3>
@@ -26,7 +26,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
