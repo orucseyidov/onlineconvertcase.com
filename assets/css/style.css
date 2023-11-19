@@ -738,6 +738,10 @@ img{
     margin: 0;
 }
 
+.other-link-btn h3.mini{
+    font-size: 14px!important;
+}
+
 .other-link-btn:hover {
     background-color: grey;
     color: #fff;
@@ -893,6 +897,8 @@ img{
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     min-height: 330px;
     font-family: var(--font-roboto);
+    white-space: wrap;
+    word-wrap: break-word!important;
 }
 .other-tool-btn-block{
     display: flex;
