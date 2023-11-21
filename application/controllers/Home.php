@@ -20,6 +20,7 @@ class Home extends GO_Controller {
 				$this->data['tool'] = $tool;
 				$this->data['faq'] 	= $this->home->faq($tool['id']);
 				$this->data['other_info'] = $this->home->other_info($tool['id']);
+				$this->data['other_tools_by_group'] = $this->home->other_tools_by_group_id($tool['group_id']);
 				$this->meta_seo($tool);
 				$this->renderTool($tool,$slug);
 			} else {

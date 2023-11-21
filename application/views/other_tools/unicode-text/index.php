@@ -45,4 +45,9 @@
     </div>
   </div>
 </div>
-<?php $this->load->view("other_tools/inc/about-tool"); ?>
+<?php 
+$this->load->view("other_tools/inc/about-tool");
+if (isset($other_tools_by_group) && is_array($other_tools_by_group) && count($other_tools_by_group)) {
+  $this->load->view("other_tools/inc/groupByOtherTools");
+}
+?>

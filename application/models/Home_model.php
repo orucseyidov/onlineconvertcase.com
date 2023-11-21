@@ -108,5 +108,22 @@ class Home_model extends GO_Model
 		return $this->db->get()->result_array();
 	}
 
+
+	public function other_tools_by_group_id($group_id)
+	{
+		$this->db->select("
+			`other_tools`.*,
+			common_contents.title
+		");
+		$this->db->from("other_tools");
+		$this->db->join('common_contents','common_contents.page_id = other_tools.id','left');
+		$this->db->where("common_contents.table_name", "other_tools");
+		$this->db->where("common_contents.locale", $this->locale);
+		$this->db->where("other_tools.group_id", $group_id);
+		$this->db->where("other_tools.status", 1);
+		$this->db->order_by("other_tools.rank", "ASC");
+		return $this->db->get()->result_array();
+	}
+
 	
 }
