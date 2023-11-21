@@ -54,7 +54,7 @@
   <?php if ($scriptsLoad['swiper']): ?>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9.0.0/swiper-bundle.min.css">
   <?php endif ?>
-  <link rel="canonical" href="<?=current_url() ?>">
+  <link rel="canonical" href="<?=$canonical ?>">
   <?php 
   if (!empty($headdata)) {
     echo $headdata;

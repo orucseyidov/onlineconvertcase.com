@@ -15,6 +15,7 @@ RewriteCond %{REQUEST_URI} !^/gopanel/
 RewriteCond %{HTTP:X-Requested-With} !XMLHttpRequest
 # If both conditions are met (not an existing file and not an admin panel route), add a trailing slash and issue a 301 redirect
 RewriteRule ^([^/]+)/?$ /$1/ [L,R=301]
+#RewriteRule ^(.*)$ /$1/ [L,R=301]
 
 #RewriteCond %{HTTP_HOST} ^www.onlineconvertcase\.com [NC]
 #RewriteRule ^(.*)$ https://onlineconvertcase.com/$1/ [L,R=301]

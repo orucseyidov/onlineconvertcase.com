@@ -45,6 +45,7 @@ class GO_Controller extends MX_Controller
 			"locale"		=> $this->locale,
 			"languages"		=> $this->config->item("languages"),
 			"current_locale" => get_lang($this->config->item("languages"), $this->locale),
+			"canonical"		=> $this->canonical(),
 			"json_ltd"		=> [],
 			'scriptsLoad'	=> [
 				'swiper' => false
@@ -151,6 +152,10 @@ class GO_Controller extends MX_Controller
 			$this->token = isset($_SESSION['token']) ? $_SESSION['token'] : $token;
 		}
 		return $this->token;
+	}
+
+	public function canonical(){
+		return rtrim(current_url(),'/').'/';
 	}
 
 

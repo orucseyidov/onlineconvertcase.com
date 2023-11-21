@@ -13,25 +13,34 @@
 	  <changefreq>daily</changefreq>
 	  <priority>1.00</priority>
 	</url>
-	<?php foreach ($tools as $key => $value): ?>
+	<?php 
+		foreach ($tools as $key => $value):
+			$link = base_url(rtrim($value['slug'],'/')).'/';
+	?>
 		<url>
-		  <loc><?=base_url($value['slug']) ?></loc>
+		  <loc><?=$link ?></loc>
 		  <lastmod><?= date("Y-m-d") ?></lastmod>
 		  <changefreq>daily</changefreq>
 		  <priority>1.00</priority>
 		</url>
 	<?php endforeach ?>
-	<?php foreach ($seo as $key => $value): ?>
+	<?php 
+		foreach ($seo as $key => $value): 
+			$link = base_url(rtrim($value['slug'],'/')).'/';
+	?>
 		<url>
-		  <loc><?=base_url($value['slug']) ?></loc>
+		  <loc><?=$link ?></loc>
 		  <lastmod><?= date("Y-m-d") ?></lastmod>
 		  <changefreq>daily</changefreq>
 		  <priority>1.00</priority>
 		</url>
 	<?php endforeach ?>
-	<?php foreach ($menu as $key => $value): ?>
+	<?php 
+		foreach ($menu as $key => $value):
+			$link = base_url(rtrim($value['slug'],'/')).'/';
+	?>
 		<url>
-		  <loc><?=base_url($value['slug']) ?></loc>
+		  <loc><?=$link ?></loc>
 		  <lastmod><?= date("Y-m-d") ?></lastmod>
 		  <changefreq>daily</changefreq>
 		  <priority>0.50</priority>
