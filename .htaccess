@@ -14,17 +14,54 @@ RewriteCond %{REQUEST_URI} !^/gopanel/
 # Check for the X-Requested-With header to identify AJAX requests
 RewriteCond %{HTTP:X-Requested-With} !XMLHttpRequest
 # If both conditions are met (not an existing file and not an admin panel route), add a trailing slash and issue a 301 redirect
-RewriteRule ^(.*)$ /$1/ [L,R=301]
+RewriteRule ^([^/]+)/?$ /$1/ [L,R=301]
+
+#RewriteCond %{HTTP_HOST} ^www.onlineconvertcase\.com [NC]
+#RewriteRule ^(.*)$ https://onlineconvertcase.com/$1/ [L,R=301]
+
+#RewriteCond %{HTTP_HOST} ^www.onlineconvertcase\.com [NC]
+#RewriteRule ^(.*)$ https://onlineconvertcase.com/$1 [L,R=301]
 
 
+RewriteRule ^en/contact$ /contact/ [R=301,L]
+RewriteRule ^en/contact/$ /contact/ [R=301,L]
+RewriteRule ^en/about$ /about/ [R=301,L]
+RewriteRule ^en/about/$ /about/ [R=301,L]
+RewriteRule ^en/privacy-policy$ /privacy-policy/ [R=301,L]
+RewriteRule ^en/privacy-policy/$ /privacy-policy/ [R=301,L]
+RewriteRule ^en/terms-of-services$ /terms-of-services/ [R=301,L]
+RewriteRule ^en/terms-of-services/$ /terms-of-services/ [R=301,L]
+RewriteRule ^en/faq/$ /faq/ [R=301,L]
+RewriteRule ^en/title-case-converter/$ /title-case-converter/ [R=301,L]
+RewriteRule ^en/inverse-case-converter/$ /inverse-case-converter/ [R=301,L]
+RewriteRule ^en/sentence-case$ /caps-to-sentence-case/ [R=301,L]
+RewriteRule ^en/sentence-case/$ /caps-to-sentence-case/ [R=301,L]
+RewriteRule ^sentence-case$ /caps-to-sentence-case/ [R=301,L]
+RewriteRule ^sentence-case/$ /caps-to-sentence-case/ [R=301,L]
+
+RewriteRule ^en/alternating-case-converter/$ /alternating-case-converter/ [R=301,L]
+RewriteRule ^en/capitalized-case-converter /capitalized-case-converter/ [R=301,L]
+RewriteRule ^en/capitalized-case-converter/$ /capitalized-case-converter/ [R=301,L]
+RewriteRule ^en/lower-case-converter /upper-case-to-lower-case/ [R=301,L]
 
 
-RewriteCond %{HTTP_HOST} ^onlineconvertcase\.com [NC]
-RewriteRule ^(.*)$ https://www.onlineconvertcase.com/$1 [L,R=301]
+RewriteRule ^lower-case-converter/$ /upper-case-to-lower-case/ [R=301,L]
+RewriteRule ^upper-case-converter/$ /lower-case-to-upper-case/ [R=301,L]
+RewriteRule ^{search_term_string}/$ / [R=301,L]
+
+
+RewriteRule ^en/$ / [R=301,L]
+
+
 RewriteCond $1 !^(index\.php|resources)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+RewriteRule ^(.*)$ index.php/$1/ [L,QSA]
+
+
+
+
+
 
 
 
