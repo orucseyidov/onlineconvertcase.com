@@ -15,7 +15,7 @@
 	</url>
 	<?php 
 		foreach ($tools as $key => $value):
-			$link = base_url(rtrim($value['slug']),'/').'/';
+			$link = base_url(rtrim($value['slug']'/')).'/';
 	?>
 		<url>
 		  <loc><?=$link ?></loc>
@@ -26,7 +26,7 @@
 	<?php endforeach ?>
 	<?php 
 		foreach ($seo as $key => $value): 
-			$link = base_url(rtrim($value['slug']),'/').'/';
+			$link = base_url(rtrim($value['slug']'/')).'/';
 	?>
 		<url>
 		  <loc><?=$link ?></loc>
@@ -37,7 +37,7 @@
 	<?php endforeach ?>
 	<?php 
 		foreach ($menu as $key => $value):
-			$link = base_url(rtrim($value['slug']),'/').'/';
+			$link = base_url(rtrim($value['slug']'/')).'/';
 	?>
 		<url>
 		  <loc><?=$link ?></loc>
